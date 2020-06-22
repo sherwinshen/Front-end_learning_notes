@@ -28,7 +28,7 @@
 
 2.1 [Vue框架](前端框架/Vue/README.md)
 
-2.2 [React框架]()
+2.2 [React框架](前端框架/React/README.md)
 
 2.3 [框架和类库解决方案](前端框架/框架和类库解决方案/框架和类库解决方案.md)
 
@@ -38,7 +38,7 @@
 
 3.1 [Nodejs](服务端开发/Nodejs笔记.md)
 
-3.2 [Mongoose](服务端开发/MongoDB笔记.md)
+3.2 [MongoDB](服务端开发/MongoDB笔记.md)
 
 
 

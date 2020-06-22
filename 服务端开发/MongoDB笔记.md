@@ -30,12 +30,14 @@
 ## 1、安装MongoDB及启动
 
 - 【下载】在[官网](https://www.mongodb.com)下载安装包，并将其解压至/usr/local/目录，并重命名为MongoDB
-- 【配置】终端输入`open -e .bash_profile`，在.bash_profile配置文件中添加环境变量`export PATH=${PATH}:/usr/local/mongoDB/bin`，关闭配置文件，在终端中输入`source .bash_profile`使配置立即生效。
-- 【启动服务】在/usr/local/mongoDB目录创建两个文件夹: data 和 log，并在该路径下终端输入`mongod --dbpath data --logpath log/mongod.log --logappend`。
+- 【配置】终端输入`open -e .zshrc`，在.bash_profile配置文件中添加环境变量`export PATH=${PATH}:/usr/local/mongoDB/bin`，关闭配置文件，在终端中输入`source .zshrc`使配置立即生效。
+- 【启动服务】在/usr/local/mongoDB目录创建两个文件夹: data 和 log，并在该路径下终端输入`sudo mongod --dbpath data --logpath log/mongod.log --logappend`。
 
 - 【连接数据库】新的终端中输入`mongo`连接数据库，也可以使用MongoDB Compass可视化工具连接。
 
-> 备注：默认的数据保存地址为/data/db，需要手动创建，我们自定义了data目录位置，需要在启动服务时指定dbpath的位置。 --dbpath  data文件夹的地址  --logpath  log存放的地址
+> 备注1：默认的数据保存地址为/data/db，需要手动创建，我们自定义了data目录位置，需要在启动服务时指定dbpath的位置。 --dbpath  data文件夹的地址  --logpath  log存放的地址
+>
+> 备注2：macbook旧版本需要在`open -e .bash_profile`来配置环境
 
 
 
