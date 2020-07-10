@@ -18,6 +18,8 @@
 
 5. [Vuex指南](Vuex/Vuex指南.md)
 
+6. [Vuepress开发](Vuepress开发.md)
+
    
 
 

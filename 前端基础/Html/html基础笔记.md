@@ -1,6 +1,6 @@
-# Html学习笔记
+# Html基础笔记
 
-简介：本文为Html学习笔记，完整笔记详见[Github](https://github.com/MrEnvision/Front-end_learning_notes)
+简介：本文为Html基础学习笔记，完整笔记详见[Github](https://github.com/MrEnvision/Front-end_learning_notes)
 
 作者：[Envision](https://github.com/MrEnvision)         联系邮箱：[EnvisionShen@gmail.com](mailto:EnvisionShen@gmail.com)
 
