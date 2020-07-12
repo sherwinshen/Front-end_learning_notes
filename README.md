@@ -76,7 +76,9 @@
 
 ## 8、教程笔记
 
-暂无
+8.1 [HTML和CSS教程 - 朗朗口腔](https://github.com/MrEnvision/langlangDental)
+
+8.2 [Vue3.0教程 - 后台管理系统](https://github.com/MrEnvision/vue-admin)
 
 
 
