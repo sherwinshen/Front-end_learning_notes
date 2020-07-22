@@ -8,6 +8,87 @@
 
 
 
+## 0、GIT小游戏
+
+> Git学习小游戏：https://github.com/pcottle/learnGitBranching
+
+- 提交记录
+
+```shell
+git commit -m <注释>
+```
+
+- 创建分支并切换至新分支
+
+```shell
+# 创建分支
+git branch <分支名>
+# 切换分支
+git checkout <分支名>
+# 合并写法
+git checkout -b <分支名> 
+```
+
+- 合并分支
+
+```shell
+# merge 是在当前分支添加一个新的merge记录实现合并
+git merge <分支名>
+
+# rebase 是在指定分支后添加当前分支所更改的内容，更加线性
+git rebase <分支名>
+```
+
+- 分离HEAD - HEAD 总是指向当前分支上最近一次提交记录
+
+```shell
+git checkout <引用内容>
+```
+
+- 相对引用^和~
+
+```shell
+# ^后退一步，～后退指定步数
+git checkout <引用内容，例如HEAD、分支名等>^
+git checkout <引用内容，例如HEAD、分支名等>~<num>
+```
+
+- 将一些commit记录复制到当前位置下面
+
+```shell
+git cherry-pick <引用> <引用> <引用> ...
+```
+
+- 打标签
+
+```shell
+# 对应记录可以省略，就针对当前HEAD指向记录打标签
+git tag <标签> <对应记录>
+```
+
+- 撤销更改 - 参考资料：[Git恢复之前版本的两种方法reset、revert](https://blog.csdn.net/yxlshk/article/details/79944535)
+
+```shell
+git reset <目标>
+git revert <目标>
+```
+
+git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，彻底后退
+
+<img src='img/reset.png'>
+
+git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的，例如以下例子，想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西。
+
+<img src='img/revert.png'>
+
+- 在提交远程分支前，如果当前远程分支别人已经更改了，则需要先获取相关内容进行合并，建议不管如何，提交前最好都执行下
+
+```shell
+git pull --rebase
+```
+
+
+
 ## 1、Git安装
 
 >安装-参考教程: [1](https://www.jianshu.com/p/7edb6b838a2e) [2](https://www.cnblogs.com/zheng577564429/p/8317524.html) [3](https://www.runoob.com/git/git-install-setup.html)
@@ -166,12 +247,6 @@ $ git push[remote] –force
 # 推送所有分支到远程仓库
 $ git push[remote] –all
 ```
-
-## 6、撤销操作
-
-checkout与reset区别：
-
-<img src="img/pic3.png" height=350/>
 
 
 

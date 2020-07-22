@@ -4,13 +4,13 @@
 
 项目地址：https://github.com/MrEnvision/Front-end_learning_notes
 
-作者：[EnvisionShen](https://github.com/MrEnvision)        更新日期：2020.04.25
+作者：[SherwinShen](https://github.com/MrEnvision)        更新日期：2020.07.12
 
 
 
 ## 1、前端基础
 
-1.1[Html/Html5](前端基础/Html/README.md)
+1.1 [Html/Html5](前端基础/Html/README.md)
 
 1.2 [CSS/CSS3](前端基础/CSS/README.md)
 
@@ -56,11 +56,15 @@
 
 5.3 [Vue项目单元测试](开发工具/Vue项目单元测试.md)
 
+5.4 [前端错误监控Sentry](开发工具/Sentry使用.md)
+
 
 
 ## 6、其他
 
 6.1 [接口设计](其他/接口设计.md)
+
+6.2 [算法专题](https://github.com/MrEnvision/LeetCode_JS)
 
 
 
@@ -68,7 +72,7 @@
 
 7.1 2020春招 - [面试知识总结](面试/面试知识总结.md)   [面试问题总结(1)-不含答案](面试/面试问题总结(1).md)   [面试问题总结(2)-部分答案](面试/面试问题总结(2).md)
 
-7.2 2021秋招 - [面试问题总结](面试/面试问题总结.md)   [面试算法专题](https://github.com/MrEnvision/LeetCode_JS)
+7.2 2021秋招 - [面试问题总结](面试/面试问题总结.md)   [面试算法专题](面试/算法解题框架.md)
 
 7.3 [面试资源](面试/面试资源.md)
 
