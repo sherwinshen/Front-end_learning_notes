@@ -9,22 +9,16 @@
 ## 目录
 
 1. [Vue基础知识](Vue基础知识.md)
-
 2. [Vue进阶知识](Vue进阶知识.md)
-
 3. [Vue生命周期](生命周期.md)
-
 4. [MVVM原理](MVVM模型.md)
-
 5. [Vuex指南](Vuex/Vuex指南.md)
-
 6. [Vuepress开发](Vuepress开发.md)
+7. [Vue项目单元测试](Vue项目单元测试.md)
 
-   
 
 
 
 ------
 
 如果发现本项目有错误，欢迎提交 issues 指正。
-

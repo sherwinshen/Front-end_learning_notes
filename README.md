@@ -4,7 +4,7 @@
 
 项目地址：https://github.com/MrEnvision/Front-end_learning_notes
 
-作者：[SherwinShen](https://github.com/MrEnvision)        更新日期：2020.07.12
+作者：[SherwinShen](https://github.com/MrEnvision)        更新日期：2020.08.01
 
 
 
@@ -54,17 +54,23 @@
 
 5.2 [自动化构建工具Webpack]()
 
-5.3 [Vue项目单元测试](开发工具/Vue项目单元测试.md)
-
 5.4 [前端错误监控Sentry](开发工具/Sentry使用.md)
 
 
 
-## 6、其他
+## 6、其他专题
 
 6.1 [接口设计](其他/接口设计.md)
 
 6.2 [算法专题](https://github.com/MrEnvision/LeetCode_JS)
+
+6.3 [前端跨域](https://github.com/MrEnvision/Front-end_learning_project/blob/master/cross-domain_solutions)
+
+6.4 [代码规范配置](https://github.com/MrEnvision/Front-end_learning_project/blob/master/coding_guide_setting)
+
+6.5 [前端换肤](https://github.com/MrEnvision/Front-end_learning_project/blob/master/change_theme_solutions)
+
+6.6 [文件上传与下载](https://github.com/MrEnvision/Front-end_learning_project/blob/master/file_upload_download)
 
 
 
@@ -72,7 +78,7 @@
 
 7.1 2020春招 - [面试知识总结](面试/面试知识总结.md)   [面试问题总结(1)-不含答案](面试/面试问题总结(1).md)   [面试问题总结(2)-部分答案](面试/面试问题总结(2).md)
 
-7.2 2021秋招 - [面试问题总结](面试/面试问题总结.md)   [面试算法专题](面试/算法解题框架.md)
+7.2 2021秋招 - [面试问题总结](面试/面试问题总结.md)   [面试JS常见编程](面试/面试JS常见编程.js)   [面试算法专题](面试/算法解题框架.md)
 
 7.3 [面试资源](面试/面试资源.md)
 
