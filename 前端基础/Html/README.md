@@ -8,8 +8,8 @@
 
 ## 基础笔记
 
-1. [HTML基础知识](HTML基础笔记.md)
-2. [HTML进阶知识](HTML进阶笔记.md)
+1. [HTML基础知识](html基础笔记.md)
+2. [HTML进阶知识](html进阶笔记.md)
 
 
 
