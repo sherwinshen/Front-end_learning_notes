@@ -1,66 +1,72 @@
-# 前端学习笔记
+---
+description: "欢迎来到小沈的前端学习博客，参观由此开始\U0001F9D0"
+---
 
-项目介绍：前端学习相关笔记，持续更新，喜欢请 star（≧∇≦）
+# 首页
 
-项目地址：https://github.com/MrEnvision/Front-end_learning_notes
+## 1、HTML相关
 
-作者：[SherwinShen](https://github.com/MrEnvision)        更新日期：2020.08.06
+## 2、CSS相关
 
+## 3、Javascript相关
 
+## 4、浏览器相关
+
+## 5、前端框架
+
+## 6、服务器/网络相关
+
+## 7、开发工具
+
+## 8、其他专题
+
+## 9、面试相关
+
+## 10、项目经验
 
 ## 1、前端基础
 
-1.1 [Html/Html5](前端基础/Html/README.md)
+1.1 [Html/Html5](qian-duan-ji-chu/html/)
 
-1.2 [CSS/CSS3](前端基础/CSS/README.md)
+1.2 [CSS/CSS3](qian-duan-ji-chu/css/)
 
-1.3 [Javascript/浏览器环境](前端基础/Javascript/README.md)
+1.3 [Javascript/浏览器环境](qian-duan-ji-chu/javascript/)
 
-1.4 [Http标准](前端基础/Http标准/README.md)
+1.4 [Http标准](qian-duan-ji-chu/http-biao-zhun/)
 
-1.5 [性能优化](前端基础/性能优化/性能优化.md)
+1.5 [性能优化](qian-duan-ji-chu/xing-neng-you-hua/xing-neng-you-hua.md)
 
-1.6 [安全防御](前端基础/安全防御/安全防御.md)
-
-
+1.6 [安全防御](qian-duan-ji-chu/an-quan-fang-yu/an-quan-fang-yu.md)
 
 ## 2、前端框架
 
-2.1 [Vue框架](前端框架/Vue/README.md)
+2.1 [Vue框架](qian-duan-kuang-jia/vue/)
 
-2.2 [React框架](前端框架/React/README.md)
+2.2 [React框架](qian-duan-kuang-jia/react/)
 
-2.3 [框架和类库解决方案](前端框架/框架和类库解决方案/框架和类库解决方案.md)
-
-
+2.3 [框架和类库解决方案](qian-duan-kuang-jia/kuang-jia-he-lei-ku-jie-jue-fang-an/kuang-jia-he-lei-ku-jie-jue-fang-an.md)
 
 ## 3、服务端开发
 
-3.1 [Nodejs](服务端开发/Nodejs笔记.md)
+3.1 [Nodejs](fu-wu-duan-kai-fa/nodejs-bi-ji.md)
 
-3.2 [MongoDB](服务端开发/MongoDB笔记.md)
-
-
+3.2 [MongoDB](fu-wu-duan-kai-fa/mongodb-bi-ji.md)
 
 ## 4、移动端开发
 
 暂无
 
-
-
 ## 5、开发工具
 
-5.1 [版本控制工具Git](开发工具/Git使用)
+5.1 [版本控制工具Git](https://github.com/MrEnvision/Front-end_learning_notes/tree/e271cf028afb432007c228479fafc70df6e880c6/开发工具/Git使用/README.md)
 
-5.2 [自动化构建工具Webpack]()
+5.2 [自动化构建工具Webpack](./)
 
-5.4 [前端错误监控Sentry](开发工具/Sentry使用.md)
-
-
+5.4 [前端错误监控Sentry](kai-fa-gong-ju/sentry-shi-yong.md)
 
 ## 6、其他专题
 
-6.1 [接口设计](其他/接口设计.md)
+6.1 [接口设计](qi-ta/jie-kou-she-ji.md)
 
 6.2 [算法专题](https://github.com/MrEnvision/LeetCode_JS)
 
@@ -72,17 +78,13 @@
 
 6.6 [文件上传与下载](https://github.com/MrEnvision/Front-end_learning_project/blob/master/file_upload_download)
 
-
-
 ## 7、面试
 
-7.1 2020春招 - [面试知识总结](面试/面试知识总结.md)   [面试问题总结(1)-不含答案](面试/面试问题总结(1).md)   [面试问题总结(2)-部分答案](面试/面试问题总结(2).md)
+7.1 2020春招 - [面试知识总结](mian-shi/mian-shi-zhi-shi-zong-jie.md) \[面试问题总结\(1\)-不含答案\]\(面试/面试问题总结\(1\).md\) \[面试问题总结\(2\)-部分答案\]\(面试/面试问题总结\(2\).md\)
 
-7.2 2021秋招 - [面试问题总结](面试/面试问题总结.md)   [面试JS常见编程](面试/面试JS常见编程.js)   [面试算法专题](面试/算法解题框架.md)
+7.2 2021秋招 - [面试问题总结](mian-shi/mian-shi-wen-ti-zong-jie.md) [面试JS常见编程](https://github.com/MrEnvision/Front-end_learning_notes/tree/e271cf028afb432007c228479fafc70df6e880c6/面试/面试JS常见编程.js) [面试算法专题](mian-shi/suan-fa-jie-ti-kuang-jia.md)
 
-7.3 [面试资源](面试/面试资源.md)
-
-
+7.3 [面试资源](mian-shi/mian-shi-zi-yuan.md)
 
 ## 8、教程笔记
 
@@ -90,8 +92,3 @@
 
 8.2 [Vue3.0教程 - 后台管理系统](https://github.com/MrEnvision/vue-admin)
 
-
-
-------
-
-如果发现本项目有内容上的错误，欢迎提交 issues 进行指正，相关合作请邮件联系[EnvisionShen@gmail.com](mailto:EnvisionShen@gmail.com)

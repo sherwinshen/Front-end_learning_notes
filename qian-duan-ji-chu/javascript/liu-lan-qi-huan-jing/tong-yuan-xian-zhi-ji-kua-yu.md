@@ -1,0 +1,46 @@
+# 同源限制及跨域
+
+简介：本文介绍同源限制及常见跨域解决方案，完整笔记在详见[Github](https://github.com/MrEnvision/Front-end_learning_notes)
+
+作者：[Envision](https://github.com/MrEnvision) 联系邮箱：[EnvisionShen@gmail.com](mailto:EnvisionShen@gmail.com)
+
+## 1、同源概念
+
+> 为了保证用户信息的安全，防止恶意的网站窃取数据产生了同源限制，同源是指三个相同，**协议相同+域名相同+端口相同**，尤其注意`http://www.example.com`和`http://example.com`为不同域名，还有域名和域名对应相同ip也是不同域的。
+
+## 2、同源限制范围
+
+（1） 无法读取非同源网页的 Cookie、LocalStorage 和 IndexedDB。
+
+（2） 无法接触非同源网页的 DOM。
+
+（3） 无法向非同源地址发送 AJAX 请求（可以发送，但浏览器会拒绝接受响应）
+
+## 3、常见跨域方法
+
+（1）通过jsonp跨域——只能实现get一种请求
+
+（2）document.domain + iframe跨域——主域相同，子域不同场景
+
+（3）location.hash + iframe
+
+（4）window.name + iframe跨域
+
+（5）postMessage跨域
+
+（6）跨域资源共享（CORS）
+
+（7）nginx代理跨域
+
+（8）nodejs中间件代理跨域
+
+（9）WebSocket协议跨域
+
+具体详见参考资料：
+
+1. [前端常见跨域解决方案（全）](https://segmentfault.com/a/1190000011145364)—— 参考源代码：[cross-domain](https://github.com/FatDong1/cross-domain)  
+2. [解锁跨域的九种姿势](https://github.com/LiChangyi/crossDomain)
+3. [同源限制及解决](https://wangdoc.com/javascript/bom/same-origin.html)
+
+如果发现本项目有错误，欢迎提交 issues 指正。
+
