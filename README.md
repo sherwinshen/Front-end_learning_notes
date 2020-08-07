@@ -1,7 +1,3 @@
-⚠️注意，本项目已迁移至gitbook中，github中不再更新，请移步gitbook：https://sheweinshen.gitbook.io/front-end-blog/
-
-
-
 # 前端学习笔记
 
 项目介绍：前端学习相关笔记，持续更新，喜欢请 star（≧∇≦）
