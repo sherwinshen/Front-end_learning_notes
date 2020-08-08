@@ -1,0 +1,30 @@
+# 算法解题框架
+
+简介：本文为本人2020秋招算法相关经验总结，完整笔记详见[Github](https://github.com/MrEnvision/Front-end_learning_notes)
+
+作者：[Envision](https://github.com/MrEnvision) 联系邮箱：[EnvisionShen@gmail.com](mailto:EnvisionShen@gmail.com)
+
+参考资料：[Leetcode-JS](https://github.com/MrEnvision/LeetCode_JS)
+
+## 回溯算法
+
+```javascript
+let result = []
+function backtrack(路径, 选择列表){
+  // 结束条件
+  if(满足结束条件){
+    result.push(路径)
+    return
+  }
+  // 进行选择
+  for(let 选择 of 选择列表){
+    // 做选择加入路径
+    路径.push(选择)
+    // 进入下一层
+    backtrack(路径, 选择列表)
+    // 撤销选择，进行for循环的下一轮
+    路径.pop(选择)
+  } 
+}
+```
+
