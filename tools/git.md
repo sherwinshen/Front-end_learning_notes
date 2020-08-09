@@ -233,3 +233,4 @@ $ git push[remote] –force
 $ git push[remote] –all
 ```
 
+{% hint style="info" %} 参考资料：[猴子都能懂的Git入门](https://backlog.com/git-tutorial/cn/) [Git简明指南](http://rogerdudler.github.io/git-guide/index.zh.html) [Pro Git Book](https://www.kancloud.cn/kancloud/progit/70158) [try github](http://try.github.com/) [Git命令-博客](https://blog.csdn.net/qq_33384065/article/details/81909754) [Git教程-菜鸟教程](https://www.runoob.com/git/git-tutorial.html) [Git教程-廖雪峰教程](https://www.liaoxuefeng.com/wiki/896043488029600) {% endhint %}
