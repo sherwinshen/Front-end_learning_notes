@@ -11,22 +11,24 @@
 ### 2. 行内元素与块级元素的区别
 
 常见的行内元素有 a b span img strong sub sup button input label select textarea；
+
 常见的块级元素有 div ul ol li dl dt dd h1 h2 h3 h4 h5 h6 p；
-1、格式上，默认情况下，行内元素不会以新行开始，而块级元素会新起一行；
-2、内容上，默认情况下，行内元素只能包含文本和其他行内元素。而块级元素可以包含行内元素和其他块级元素；
-3、布局上，默认情况下，行内元素设置 width 无效，height 无效（可以设置 line-height），设置 margin 和 padding 的上下不会对其他元素产生影响（左右有效，但上下会有视觉效果比如 border 被撑开）。
+
+1. 格式上，默认情况下，行内元素不会以新行开始，而块级元素会新起一行；
+2. 内容上，默认情况下，行内元素只能包含文本和其他行内元素。而块级元素可以包含行内元素和其他块级元素；
+3. 布局上，默认情况下，行内元素设置 width 无效，height 无效（可以设置 line-height），设置 margin 和 padding 的上下不会对其他元素产生影响（左右有效，但上下会有视觉效果比如 border 被撑开）。
 
 ### 3. 引入 CSS 样式的 link 与 @import 的区别
 
-1、@import 只有导入样式表的作用；link 不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性、引入网站图标等。
-2、加载页面时，link 标签引入的 CSS 被同时加载；@import 引入的 CSS 将在页面加载完毕后被加载。
-3、兼容性区别
+1. @import 只有导入样式表的作用；link 不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性、引入网站图标等。
+2. 加载页面时，link 标签引入的 CSS 被同时加载；@import 引入的 CSS 将在页面加载完毕后被加载。
+3. 兼容性区别
 
 ### 4.  async 和 defer 的作用与区别
 
-1、渲染过程中遇到 JS 就停止渲染，执行 JS 代码；
-2、async 异步下载 JS 文件不阻塞 DOM 解析，当下载完阻塞 DOM 解析转而执行 JS 文件；
-3、defer 异步下载 JS 文件不阻塞 DOM 解析，HTML 标签解析完成后按顺序执行 JS 文件；
+1. 渲染过程中遇到 JS 就停止渲染，执行 JS 代码；
+2. async 异步下载 JS 文件不阻塞 DOM 解析，当下载完阻塞 DOM 解析转而执行 JS 文件；
+3. defer 异步下载 JS 文件不阻塞 DOM 解析，HTML 标签解析完成后按顺序执行 JS 文件；
 
 ### 5. 重绘与回流
 
@@ -36,15 +38,16 @@
 - 回流：节点的布局或者几何属性需要改变，影响布局的，例如DOM处理、位置尺寸、字体大小、窗口尺寸变化、隐藏内容等。
 
 常见触发回流情况（元素的位置和尺寸大小更改）：
-（1）添加或者删除可见的 DOM 元素；
-（2）元素尺寸改变 -- 边距、填充、边框、宽度和高度
-（3）内容变化，比如用户在 input 框中输入文字
-（4）浏览器窗口尺寸改变 -- resize事件发生时
-（5）计算 offsetWidth 和 offsetHeight 属性
-（6）设置 style 属性的值
-（7）当你修改网页的默认字体时（元素字体大小变化）
-（8）页面首次渲染
-（9）激活CSS伪类（例如：:hover）
+
+1. 添加或者删除可见的 DOM 元素
+2. 元素尺寸改变 -- 边距、填充、边框、宽度和高度
+3. 内容变化，比如用户在 input 框中输入文字
+4. 浏览器窗口尺寸改变 -- resize事件发生时
+5. 计算 offsetWidth 和 offsetHeight 属性
+6. 设置 style 属性的值
+7. 当你修改网页的默认字体时（元素字体大小变化）
+8. 页面首次渲染
+9. 激活CSS伪类（例如：:hover）
 
 ### 6. 如何减少回流
 
@@ -54,11 +57,11 @@
 
 ### 7. HTML语义化的理解
 
-（1）用正确的标签做正确的事情。
-（2）html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
-（3）即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;
-（4）搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO ;
-（5）使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+1. 用正确的标签做正确的事情。
+2. html 语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
+3. 即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;
+4. 搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO ;
+5. 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
 
 ### 8. 语义化标签哪些
 
@@ -66,19 +69,19 @@
 
 ### 9. 前端SEO
 
-（1）合理的 title、description、keywords （meta标签）
-（2）语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页
-（3）重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容肯定被抓取
-（4）重要内容不要用 js 输出：爬虫不会执行 js 获取内容
-（5）少用 iframe：搜索引擎不会抓取 iframe 中的内容
-（6）非装饰性图片必须加 alt
-（7）提高网站速度：网站速度是搜索引擎排序的一个重要指标
+1. 合理的 title、description、keywords （meta标签）
+2. 语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页
+3. 重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容肯定被抓取
+4. 重要内容不要用 js 输出：爬虫不会执行 js 获取内容
+5. 少用 iframe：搜索引擎不会抓取 iframe 中的内容
+6. 非装饰性图片必须加 alt
+7. 提高网站速度：网站速度是搜索引擎排序的一个重要指标
 
 ### 10. HTML5 的离线储存怎么使用
 
 > 参考资料： [《HTML5 离线缓存-manifest 简介》](https://yanhaijing.com/html/2014/12/28/html5-manifest/) [《有趣的 HTML5：离线存储》](https://segmentfault.com/a/1190000000732617)
 
-1、创建一个和 html 同名的 manifest 文件
+1. 创建一个和 html 同名的 manifest 文件
 
  ```
  CACHE MANIFEST
@@ -95,7 +98,7 @@
  / /offline.html
  ```
 
-2、在html页面头部加入一个 manifest 的属性
+2. 在html页面头部加入一个 manifest 的属性
 
 ```
  <html lang="en" manifest="index.manifest">
@@ -103,9 +106,9 @@
 
 ### 11. 如何在页面上实现一个圆形的可点击区域
 
-（1）纯 html 实现 - `<map>` 标签用来定义一个客户端图像映射，`<area>` 标签用来定义图像映射中的区域
-（2）纯 css 实现 - 使用 border-radius 实现圆形区域
-（3）纯  JS 实现 - 通过监听文档的点击事件，获取每次点击时鼠标的位置，判断该位置是否在我们规定的圆形区域内
+1. 纯 html 实现 - `<map>` 标签用来定义一个客户端图像映射，`<area>` 标签用来定义图像映射中的区域
+2. 纯 css 实现 - 使用 border-radius 实现圆形区域
+3. 纯  JS 实现 - 通过监听文档的点击事件，获取每次点击时鼠标的位置，判断该位置是否在我们规定的圆形区域内
 
 ### 12. Canvas 和 SVG 有什么区别
 
@@ -159,17 +162,17 @@ meta 标签提供关于 HTML 文档的元数据，元数据将服务于浏览器
 
 ### 2. CSS 选择器
 
-（1）id选择器（#myid）
-（2）类选择器（.myclassname）
-（3）标签选择器（div,h1,p）
-（4）属性选择器（a[rel="external"]）
-（5）伪类选择器（a:hover,li:nth-child）
-（6）伪元素选择器（::before、::after）
-（7）通配符选择器（*）
-（8）后代选择器（h1 p）
-（9）相邻后代选择器（子）选择器（ul > li）
-（10）兄弟选择器（li ~ a）
-（11）相邻兄弟选择器（li + a）
+1. id选择器（#myid）
+2. 类选择器（.myclassname）
+3. 标签选择器（div,h1,p）
+4. 属性选择器（a[rel="external"]）
+5. 伪类选择器（a:hover,li:nth-child）
+6. 伪元素选择器（::before、::after）
+7. 通配符选择器（*）
+8. 后代选择器（h1 p）
+9. 相邻后代选择器（子）选择器（ul > li）
+10. 兄弟选择器（li ~ a）
+11. 相邻兄弟选择器（li + a）
 
 ### 3. CSS 权重（优先级）
 
@@ -191,12 +194,12 @@ meta 标签提供关于 HTML 文档的元数据，元数据将服务于浏览器
 
 > 参考资料：[《CSS 有哪些属性可以继承？》](https://www.jianshu.com/p/34044e3c9317)
 
-1、字体系列属性：font、font-family、font-weight、font-size、font-style、font-variant、font-stretch、font-size-adjust
-2、文本系列属性：text-indent、text-align、text-shadow、line-height、word-spacing、letter-spacing、text-transform、direction、color
-3、表格布局属性：caption-sideborder-collapseempty-cells
-4、列表属性：list-style-type、list-style-image、list-style-position、list-style
-5、光标属性：cursor
-6、元素可见性：visibility
+1. 字体系列属性：font、font-family、font-weight、font-size、font-style、font-variant、font-stretch、font-size-adjust
+2. 文本系列属性：text-indent、text-align、text-shadow、line-height、word-spacing、letter-spacing、text-transform、direction、color
+3. 表格布局属性：caption-sideborder-collapseempty-cells
+4. 列表属性：list-style-type、list-style-image、list-style-position、list-style
+5. 光标属性：cursor
+6. 元素可见性：visibility
 
 ### 6.  a标签的伪类
 
@@ -208,19 +211,19 @@ meta 标签提供关于 HTML 文档的元数据，元数据将服务于浏览器
 
 ### 8. display 的值有哪些以及作用
 
-block - 块类型，默认宽度为父元素宽度，可设置宽高，换行显示。
-inline - 行内元素类型，默认宽度为内容宽度，不可设置宽高，同行显示。
-inline-block - 默认宽度为内容宽度，可以设置宽高，同行显示。
-inherit - 从父元素继承display属性的值。
-none - 元素不显示，并从文档流中移除。
+1. block - 块类型，默认宽度为父元素宽度，可设置宽高，换行显示。
+2. inline - 行内元素类型，默认宽度为内容宽度，不可设置宽高，同行显示。
+3. inline-block - 默认宽度为内容宽度，可以设置宽高，同行显示。
+4. inherit - 从父元素继承display属性的值。
+5. none - 元素不显示，并从文档流中移除。
 
 ### 9. position 的值及其定位点
 
-- 默认static
-- 绝对定位absolute - 相对于前一个非static定位的父元素，脱离文档流
-- 相对定位relative - 相对于自身原来位置，未脱离文档流
-- 固定定位fixed - 相对于可视窗口而言
-- 粘性定位sticky - 应用于表头锁定、导航栏固定、图片堆叠等
+1. 默认static
+2. 绝对定位absolute - 相对于前一个非static定位的父元素，脱离文档流
+3. 相对定位relative - 相对于自身原来位置，未脱离文档流
+4. 固定定位fixed - 相对于可视窗口而言
+5. 粘性定位sticky - 应用于表头锁定、导航栏固定、图片堆叠等
 
 ### 10. flex布局
 
@@ -240,10 +243,10 @@ flex 布局是 CSS3 新增的一种布局方式，我们可以通过将一个元
 
 > 参考资料： [《前端应该掌握的 CSS 实现多列等高布局》](https://juejin.im/post/5b0fb34151882515662238fd) [《CSS：多列等高布局》](https://codepen.io/yangbo5207/post/equh)
 
-（1）负margin-bottom和正padding-bottom实现。(注意，父元素要设置 overflow:hidden;)
-（2）flex布局，项目align-items属性默认为stretch，如果项目未设置高度或设为auto，将占满整个容器的高度。
-（3）table与grid布局，略。
-（4）JS判断最大高度并设置
+1. 负margin-bottom和正padding-bottom实现。(注意，父元素要设置 overflow:hidden;)
+2. flex布局，项目align-items属性默认为stretch，如果项目未设置高度或设为auto，将占满整个容器的高度。
+3. table与grid布局，略。
+4. JS判断最大高度并设置
 
 ### 13. li 与 li 之间有看不见的空白间隔是什么原因引起的，如何让去除 inline-block 元素间间距
 
@@ -254,44 +257,45 @@ flex 布局是 CSS3 新增的一种布局方式，我们可以通过将一个元
 
 ### 14. 什么是包含块
 
-（1）根元素（一般是 `<html>`）被称为“初始包含块”，其尺寸等同于浏览器可视窗口的大小。
-（2）如果元素的position是relative或者static，则“包含块”由其最近的块容器祖先盒的contentbox边界形成。
-（3）如果元素position:fixed，则“包含块”是“初始包含块”。
-（4）如果元素position:absolute，则“包含块”由最近的position不为static的祖先元素建立。
+1. 根元素（一般是 `<html>`）被称为“初始包含块”，其尺寸等同于浏览器可视窗口的大小。
+2. 如果元素的position是relative或者static，则“包含块”由其最近的块容器祖先盒的contentbox边界形成。
+3. 如果元素position:fixed，则“包含块”是“初始包含块”。
+4. 如果元素position:absolute，则“包含块”由最近的position不为static的祖先元素建立。
 
 ### 15. css3中 nth-child 和 nth-of-type 的区别
 
-（1）ele:nth-of-type(n)是指父元素下第n个ele元素，:nth-of-type 以"type"来区分的。
-（2）ele:nth-child(n)是指父元素下第n个元素且这个元素为ele，若不是，则选择失败。 
+1. ele:nth-of-type(n)是指父元素下第n个ele元素，:nth-of-type 以"type"来区分的。
+2. ele:nth-child(n)是指父元素下第n个元素且这个元素为ele，若不是，则选择失败。 
 
 ### 16. width:auto 和 width:100% 的区别
 
-（1）width: auto 时，父元素宽度 = 子元素 width + padding-left/right + border-left/right + margin-left/right，因此子元素的宽度会自动调节，不会出现溢出父元素的情况。
-（2）width: 100% 时，子元素宽度即为父元素的宽度，因此 width:100% 会发生内容溢出父节点的情况，会产生不良的影响。
+1. width: auto 时，父元素宽度 = 子元素 width + padding-left/right + border-left/right + margin-left/right，因此子元素的宽度会自动调节，不会出现溢出父元素的情况。
+2. width: 100% 时，子元素宽度即为父元素的宽度，因此 width:100% 会发生内容溢出父节点的情况，会产生不良的影响。
 
 ### 17. margin 重叠理解与解决
 
 理解：margin 值均为正数或负数，则取绝对值最大的值；margin值为一正或一负，则取两者相加的值；
 
 解决：
-（1）相邻兄弟元素 margin 合并 —— 其中一个设置 BFC
-（2）父元素和第一个/最后一个子元素的 margin 合并 —— 
-		对于 margin-top 合并，可以进行如下操作（满足一个条件即可）：
-			父元素设置为块状格式化上下文元素；
-			父元素设置 border-top 值；
-			父元素设置 padding-top 值；
-			父元素和第一个子元素之间添加内联元素进行分隔。
-		对于 margin-bottom 合并，可以进行如下操作（满足一个条件即可）：
-			父元素设置为块状格式化上下文元素；
-			父元素设置 border-bottom 值；
-			父元素设置 padding-bottom 值；
-			父元素和最后一个子元素之间添加内联元素进行分隔；
-			父元素设置 height、min-height 或 max-height。
-（3）空块级元素的自身 margin-top & bottom 合并 —— 
-		设置垂直方向的 border；
-		设置垂直方向的 padding；
-		里面添加内联元素（直接 Space 键空格是没用的）；
-		设置 height 或者 min-height。
+
+1. 相邻兄弟元素 margin 合并 —— 其中一个设置 BFC
+2. 父元素和第一个/最后一个子元素的 margin 合并 —— 
+   		1. 对于 margin-top 合并，可以进行如下操作（满足一个条件即可）：
+        1. 父元素设置为块状格式化上下文元素；
+        2. 父元素设置 border-top 值；
+        3. 父元素设置 padding-top 值；
+        4. 父元素和第一个子元素之间添加内联元素进行分隔。
+   2. 对于 margin-bottom 合并，可以进行如下操作（满足一个条件即可）：
+        1. 父元素设置为块状格式化上下文元素；
+        2. 父元素设置 border-bottom 值；
+        3. 父元素设置 padding-bottom 值；
+        4. 父元素和最后一个子元素之间添加内联元素进行分隔；
+        5. 父元素设置 height、min-height 或 max-height。
+3. 空块级元素的自身 margin-top & bottom 合并 —— 
+      1. 设置垂直方向的 border；
+      2. 设置垂直方向的 padding；
+      3. 里面添加内联元素（直接 Space 键空格是没用的）；
+      4. 设置 height 或者 min-height。
 
 ### 18. BFC 规范（块级格式化上下文）的理解
 
@@ -300,16 +304,18 @@ flex 布局是 CSS3 新增的一种布局方式，我们可以通过将一个元
 BFC（block formatting context）指的是块级格式化上下文，一个元素形成了 BFC 之后，那么它内部元素产生的布局不会影响到外部元素，外部元素的布局也不会影响到 BFC 中的内部元素。一个 BFC 就像是一个隔离区域，和其他区域互不影响。
 
 创建 BFC（简单记忆脱离文档流的方法即可，但实际不是哦！）
-（1）overflow＝hidden|auto或scroll(≠visible)
-（2）浮动元素float＝left|right或inherit（≠none）
-（3）绝对定位元素position＝absolute或fixed
-（4）display＝inline-block|flex|inline-flex|table-cell或table-caption
-（5）根元素或包含根元素的元素
+
+1. overflow＝hidden|auto或scroll(≠visible)
+2. 浮动元素float＝left|right或inherit（≠none）
+3. 绝对定位元素position＝absolute或fixed
+4. display＝inline-block|flex|inline-flex|table-cell或table-caption
+5. 根元素或包含根元素的元素
 
 作用：
-（1）浮动元素使得父元素高度塌陷
-（2）外边距垂直方向重合问题
-（3）两栏自适应布局问题（左侧浮动，右边内容一多文字就会扩展到左边，形成环绕左侧的现象，需要为右侧设置BFC）
+
+1. 浮动元素使得父元素高度塌陷
+2. 外边距垂直方向重合问题
+3. 两栏自适应布局问题（左侧浮动，右边内容一多文字就会扩展到左边，形成环绕左侧的现象，需要为右侧设置BFC）
 
 衍生问题：overflow: hidden 来实现 BFC 会产生什么问题？例如浮动元素的父元素设置 overflow: hidden，则 float 元素高度比父元素大那么超出的部分会被隐藏。
 
@@ -318,9 +324,10 @@ BFC（block formatting context）指的是块级格式化上下文，一个元�
 原因：浮动的元素会导致高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示。
 
 方法：
-（1）浮动子元素后添加div，并设置clear:both样式 - 存在问题是额外增加了一个无意义的标签，有点占用资源；
-（2）父元素添加:after伪类，并设置clear:both样式
-（3）父元素设置overflow:hidden样式，BFC - 存在问题是若float元素高度比父元素大那么超出的部分会被隐藏；
+
+1. 浮动子元素后添加div，并设置clear:both样式 - 存在问题是额外增加了一个无意义的标签，有点占用资源；
+2. 父元素添加:after伪类，并设置clear:both样式
+3. 父元素设置overflow:hidden样式，BFC - 存在问题是若float元素高度比父元素大那么超出的部分会被隐藏；
 
 ### 20. 媒体查询的理解
 
@@ -390,9 +397,8 @@ media feature（常用宽度来判断，实际还有很多属性特征可用于�
 
 ### 24. 元素百分比的相对参考点
 
-（1）如果是宽高的话，是相对于包含块的宽高。
-
-（2）如果是padding或者margin竖直方向的属性则是相对于包含块的宽度。
+1. 如果是宽高的话，是相对于包含块的宽高。
+2. 如果是padding或者margin竖直方向的属性则是相对于包含块的宽度。
 
 ### 25. font-style 属性中 italic 和 oblique 的区别
 
@@ -406,22 +412,23 @@ italic 和 oblique 这两个关键字都表示“斜体”的意思。它们的�
 
 ### 27. 高度自适应的 div里面有两个 div，一个高 100px，如何使另一个填满剩下高度
 
-（1）flex 布局。设置主轴为竖轴，并且第二个 div 的 flex-grow 为1，使其自动填充剩余空间。
-
-（2）绝对定位。外层 div 使用 position：relative，高度自适应的 div 使用 position:absolute; top:100px; bottom:0; left:0; right:0;
+1. flex 布局。设置主轴为竖轴，并且第二个 div 的 flex-grow 为1，使其自动填充剩余空间。
+2. 绝对定位。外层 div 使用 position：relative，高度自适应的 div 使用 position:absolute; top:100px; bottom:0; left:0; right:0;
 
 ### 28. 阐述一下 CSSSprites
 
 将一个页面涉及到的所有图片都包含到一张大图中去，然后利用 CSS 的 background-image，background-repeat，background-position 的组合进行背景定位。利用 CSSSprites 能很好地减少网页的 http 请求，从而很好的提高页面的性能；CSSSprites 能减少图片的字节。
 
 ✍️ 优点：
-减少HTTP请求数，极大地提高页面加载速度；
-增加图片信息重复度，提高压缩比，减少图片大小；
-更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现；
+
+1. 减少HTTP请求数，极大地提高页面加载速度；
+2. 增加图片信息重复度，提高压缩比，减少图片大小；
+3. 更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现；
 
 ✍️ 缺点：
-图片合并麻烦；
-维护麻烦，修改一个图片可能需要重新布局整个图片和修改样式；
+
+1. 图片合并麻烦；
+2. 维护麻烦，修改一个图片可能需要重新布局整个图片和修改样式；
 
 ### 29. CSS 中出现 height 为 100% 失效的原因
 
@@ -440,9 +447,8 @@ italic 和 oblique 这两个关键字都表示“斜体”的意思。它们的�
 
 ### 31. margin:auto 的填充规则
 
-（1）如果一侧定值，一侧auto，则auto为剩余空间大小。
-
-（2）如果两侧均是auto，则平分剩余空间。
+1. 如果一侧定值，一侧auto，则auto为剩余空间大小。
+2. 如果两侧均是auto，则平分剩余空间。
 
 ### 32. line-height/font-size理解
 
@@ -450,27 +456,19 @@ italic 和 oblique 这两个关键字都表示“斜体”的意思。它们的�
 
 ### 33. 图片格式 - 7种
 
-（1）第一种是 BMP 格式，无损压缩，支持索引色和直接色的点阵图。由于它基本上没有压缩，因此文件体积一般比较大。
-
-（2）第二种是 GIF 格式，它是无损压缩的使用索引色的点阵图。由于使用了LZW压缩方法，因此文件的体积很小。并且GIF还支持动画和透明度。但因为它使用的是索引色，所以它适用于一些对颜色要求不高且需要文件体积小的场景。
-
-（3）第三种是 JPEG 格式，它是有损压缩的使用直接色的点阵图。由于使用了直接色，色彩较为丰富，一般适用于来存储照片。但由于使用的是直接色，可能文件的体积相对于GIF格式来说更大。
-
-（4）第四种是 PNG-8 格式，它是无损压缩的使用索引色的点阵图。它是 GIF 的一种很好的替代格式，它也支持透明度的调整，并且文件的体积相对于GIF格式更小。一般来说如果不是需要动画的情况，我们都可以使用 PNG-8 格式代替 GIF 格式。
-
-（5）第五种是 PNG-24 格式，它是无损压缩的使用直接色的点阵图。PNG-24 的优点是它使用了压缩算法，所以它的体积比 BMP 格式的文件要小得多，但是相对于其他的几种格式，还是要大一些。
-
-（6）第六种格式是 svg 格式，它是矢量图，它记录的图片的绘制方式，因此对矢量图进行放大和缩小不会产生锯齿和失真。它一般适合于用来制作一些网站logo或者图标之类的图片。
-
-（7）第七种格式是 webp 格式，它是支持有损和无损两种压缩方式的使用直接色的点阵图。使用 webp 格式的最大的优点是，在相同质量的文件下，它拥有更小的文件体积。因此它非常适合于网络图片的传输，因为图片体积的减少，意味着请求时间的减小，这样会提高用户的体验。这是谷歌开发的一种新的图片格式，目前在兼容性上还不是太好。
+1. 第一种是 BMP 格式，无损压缩，支持索引色和直接色的点阵图。由于它基本上没有压缩，因此文件体积一般比较大。
+2. 第二种是 GIF 格式，它是无损压缩的使用索引色的点阵图。由于使用了LZW压缩方法，因此文件的体积很小。并且GIF还支持动画和透明度。但因为它使用的是索引色，所以它适用于一些对颜色要求不高且需要文件体积小的场景。
+3. 第三种是 JPEG 格式，它是有损压缩的使用直接色的点阵图。由于使用了直接色，色彩较为丰富，一般适用于来存储照片。但由于使用的是直接色，可能文件的体积相对于GIF格式来说更大。
+4. 第四种是 PNG-8 格式，它是无损压缩的使用索引色的点阵图。它是 GIF 的一种很好的替代格式，它也支持透明度的调整，并且文件的体积相对于GIF格式更小。一般来说如果不是需要动画的情况，我们都可以使用 PNG-8 格式代替 GIF 格式。
+5. 第五种是 PNG-24 格式，它是无损压缩的使用直接色的点阵图。PNG-24 的优点是它使用了压缩算法，所以它的体积比 BMP 格式的文件要小得多，但是相对于其他的几种格式，还是要大一些。
+6. 第六种格式是 svg 格式，它是矢量图，它记录的图片的绘制方式，因此对矢量图进行放大和缩小不会产生锯齿和失真。它一般适合于用来制作一些网站logo或者图标之类的图片。
+7. 第七种格式是 webp 格式，它是支持有损和无损两种压缩方式的使用直接色的点阵图。使用 webp 格式的最大的优点是，在相同质量的文件下，它拥有更小的文件体积。因此它非常适合于网络图片的传输，因为图片体积的减少，意味着请求时间的减小，这样会提高用户的体验。这是谷歌开发的一种新的图片格式，目前在兼容性上还不是太好。
 
 ### 34. relative定位的注意点
 
-（1）left/top/right/bottom 的百分比值是相对于包含块计算的，而不是自身。
-
-（2）当包含块的 height 为 auto 时，设置 top/bottom 的无效，均为 0；包含块的 width 为 auto 无影响，宽度默认为 100%，因此 left/right 有效。
-
-（3）当同时设置 bottom/top 时，top 有效；当同时设置 left/right 时，left 有效；
+1. left/top/right/bottom 的百分比值是相对于包含块计算的，而不是自身。
+2. 当包含块的 height 为 auto 时，设置 top/bottom 的无效，均为 0；包含块的 width 为 auto 无影响，宽度默认为 100%，因此 left/right 有效。
+3. 当同时设置 bottom/top 时，top 有效；当同时设置 left/right 时，left 有效；
 
 ### 35. 层叠规则
 
@@ -480,8 +478,8 @@ italic 和 oblique 这两个关键字都表示“斜体”的意思。它们的�
 
 ### 36. letter-spacing与word-spacing的区别
 
-（1）letter-spacing可以用来控制 "字符 - 英文字母、汉字以及空格" 之间的间距。
-（2）word-spacing可以用来控制 "空格字符" 之间的间距。
+1. letter-spacing可以用来控制 "字符 - 英文字母、汉字以及空格" 之间的间距。
+2. word-spacing可以用来控制 "空格字符" 之间的间距。
 
 ### 37. 单行/多行文本溢出省略号的处理
 
@@ -522,51 +520,35 @@ p:after {
 
 ### 38. 常见的元素隐藏方式
 
-（1）使用 display:none;隐藏元素，渲染树不会包含该渲染对象，该元素不会在页面中占据位置，也不会响应绑定的监听事件。
-
-（2）使用 visibility:hidden;隐藏元素，元素在页面中仍占据空间，但是不会响应绑定的监听事件。
-
-（3）使用 opacity:0;将元素的透明度设置为0来实现元素的隐藏，元素在页面中仍然占据空间，并且能够响应元素绑定的监听事件。
-
-（4）通过使用绝对定位将元素移除可视区域内来实现元素的隐藏。
-
-（5）通过 z-index 负值，来使其他元素遮盖住该元素来实现隐藏。
-
-（6）通过 clip/clip-path 元素裁剪的方法来实现元素的隐藏，元素仍在页面中占据位置，但是不会响应绑定的监听事件。
-
-（7）通过 transform:scale(0,0)来将元素缩放为0来实现元素的隐藏，元素仍在页面中占据位置，但是不会响应绑定的监听事件。
+1. 使用 display:none;隐藏元素，渲染树不会包含该渲染对象，该元素不会在页面中占据位置，也不会响应绑定的监听事件。
+2. 使用 visibility:hidden;隐藏元素，元素在页面中仍占据空间，但是不会响应绑定的监听事件。
+3. 使用 opacity:0;将元素的透明度设置为0来实现元素的隐藏，元素在页面中仍然占据空间，并且能够响应元素绑定的监听事件。
+4. 通过使用绝对定位将元素移除可视区域内来实现元素的隐藏。
+5. 通过 z-index 负值，来使其他元素遮盖住该元素来实现隐藏。
+6. 通过 clip/clip-path 元素裁剪的方法来实现元素的隐藏，元素仍在页面中占据位置，但是不会响应绑定的监听事件。
+7. 通过 transform:scale(0,0)来将元素缩放为0来实现元素的隐藏，元素仍在页面中占据位置，但是不会响应绑定的监听事件。
 
 ### 39. CSS布局
 
 > 参考资料：[《几种常见的 CSS 布局》](https://juejin.im/post/5bbcd7ff5188255c80668028#heading-12)
 
 1. 上下固定中间自适应布局
-
-（1）绝对定位。三部分均设置绝对定位，上面和下面设置 top/bottom: 0; 中间设置 top: 100px; bottom: 100px;
-
-（2）flex布局。中间设置 flex-grow: 1;
+   1. 绝对定位。三部分均设置绝对定位，上面和下面设置 top/bottom: 0; 中间设置 top: 100px; bottom: 100px;
+   2. flex布局。中间设置 flex-grow: 1;
 
 2. 两栏（左固定右自适应）布局
-
-（1）浮动布局。左边定宽并左浮动，右边margin-left为左边宽度并且width为auto；
-
-（2）flex布局。左边定宽且flex-shrink和flex-grow均为0，右边flex为auto；
-
-（3）绝对定位。左边定宽且绝对定位，右边margin-left为左边宽度；
-
-（4）绝对定位。左边定宽且绝对定位，右边绝对定位，且left为左边宽度，其他方向为0；
+   1. 浮动布局。左边定宽并左浮动，右边margin-left为左边宽度并且width为auto；
+   2. flex布局。左边定宽且flex-shrink和flex-grow均为0，右边flex为auto；
+   3. 绝对定位。左边定宽且绝对定位，右边margin-left为左边宽度；
+   4. 绝对定位。左边定宽且绝对定位，右边绝对定位，且left为左边宽度，其他方向为0；
 
 3. 三栏（左右固定中间自适应）布局
 
-（1）浮动布局。左右浮动，中间设置对应的marhin值，注意中间部分需要放在最后；
-
-（2）flex布局。左右定宽且flex-shrink和flex-grow均为0，中间flex为auto；
-
-（3）绝对定位。左右定宽且绝对定位，中间设置对应的margin值；
-
-（4）双飞翼布局。
-
-（5）圣杯布局。
+   1. 浮动布局。左右浮动，中间设置对应的marhin值，注意中间部分需要放在最后；
+   2. flex布局。左右定宽且flex-shrink和flex-grow均为0，中间flex为auto；
+   3. 绝对定位。左右定宽且绝对定位，中间设置对应的margin值；
+   4. 双飞翼布局。
+   5. 圣杯布局。
 
 ### 40. 宽高自适应的正方形？（自适应比例矩形同理）
 
@@ -621,34 +603,38 @@ p:after {
 > 参考资料： [《CSS 优化、提高性能的方法有哪些？》](https://www.zhihu.com/question/19886806) [《CSS 优化，提高性能的方法》](https://www.jianshu.com/p/4e673bf24a3b)
 
 **加载性能**：
-（1）css 压缩：将写好的 css 进行打包压缩，可以减少很多的体积。
-（2）css 单一样式：当需要下边距和左边距的时候，很多时候选择 `margin: 10px 0 10px 0;`但`margin-bottom: 10px; margin-left: 10px;`执行的效率更高。
-（3）减少使用 @import，而建议使用 link，因为后者在页面加载时一起加载，前者是等待页面加载完成之后再进行加载。
+
+1. css 压缩：将写好的 css 进行打包压缩，可以减少很多的体积。
+2. css 单一样式：当需要下边距和左边距的时候，很多时候选择 `margin: 10px 0 10px 0;`但`margin-bottom: 10px; margin-left: 10px;`执行的效率更高。
+3. 减少使用 @import，而建议使用 link，因为后者在页面加载时一起加载，前者是等待页面加载完成之后再进行加载。
 
 **选择器性能**：
-（1）关键选择器（keyselector）。选择器的最后面的部分为关键选择器（即用来匹配目标元素的部分）。CSS选择符是从右到左进行匹配的。当使用后代选择器的时候，浏览器会遍历所有子元素来确定是否是指定的元素等等；
-（2）如果规则拥有ID选择器作为其关键选择器，则不要为规则增加标签。
-（3）避免使用通配规则，如*{}计算次数惊人！只对需要用到的元素进行选择。
-（4）尽量少的去对标签进行选择，而是用class。
-（5）尽量少的去使用后代选择器，降低选择器的权重值。后代选择器的开销是最高的，尽量将选择器的深度降到最低，最高不要超过三层，更多的使用类来关联每一个标签元素。
-（6）了解哪些属性是可以通过继承而来的，然后避免对这些属性重复指定规则。
+
+1. 关键选择器（keyselector）。选择器的最后面的部分为关键选择器（即用来匹配目标元素的部分）。CSS选择符是从右到左进行匹配的。当使用后代选择器的时候，浏览器会遍历所有子元素来确定是否是指定的元素等等；
+2. 如果规则拥有ID选择器作为其关键选择器，则不要为规则增加标签。
+3. 避免使用通配规则，如*{}计算次数惊人！只对需要用到的元素进行选择。
+4. 尽量少的去对标签进行选择，而是用class。
+5. 尽量少的去使用后代选择器，降低选择器的权重值。后代选择器的开销是最高的，尽量将选择器的深度降到最低，最高不要超过三层，更多的使用类来关联每一个标签元素。
+6. 了解哪些属性是可以通过继承而来的，然后避免对这些属性重复指定规则。
 
 **渲染性能**：
-（1）慎重使用高性能属性：浮动、定位。
-（2）尽量减少页面重排、重绘。
-（3）去除空规则，空规则的产生原因一般来说是为了预留样式。
-（4）属性值为0时，不加单位。
-（5）属性值为浮动小数0.**，可以省略小数点之前的0。
-（6）标准化各种浏览器前缀：带浏览器前缀的在前。标准属性在后。
-（7）不使用@import前缀，它会影响css的加载速度。
-（8）选择器优化嵌套，尽量避免层级过深。
-（9）css雪碧图，同一页面相近部分的小图标，方便使用，减少页面的请求次数，但是同时图片身会变大，使用时优劣考虑清楚。
-（10）正确使用display的属性，由于display的作用，某些样式组合会无效，徒增样式体积的同时也影响解析性能。
-（11）不滥用web字体。对于中文网站来说WebFonts可能很陌生，国外却很流行。webfonts通体积庞大，而且一些浏览器在下载webfonts时会阻塞页面渲染损伤性能。
+
+1. 慎重使用高性能属性：浮动、定位。
+2. 尽量减少页面重排、重绘。
+3. 去除空规则，空规则的产生原因一般来说是为了预留样式。
+4. 属性值为0时，不加单位。
+5. 属性值为浮动小数0.**，可以省略小数点之前的0。
+6. 标准化各种浏览器前缀：带浏览器前缀的在前。标准属性在后。
+7. 不使用@import前缀，它会影响css的加载速度。
+8. 选择器优化嵌套，尽量避免层级过深。
+9. css雪碧图，同一页面相近部分的小图标，方便使用，减少页面的请求次数，但是同时图片身会变大，使用时优劣考虑清楚。
+10. 正确使用display的属性，由于display的作用，某些样式组合会无效，徒增样式体积的同时也影响解析性能。
+11. 不滥用web字体。对于中文网站来说WebFonts可能很陌生，国外却很流行。webfonts通体积庞大，而且一些浏览器在下载webfonts时会阻塞页面渲染损伤性能。
 
 **可维护性、健壮性**：
-（1）将具有相同属性的样式抽离出来，整合并通过class在页面中进行使用，提高css的可维护性。
-（2）样式与内容分离：将css代码定义到外部css中。
+
+1. 将具有相同属性的样式抽离出来，整合并通过class在页面中进行使用，提高css的可维护性。
+2. 样式与内容分离：将css代码定义到外部css中。
 
 ### 43. 前端换肤
 
@@ -700,8 +686,8 @@ p:after {
 
 ### 1. JS 数据类型
 
-基本数据类型：undefined、null、string、boolean、number、symbol（栈存储）
-引用数据类型：Object, Function, Array, Date, RegExp, String, Boolean, Number等（堆存储-栈中仅存地址指针）
+1. 基本数据类型：undefined、null、string、boolean、number、symbol（栈存储）
+2. 引用数据类型：Object, Function, Array, Date, RegExp, String, Boolean, Number等（堆存储-栈中仅存地址指针）
 
 ### 2. null 和 undefined 的区别
 
@@ -715,9 +701,9 @@ undefined 代表的含义是未定义，null 代表的含义是空对象。一�
 
 ### 4. 数字不同进制的表示方式
 
-二进制 —— 0O、0o、0
-八进制 —— 0B、0b
-十六进制 —— 0X、0x
+1. 二进制 —— 0O、0o、0
+2. 八进制 —— 0B、0b
+3. 十六进制 —— 0X、0x
 
 ### 5. 原型、原型链
 
@@ -914,8 +900,8 @@ ul.addEventListener('click', function (event) {
 
 ### 17. 如何阻止冒泡事件和默认事件
 
-（1）e.stopPropagation()，IE 使用 event.cancelBubble = true
-（2）e.preventDefault()
+1. e.stopPropagation()，IE 使用 event.cancelBubble = true
+2. e.preventDefault()
 
 ### 18. 什么是闭包
 
@@ -1104,8 +1090,8 @@ ele.getElementsByClassName();
 
 ### 30. innerHTML 与 outerHTML 的区别
 
-（1）innerHTML：从对象的起始位置到终止位置的全部内容,不包括Html标签。
-（2）outerHTML: 除了包含innerHTML的全部内容外, 还包含对象标签本身。
+1. innerHTML：从对象的起始位置到终止位置的全部内容,不包括Html标签。
+2. outerHTML: 除了包含innerHTML的全部内容外, 还包含对象标签本身。
 
 ```html
 <!--
@@ -1178,10 +1164,11 @@ function debounce(func, delayTime) {
 
 任务队列可以分为宏任务队列和微任务队列，当前执行栈中的事件执行完毕后，js 引擎首先会判断微任务队列中是否有任务可以执行，如果有就将微任务队首的事件压入栈中执行。当微任务队列中的任务都执行完成后再去判断宏任务队列中的任务。
 
-MacroTask(宏任务)：script(整体代码), setTimeout, setInterval, requestAnimationFrame, I/O
-MicroTask(微任务)：Promise.then(), await之后的代码, process.nextTick, Object.observe, MutationObserver
+1. MacroTask(宏任务)：script(整体代码), setTimeout, setInterval, requestAnimationFrame, I/O
+2. MicroTask(微任务)：Promise.then(), await之后的代码, process.nextTick, Object.observe, MutationObserver
 
 ✍️ async中如果非异步函数，则认为顺序执行，只有await中为异步，后面的代码才进入微任务队列；
+
 ✍️ new Promise 立即执行，then 才分发到微任务；
 
 ### 37. 监听对象属性的改变的方法
@@ -1260,8 +1247,6 @@ scrollLeft 属性返回的是元素滚动条到元素左边的距离。
 ```
 
 ### 44. promise对象？手写Promise？
-
-### 
 
 ```js
 const promise = new Promise(function(resolve, reject) {
@@ -1818,13 +1803,11 @@ function isNull(obj) {
 }
 ```
 
-
-
 ### 其他
 
-（1）NaN 表示 not a number，但是要注意 typeof NaN 为 number，并且 NaN 与自身不相等；
-（2）new Array (x) 只有一个参数的时候表示数组长度，多个参数就是该数组的值
-（3）let 和 const 不存在声明提升，存在暂时性死区，如果在变量声明前使用，会报错
+1. NaN 表示 not a number，但是要注意 typeof NaN 为 number，并且 NaN 与自身不相等；
+2. new Array (x) 只有一个参数的时候表示数组长度，多个参数就是该数组的值
+3. let 和 const 不存在声明提升，存在暂时性死区，如果在变量声明前使用，会报错
 
 
 
@@ -2013,10 +1996,10 @@ URI 用唯一的标识来确定一个资源，它是一种抽象的定义，不�
 
 ### 18. HTTP1.0/HTTP2.0
 
-（1）新的二进制格式（Binary Format），HTTP1.x的解析是基于文本。基于文本协议的格式解析存在天然缺陷，文本的表现形式有多样性，要做到健壮性考虑的场景必然很多，二进制则不同，只认0和1的组合。基于这种考虑HTTP2.0的协议解析决定采用二进制格式，实现方便且健壮。
-（2）多路复用（MultiPlexing），即连接共享，即每一个request都是是用作连接共享机制的。一个request对应一个id，这样一个连接上可以有多个request，每个连接的request可以随机的混杂在一起，接收方可以根据request的 id将request再归属到各自不同的服务端请求里面。HTTP/1.* 一次请求-响应，建立一个连接，用完关闭；每一个请求都要建立一个连接；HTTP/2多个请求可同时在一个连接上并行执行。
-（3）header压缩，如上文中所言，对前面提到过HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP2.0使用encoder来减少需要传输的header大小，通讯双方各自cache一份header fields表，既避免了重复header的传输，又减小了需要传输的大小。
-（4）服务端推送（server push），同 SPDY 一样，HTTP2.0也具有server push功能。
+1. 新的二进制格式（Binary Format），HTTP1.x的解析是基于文本。基于文本协议的格式解析存在天然缺陷，文本的表现形式有多样性，要做到健壮性考虑的场景必然很多，二进制则不同，只认0和1的组合。基于这种考虑HTTP2.0的协议解析决定采用二进制格式，实现方便且健壮。
+2. 多路复用（MultiPlexing），即连接共享，即每一个request都是是用作连接共享机制的。一个request对应一个id，这样一个连接上可以有多个request，每个连接的request可以随机的混杂在一起，接收方可以根据request的 id将request再归属到各自不同的服务端请求里面。HTTP/1.* 一次请求-响应，建立一个连接，用完关闭；每一个请求都要建立一个连接；HTTP/2多个请求可同时在一个连接上并行执行。
+3. header压缩，如上文中所言，对前面提到过HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP2.0使用encoder来减少需要传输的header大小，通讯双方各自cache一份header fields表，既避免了重复header的传输，又减小了需要传输的大小。
+4. 服务端推送（server push），同 SPDY 一样，HTTP2.0也具有server push功能。
 
 ### 15. session 与 JWT(token) 区别
 
