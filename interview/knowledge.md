@@ -128,6 +128,8 @@ const deepCopy = function (obj) {
 * 隐式丢失：call\(\)、apply\(\)、bind\(\)方法。
 * new绑定：一般绑定至new生成的新对象，但是如果构造函数返回一个对象，则绑定至该对象。
 
+✍️ 首先，`new` 的方式优先级最高，接下来是 `bind` 这些函数，然后是 `obj.foo()` 这种调用方式，最后是 `foo` 这种调用方式，同时，箭头函数的 `this` 一旦被绑定，就不会再被任何方式所改变。
+
 2）改变函数内部 this 指针的指向函数？
 
 | 类型  | 调用方式     | 第一个参数           | 其余参数       |
@@ -403,30 +405,103 @@ function debounce(func, delayTime) {
 
 ### 14. 事件循环机制
 
+<img src="./img/event_loop.png" style="zoom:60%;" />
+
 JavaScript 是一门单线程语言，异步操作都是放到事件循环队列里面，每次宏任务执行完毕，先去微任务队列查找是否有微任务，如果有就先完成所有的微任务，如果没有微任务或完成所有微任务则从宏任务队列中继续执行宏任务。
 
-* MacroTask\(宏任务\)：script 整体代码, **setTimeout, setInterval**, requestAnimationFrame, I/O
+* MacroTask\(宏任务\)：script 整体代码, **setTimeout, setInterval**, requestAnimationFrame, I/O, UI rendering
 * MicroTask\(微任务\)：**Promise**, **await之后的代码**, process.nextTick, Object.observe, MutationObserver
 
 ✍️ async中如果非异步函数，则认为顺序执行，只有await中为异步，后面的代码才进入微任务队列
 
-### 15. setTimeout 和 setInterval
+### 15. 定时器函数
 
-1）通过setTimeout来实现setInterval
+常见的定时器函数有 `setTimeout`、`setInterval`、`requestAnimationFrame`。
+
+1）通过 setTimeout 来实现 setInterval
 
 ```javascript
 const newSetInterval = function (func, time) {
-    const newFunc = function(){
-        func();
-        setTimeout(newFunc,time)
-    }
-    setTimeout(newFunc, time)
+  const newFunc = function(){
+    func();
+    setTimeout(newFunc,time)
+  }
+  setTimeout(newFunc, time)
 }
+
+// 添加暂停功能
+const newSetInterval = function (func, time) {
+  const flag = {
+    isStop: false
+  }
+  const newFunc = function () {
+    if (!flag.isStop) {
+      func();
+      setTimeout(newFunc, time)
+    }
+  }
+  setTimeout(newFunc, time)
+  return flag
+}
+const flag = newSetInterval(() => console.log('hello'), 1000)
+setTimeout(() => {flag.isStop = true}, 4000)
+```
+
+2）通过 requestAnimationFrame 来实现 setInterval
+
+```javascript
+const newSetInterval = function (func, time) {
+    let startTime = Date.now()
+    let endTime = startTime
+    const callback = function () {
+        window.requestAnimationFrame(callback)
+        endTime = Date.now()
+        if (endTime - startTime >= time) {
+            startTime = endTime = Date.now()
+            func()
+        }
+    }
+    window.requestAnimationFrame(callback)
+}
+
+// 添加暂停功能
+const newSetInterval = function (func, time) {
+  const flag = {
+    isStop: false
+  }
+  let startTime = Date.now()
+  let endTime = startTime
+  const callback = function () {
+    if (!flag.isStop) {
+      timer = window.requestAnimationFrame(callback)
+      endTime = Date.now()
+      if (endTime - startTime >= time) {
+        startTime = endTime = Date.now()
+        func()
+      }
+    } else {
+      cancelAnimationFrame(timer)
+    }
+  }
+  let timer = window.requestAnimationFrame(callback)
+  return flag
+}
+const flag = newSetInterval(() => console.log('hello'), 1000)
+setTimeout(() => {flag.isStop = true}, 4000)
 ```
 
 ### 16. 正则表达式
 
 ![](./img/RegExp.png)
+
+### 其他
+
+1. 在全局作用域下使用 `let` 和 `const` 声明变量，变量并不会被挂载到 `window` 上。
+
+```javascript
+let a = 3
+console.log(window.a) // undefined
+```
 
 
 
@@ -952,6 +1027,16 @@ BOM\(浏览器对象模型\)的核心是window\(顶层对象\)
 8. 如果CDN节点有资源就返回资源，如果没有资源则CDN节点回源站拉取用户所需资源。
 9. 将回源拉取的资源缓存至节点。
 10. 将用户所需资源返回给用户。
+
+### 5. 进程与线程
+
+区别在于：
+
+1. 进程是系统进行资源（CPU、内存等）分配和调度的基本单位；线程是程序执行的基本单位。
+2. 进程拥有自己的资源空间，没启动一个进程，系统就会为它分配地址空间；而线程与CPU资源分配无关，多个线程共享同一进程内的资源，使用相同的地址空间。
+3. 一个进程可以包含若干个线程。
+
+![](./img/进程线程.png)
 
 
 

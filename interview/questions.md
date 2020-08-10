@@ -1803,6 +1803,42 @@ function isNull(obj) {
 }
 ```
 
+### 61. ['1','2','3'].map(parseInt) 的值
+
+结果：1 NaN NaN。解释：map 的回调函数接受三个参数“当前索引元素，索引，原数组”，而 parseInt 一般我们就传一个参数，其实还有第二个参数，表示解析的进制，因此最终就变成了，如下形式，
+
+1. 第一轮遍历 parseInt('1', 0) -> 1
+2. 第二轮遍历 parseInt('2', 1) -> NaN
+3. 第三轮遍历 parseInt('3', 2) -> NaN
+
+### 62. Generator 函数
+
+```javascript
+function* foo(x) {
+    let y = 2 * (yield (x + 1))
+    let z = yield (y / 3)
+    return (x + y + z)
+}
+
+let it = foo(5)
+console.log(it.next())   // => {value: 6, done: false}
+console.log(it.next(12)) // => {value: 8, done: false}
+console.log(it.next(13)) // => {value: 42, done: true}
+```
+
+✍️ 当执行第一次 next() 时，传参会被忽略，但是后续 next() 中如果有值，则传入的参数等于上一个 `yield` 的返回值，因此 y = 2 *12。
+
+### 63. 浏览器事件循环与 nodejs 的事件循环区别
+
+> 参考资料：[一篇文章教会你Event loop——浏览器和Node](https://segmentfault.com/a/1190000013861128)
+
+1. 浏览器事件循环详见 - [36. JS事件循环机制](#36. JS事件循环机制)
+2. nodejs 的 event loop 分为6个阶段，它们会按照顺序反复运行。
+
+✍️ 不同于浏览器的是，在每个阶段完成后，而不是MacroTask任务完成后，microTask队列就会被执行。
+
+![](./img/node_loop.png)
+
 ### 其他
 
 1. NaN 表示 not a number，但是要注意 typeof NaN 为 number，并且 NaN 与自身不相等；
