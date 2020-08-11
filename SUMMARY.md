@@ -38,7 +38,7 @@
   * [错误监控Sentry](tools/sentry.md)
 * [其他专题](topics/README.md)
   * [单元测试]()
-  * [npm包发布]()
+  * [npm包发布](topics/npm-package.md)
 * [面试相关](interview/README.md)
   * [面试知识总结](interview/knowledge.md)
   * [面试问题总结](interview/questions.md)
