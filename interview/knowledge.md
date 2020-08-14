@@ -27,6 +27,66 @@
 
 ✍️ ES6的继承super实际执行的是 `父类.prototype.constructor.call(this)`
 
+3）静态方法/私有方法/公有方法
+
+构造函数里直接的属性和方法称为**私有**，构造函数里加了this的和原型上的方法和属性称为**公有**，直接在构造函数上的方法和属性称为**静态**，通过对象调用，不需要new。
+
+```javascript
+// ES5
+function User() {
+    // 私有属性
+    const hobby = 'swimming'
+    // 私有方法
+    const sayHi = function () {
+        console.log('Hi')
+    }
+
+    // 公有属性
+    this.name = 'Sherwin'
+    // 公有方法
+    this.getName = function () {
+        console.log(this.name)
+    }
+}
+
+// 静态属性
+User.height = 180
+// 静态方法
+User.getHeight = function () {
+    console.log(User.height)
+}
+```
+
+```javascript
+// ES6
+class User {
+    constructor() {
+        // 公有属性
+        this.name = 'Sherwin'
+        this.age = 24
+    }
+
+    // 公有方法
+    getName() {
+        console.log(this.name)
+    }
+
+    // 静态方法
+    static getAge() {
+        console.log(this.age) // 不能使用公有属性和方法
+    }
+}
+
+// 静态属性
+User.hobby = 'swimming'
+
+const user = new User()
+console.log(user.name) // 实例使用公有属性
+user.getName() // 实例使用公有方法
+console.log(User.hobby) // 类使用静态属性
+User.getAge() // 类使用静态方法
+```
+
 ### 2. 数据类型
 
 1）基本数据类型（6种）+引用对象类型（8种）
