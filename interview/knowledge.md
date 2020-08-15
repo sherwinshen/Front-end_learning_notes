@@ -954,7 +954,6 @@ HTTP 请求由三部分构成，分别为：
 1. 客户端（浏览器）向服务器请求https连接（发送一个随机值以及需要的协议和加密方式）。
 2. 服务器产生一个随机值，以及返回证书（公钥）到客户端。
 3. 验证证书的合法性
-4. 客户端随机的秘钥A（用于对称加密）。
 5. 验证通过客户端再生成一个随机值，并用公钥对随机值进行加密。
 6. 客户端将加密后的密文发送给服务器。
 7. 服务器通过私钥对密文进行解密得到对称加密的秘钥。
@@ -1057,7 +1056,7 @@ BOM\(浏览器对象模型\)的核心是window\(顶层对象\)
 
 **1）CSRF跨站请求伪造**
 
-详见参考资料 - [CSRF]()
+详见参考资料 - [CSRF](../topics/security.md)
 
 防御：
 
@@ -1068,7 +1067,7 @@ BOM\(浏览器对象模型\)的核心是window\(顶层对象\)
 
 **2）XSS跨站脚本攻击**
 
-详见参考资料 - [XSS]()
+详见参考资料 - [XSS](../topics/security.md)
 
 防御：
 
@@ -1149,7 +1148,7 @@ BOM\(浏览器对象模型\)的核心是window\(顶层对象\)
 
 ### 2. 数据双向绑定原理
 
-详见 —— [MVVM原理]()
+详见 —— [MVVM原理](../frameworks/vue/mvvm.md)
 
 ✍️ 单向数据绑定\(vuex\)和双向数据绑定的区别？
 
@@ -1159,11 +1158,11 @@ BOM\(浏览器对象模型\)的核心是window\(顶层对象\)
 
 ### 3. vuex状态管理
 
-详见 —— [Vuex]()
+详见 —— [Vuex](https://github.com/MrEnvision/Front-end_learning_project/tree/master/vuex_tutorial)
 
 ### 4. Vue组件通信
 
-详见 —— [Vue组件通信]()
+详见 —— [Vue组件通信](https://github.com/MrEnvision/Front-end_learning_project)
 
 ### 5. Vue路由
 
