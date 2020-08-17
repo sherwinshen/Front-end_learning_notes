@@ -695,6 +695,7 @@ content box的宽度为content，border-box的宽度为content+padding+border；
 
 * 背景颜色填充的范围是内容、内边距和边框区；边框设置为虚线时可验证； border-box；
 * 背景图片填充默认范围是内容、内边距和边框区；但是！！！设置了no-repeat，其填充的位置是padding与border的边界点\(即不包括border\)，这个时候设置position就要考虑这个填充范围。
+* background-clip 属性规定背景的绘制区域，可选参数 border-box|padding-box|content-box;
 
 3）双边距重叠问题？
 

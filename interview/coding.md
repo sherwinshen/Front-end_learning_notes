@@ -255,9 +255,7 @@ function throttle(func, delayTime) {
                 flag = false
             })
         }
-
     }
-
 }
 ```
 

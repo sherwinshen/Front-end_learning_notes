@@ -49,7 +49,7 @@ function Cat(name) {
 
 为父类实例添加新特性，作为子类实例返回。
 
-```
+```javascript
 function Cat3(name) {
     const cat = new Animal(name);
     cat.age = 18 // 实例添加属性
@@ -95,7 +95,7 @@ Cat.prototype.constructor = Cat5;
 
 ```javascript
 function Cat(name) {
-    Animal.call(this, name);c
+    Animal.call(this, name);
 }
 
 (function () {

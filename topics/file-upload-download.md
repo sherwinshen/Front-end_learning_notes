@@ -338,6 +338,8 @@ a.click();
 
 ✍️ 没有URL则需要创造URL。数据（例如文件流、json等）可以转成 Blob 对象，再通过 URL.createObjectURL(blob) 即可获得 URL。
 
+objectURL = URL.createObjectURL(object); 的 object 表示指定的 [`File`](https://developer.mozilla.org/zh-CN/docs/Web/API/File) 对象、 [`Blob`](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob) 对象或者 [`MediaSource`](https://developer.mozilla.org/zh-CN/docs/Web/API/MediaSource) 对象。
+
 ```javascript
 const blob = new Blob([数据], options: { type: 类型 });
 const url = URL.createObjectURL(blob);

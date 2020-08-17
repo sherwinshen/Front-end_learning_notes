@@ -1867,6 +1867,135 @@ console.log(it.next(13)) // => {value: 42, done: true}
 
 ![](./img/node_loop.png)
 
+### 64. js 实现 sticky 布局
+
+1. 监听滚动事件，计算目标元素距离视口的距离。
+2. 距离不满足条件时，按兵不动。
+3. 距离满足条件时，创建占位元素，修改目标元素定位方式为 `fixed`。
+
+```javascript
+window.addEventListener('scroll', () => {
+    const rect = elem.getBoundingClientRect();
+    // 计算目标元素和视口的距离
+})
+```
+
+### 65. URL 的编码解码
+
+encodeURI方法不会对下列字符编码 ASCII字母 数字 ~!@#$&\*()=:/,;?+'
+
+encodeURIComponent方法不会对下列字符编码 ASCII字母 数字 ~!\*()'
+
+1. 如果只是编码字符串，不和URL有半毛钱关系，那么用escape（目前已不建议使用escape）
+2. 如果你需要编码整个URL，然后需要使用这个URL，那么用encodeURI。
+3. 当你需要编码URL中的参数的时候，那么encodeURIComponent是最好方法。
+
+```javascript
+encodeURI('https://www.demo.com/my blog') // https://www.demo.com/my%20blog
+encodeURIComponent('https://www.demo.com/my blog?name=sherwin') // https%3A%2F%2Fwww.demo.com%2Fmy%20blog%3Fname%3Dsherwin
+```
+
+### 66. 手写Promise.all()
+
+```javascript
+function all(array) {
+    return new Promise((resolve, reject) => {
+        let count = 0
+        array.forEach(item => {
+            item.then(() => {
+                count++
+                if (count === array.length) {
+                    resolve()
+                }
+            }).catch(() => {
+                reject()
+            })
+        })
+    })
+}
+
+const p1 = new Promise(resolve => resolve(1))
+const p2 = new Promise((resolve, reject) => resolve(2))
+const p3 = new Promise(resolve => resolve(3))
+all([p1, p2, p3]).then(() => {
+    console.log('success')
+}).catch(() => {
+    console.log('error')
+})
+```
+
+### 67. JS为什么是单线程的？
+
+因为多线程会导致DOM操作冲突。
+
+### 68. 跨域时怎么带上cookie？
+
+
+
+### 69. 用 JS 实现 sticky 布局
+
+
+
+### 70. 轮播图实现（类似淘宝的首页）
+
+### 71. Object.defineProperty劫持
+
+```javascript
+let a = {
+    age: {
+        x: 12
+    }
+}
+Object.defineProperty(a, 'age', {
+    set: function () {
+        console.log('aaa')
+    }
+})
+
+a.age = 8 // 'aaa'
+a.age.x = 8 // TypeError: Cannot set property 'x' of undefined
+```
+
+也就是说Object.defineProperty劫持的是当前这一层对象，如果需要劫持里面的对象就要再多写一层，可通过递归的方式实现：
+
+```javascript
+let a = {
+    age: {
+        x: 12
+    }
+}
+
+const defineObj = function (obj, key, value) {
+  	if(typeof value === 'object'){
+       observe(value)
+    }
+    Object.defineProperty(obj, key, {
+        set: function (newVal) {
+            console.log(newVal, value)
+        },
+        get: function () {
+            return value
+        }
+    })
+
+}
+
+const observe = function (obj) {
+    if (!obj || typeof obj != 'object') {
+        return
+    }
+    for (let i in obj) {
+        if (obj.hasOwnProperty(i)) {
+            defineObj(obj, i, obj[i]);
+        }
+    }
+}
+
+observe(a)
+a.age.x = 32
+a.age = 'hello'
+```
+
 ### 其他
 
 1. NaN 表示 not a number，但是要注意 typeof NaN 为 number，并且 NaN 与自身不相等；
@@ -2321,4 +2450,10 @@ Webpack 具有四个核心的概念，分别是 Entry（入口）、Output（输
 ### 4. 前端单元测试
 
 > TDD（测试驱动开发）&BDD（行为驱动开发），参考资料： [《浅谈前端单元测试》](https://juejin.im/post/5b2da89cf265da597f1c7cab)
+
+## 七. 情景题
+
+### 1. 用 vue 模拟一个a标签
+
+### 2. 原生写一个弹框（含黑色半透明背景），并且点击弹框外区域则消失
 

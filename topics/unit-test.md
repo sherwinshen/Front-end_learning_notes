@@ -1,7 +1,5 @@
 # 单元测试 - VUE为例
 
-
-
 ## 1. 测试粒度
 
 | 架构层级     | 测试内容                                                     | 测试策略                                                     |
@@ -94,7 +92,7 @@ console.log(returnsTrue()) // true;
 
 **Spy** 
 
-> 用于监听模块行为、
+> 用于监听模块行为
 
 ```js
 const video = require('./video')
