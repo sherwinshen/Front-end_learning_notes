@@ -1151,7 +1151,7 @@ ele.getElementsByClassName();
 this === window ? 'browser' : 'node'
 ```
 
-### 34. 节流与防抖
+### 34. 节流与防抖（高频发送请求如何解决）
 
 > 参考资料： [《轻松理解 JS 函数节流和函数防抖》](https://juejin.im/post/5a35ed25f265da431d3cc1b1) [《JavaScript 事件节流和事件防抖》](https://juejin.im/post/5aa60b0e518825556b6c6d1a) [《JS 的防抖与节流》](https://juejin.im/entry/5b1d2d54f265da6e2545bfa4)
 
@@ -1930,13 +1930,70 @@ all([p1, p2, p3]).then(() => {
 
 ### 68. 跨域时怎么带上cookie？
 
-
+```javascript
+// 前端操作
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+// 后端 Access-Control-Allow-Credentials 设置为 true，并且后端不能把 Access-Control-Allow-Origin 设置为 *，需要设置具体的内容。
+```
 
 ### 69. 用 JS 实现 sticky 布局
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            height: 500px;
+            background-color: blue;
+        }
 
+        .box2 {
+            width: 100vw;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        .box3 {
+            height: 900px;
+            margin-top: 600px;
+            background-color: red;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 100px;
+        }
+    </style>
+</head>
+<body style="height: 3000px">
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<script>
+    const box2 = document.getElementsByClassName('box2')[0]
+    const offsetTop = box2.offsetTop
+    window.addEventListener('scroll', () => {
+        console.log(document.body.scrollTop)
+        if (offsetTop - 100 < document.documentElement.scrollTop) {
+            box2.classList.add('fixed')
+        } else {
+            box2.classList.remove('fixed')
+        }
+    })
+</script>
+</body>
+</html>
+```
 
 ### 70. 轮播图实现（类似淘宝的首页）
+
+参考资料：[轮播图](https://juejin.im/post/6844903939159277576) [原生JavaScript实现无缝轮播效果](https://juejin.im/post/6844904087637458958)
+
+详见[轮播图实现](https://github.com/MrEnvision/Front-end_learning_project/tree/master/demo_summary/轮播图)
 
 ### 71. Object.defineProperty劫持
 
@@ -2396,6 +2453,12 @@ export defult {
 }
 ```
 
+### 9. Vue2.0 与 Vue3.0 的区别？
+
+1. 数据监听：object.defineProperty 与 Proxy
+2. 目录结构更新
+3. 配置项统一写在vue.config.js上
+4. Composition API 写在统一  setup() 函数中，声明对象和基础数据使用的是不同方式
 
 ## 六. 其他
 
