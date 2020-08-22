@@ -10,7 +10,7 @@ http默认采用80作为通讯端口，对于传输采用不加密的方式，ht
 
 ![](./img/httpscrypt.png)
 
-1. `Client`发送`Client Hello`报文给`Server`开启`SSL`通信，报文中包含`Random_1`
+1. `Client`发送`Client Hello`报文给`Server`开启`SSL`通信，报文中包含`Random_1`和客户端支持的加密算法
 2. 服务器支持`SSL`通信的话，发送`Server Hello`报文回应，报文中包含`Random_2`
 3. 服务器之后发送`Certificate`报文，报文中包含数字证书
 4. 服务器再发送`Server Hello Done`通知`Client`，最初的`SSL`握手阶段协商部分结束

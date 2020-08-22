@@ -45,6 +45,8 @@ const myCars = new Array("Saab","Volvo","BMW");
 
 ✍️ ES5 对空位处理各不相同，如忽略跳过等，但 ES6 进行了统一，明确将空位转为 undefined。
 
+✍️ 注意 indexOf 直接传入要查找的元素即可，findIndex 需要传入一个判断函数，不要搞混了。
+
 ✍️ 数组实例的 entries()，keys() 和 values()
 
 ```javascript

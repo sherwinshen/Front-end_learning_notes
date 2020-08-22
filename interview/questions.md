@@ -152,7 +152,18 @@ meta 标签提供关于 HTML 文档的元数据，元数据将服务于浏览器
 
 如果用户当前访问的页面是通过 HTTPS 协议来浏览的，那么网页中的资源也只能通过 HTTPS 协议来引用，否则浏览器会出现警告信息，因此不如省略 URL 的协议声明，无论是使用 HTTPS，还是 HTTP 访问页面，浏览器都会以相同的协议请求页面中的资源。
 
+### 16. base64 的缺点？
 
+base64 内容编码后的体积会变大，编码和解码需要额外的工作量可能会变慢影响体验，另外base64（这是字符串）无法利用浏览器缓存机制。
+
+### 17. 事件DOMContentLoaded和load的区别
+
+- DOMContentLoaded：仅当DOM加载完成，不包括其他。
+- load：页面上所有的DOM，样式表，脚本，图片都已经加载完成了。
+
+### 18. 单页面与多页面的区别
+
+![](./img/单页面_多页面.png)
 
 ## 二. CSS
 
@@ -2113,13 +2124,20 @@ cookie、localstorage 、sessionstorage 和 indexDB（大规模数据存储）�
 
 -  localStorage：存储持久数据，浏览器关闭后数据不丢失除非主动删除数据。
 -  sessionStorage：数据在页面会话结束时会被清除。页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话。在新标签或窗口打开一个页面时会在顶级浏览上下文中初始化一个新的会话。
--  cookie：设置的 cookie 过期时间之前一直有效，即使窗口或浏览器关闭。
+-  cookie：设置的 cookie 过期时间之前一直有效，即使窗口或浏览器关闭，通过expires/Max-Age来设置过期时间，两者区别是一个绝对一个相对，max-age优先。
 
 3. 作用域：
 
 - sessionStorage：只在同源的同窗口（或标签页）中共享数据，也就是只在当前会话中共享。
 - localStorage：在所有同源窗口中都是共享的。
 - cookie：在所有同源窗口中都是共享的。
+
+　✍️ 应用场景：
+
+- cookie：用户登录，保存上次登录的其他信息
+- localStoragese：常用于长期登录（+判断用户是否已登录）
+- sessionStorage：敏感账号一次性登录
+- 
 
 ### 6. 如何在浏览器多个标签页内通信？
 
@@ -2251,7 +2269,7 @@ URI 用唯一的标识来确定一个资源，它是一种抽象的定义，不�
 3. header压缩，如上文中所言，对前面提到过HTTP1.x的header带有大量信息，而且每次都要重复发送，HTTP2.0使用encoder来减少需要传输的header大小，通讯双方各自cache一份header fields表，既避免了重复header的传输，又减小了需要传输的大小。
 4. 服务端推送（server push），同 SPDY 一样，HTTP2.0也具有server push功能。
 
-### 15. session 与 JWT(token) 区别
+### 19. session 与 JWT(token) 区别
 
 <img src="./img/session.png" style="zoom:75%;" />
 
@@ -2274,7 +2292,7 @@ token：
 
 ✍️ 主要区别就是用户的状态保存的位置不同，session 是保存在服务端的且通过 cookie 发送至服务器，而 jwt 是保存在客户端的且通过请求头发送至服务器。
 
-### 16. TCP三次握手 / 四次挥手
+### 20. TCP三次握手 / 四次挥手
 
 ![](./img/TCP三次握手.png)
 
@@ -2289,24 +2307,6 @@ token：
 ✍️ 为什么客户端最后还要等待2MSL？
 
 保证客户端发送的最后一个ACK报文能够到达服务器，因为这个ACK报文可能丢失，站在服务器的角度看来，我已经发送了FIN+ACK报文请求断开了，客户端还没有给我回应，应该是我发送的请求断开报文它没有收到，于是服务器又会重新发送一次，而客户端就能在这个2MSL时间段内收到这个重传的报文，接着给出回应报文，并且会重启2MSL计时器。
-
-### 17. 什么是正向代理和反向代理
-
-1. 正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁。
-2. 反向代理隐藏了真实的服务端，当我们请求一个网站的时候，背后可能有成千上万台服务器为我们服务，但具体是哪一台，我们不知道，也不需要知道，我们只需要知道反向代理服务器是谁就好了，反向代理服务器会帮我们把请求转发到真实的服务器那里去。
-
-### 18. 负载均衡的方法
-
-1. 反向代理。用户请求都发送到反向代理服务上，然后由反向代理服务器来转发请求到真实服务器上，以实现集群的负载平衡。
-2. DNS。 一个域名可能会对应多个服务器地址。当用户向网站域名请求的时候，DNS 服务器返回这个域名所对应的服务器 IP 地址的集合，但在每个回答中，会循环这些 IP 地址的顺序，用户一般会选择排在前面的地址发送请求。
-
-### 19. service worker
-
-service worker 是一个服务器与浏览器之间的中间人角色，如果网站中注册了 service worker 那么它可以拦截当前网站所有的请求，进行判断（需要编写相应的判断程序），如果需要向服务器发起请求的就转给服务器，如果可以直接使用缓存的就直接返回缓存不再转给服务器。从而大大提高浏览体验。
-
-### 20. 为什么操作 DOM 开销很大？
-
-因为 DOM 是属于渲染引擎中的东西，而 JS 又是 JS 引擎中的东西。当我们通过 JS 操作 DOM 的时候，其实这个操作涉及到了两个线程之间的通信，那么势必会带来一些性能上的损耗。操作 DOM 次数一多，也就等同于一直在进行线程之间的通信，并且操作 DOM 可能还会带来重绘回流的情况，所以也就导致了性能上的问题。
 
 ### 21. 插入几万个 DOM，如何实现页面不卡顿？
 
@@ -2341,6 +2341,49 @@ service worker 是一个服务器与浏览器之间的中间人角色，如果�
 - TCP 一对一；UDP 一对一、一对多、多对多
 - TCP 首部 40 字节；UDP 首部 8 字节
 - TCP 可靠；UDP 不保证可靠，适用于实时性比较高的场景，例如直播等
+
+### 25. URL的组成
+
+http://www.fordays.com:8080/api/demo/?data=hello&name=shen#5
+
+- 协议（http）
+- 域名（www.fordays.com）
+- 端口（8080）
+- 路径（/api/demo/）
+- 参数（?data=hello&name=shen）
+- 锚点（#5）
+
+### 26. 什么是正向代理和反向代理
+
+1. 正向代理的过程，它隐藏了真实的请求客户端，服务端不知道真实的客户端是谁。
+2. 反向代理隐藏了真实的服务端，当我们请求一个网站的时候，背后可能有成千上万台服务器为我们服务，但具体是哪一台，我们不知道，也不需要知道，我们只需要知道反向代理服务器是谁就好了，反向代理服务器会帮我们把请求转发到真实的服务器那里去。
+
+### 27. 负载均衡的方法
+
+1. 反向代理。用户请求都发送到反向代理服务上，然后由反向代理服务器来转发请求到真实服务器上，以实现集群的负载平衡。
+2. DNS。 一个域名可能会对应多个服务器地址。当用户向网站域名请求的时候，DNS 服务器返回这个域名所对应的服务器 IP 地址的集合，但在每个回答中，会循环这些 IP 地址的顺序，用户一般会选择排在前面的地址发送请求。
+
+### 28. service worker
+
+service worker 是一个服务器与浏览器之间的中间人角色，如果网站中注册了 service worker 那么它可以拦截当前网站所有的请求，进行判断（需要编写相应的判断程序），如果需要向服务器发起请求的就转给服务器，如果可以直接使用缓存的就直接返回缓存不再转给服务器。从而大大提高浏览体验。
+
+### 29. 为什么操作 DOM 开销很大？
+
+因为 DOM 是属于渲染引擎中的东西，而 JS 又是 JS 引擎中的东西。当我们通过 JS 操作 DOM 的时候，其实这个操作涉及到了两个线程之间的通信，那么势必会带来一些性能上的损耗。操作 DOM 次数一多，也就等同于一直在进行线程之间的通信，并且操作 DOM 可能还会带来重绘回流的情况，所以也就导致了性能上的问题。
+
+### 30. localStorage容量超过5M怎么办？
+
+localStorage最大容量5M的意思是每一个域名下的localStorage容量是5M，假如现在a.com域名下localstorage存不下了，我们可以使用iframe创建b.com域框架（子页面）用于存储a.com剩下的数据。然后使用postMessage读写数据。
+
+### 31. form 表单提交允许跨域吗？为什么？
+
+单纯 form 表单提交允许跨域，区别于ajax不允许跨域在于原页面用 form 提交到另一个域名之后，原页面的脚本无法获取新页面中的内容，所以浏览器认为这是安全的，而 ajax是可以读取响应内容的，因此浏览器不能允许你这样做。
+
+### 32. Web Socket、Web Worker和Service Worker
+
+1. **service worker**：一个服务器与浏览器之间的中间人角色，如果网站中注册了service worker那么它可以拦截当前网站所有的请求，进行判断（需要编写相应的判断程序），如果需要向服务器发起请求的就转给服务器，如果可以直接使用缓存的就直接返回缓存不再转给服务器。从而大大提高浏览体验。
+2. **Web Worker**：JavaScript是单线程的，但是碰到一些计算密集型或者高延迟的任务时，会影响整个页面的运行。Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行。在主线程运行的同时，Worker 线程在后台运行，两者互不干扰。等到 Worker 线程完成计算任务，再把结果返回给主线程。
+3. **web socket**：HTML5 开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。WebSocket 使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。
 
 ## 五. Vue框架
 
@@ -2460,6 +2503,72 @@ export defult {
 3. 配置项统一写在vue.config.js上
 4. Composition API 写在统一  setup() 函数中，声明对象和基础数据使用的是不同方式
 
+### 10. 单向数据流
+
+<img src="./img/单向数据流.png" style="zoom:30%;" />
+
+基础的单向数据流即访问 view 使其发出 action，action 对相应的 state 进行更改，state 更新会触发 view 的更新。
+
+<img src="./img/vuex单向数据流.png" style="zoom:80%;" />
+
+在 vuex 中，组件 dispatch actions，action commit mutations，mutations mutate state，state 更新触发组件更新。
+
+### 11. 讲讲Vuex
+
+```javascript
+// 存储
+const store = new Vuex.store({
+  state: {
+    count: 0
+  },
+  getter: {
+    nowCount(state){
+      return `当前数量${state.count}`
+    }
+  },
+  actions: {
+    increment (context) {
+      context.commit('addCount', 5)
+    }
+  },
+  mutations: {
+    addCount(state, n){
+      state.count += n
+    }
+  }
+})
+
+// 使用 - 单独
+this.$store.state.count
+this.$store.dispach('increment')
+this.$store.commit('addCount', 5)
+this.$store.getters.nowCount
+
+// 使用 - map
+computed: {
+  ...mapState({
+    count: state => state.count // this.count 就是 this.$store.state
+  }),
+  ...mapState([
+    'nowCount'
+  ])
+}
+
+methods: {
+  ...mapActions([
+    'addFun' // 可以将 this.addFun 映射为 this.$store.dispatch('addFun')
+  ]),
+  ...mapMutations([
+    'addFun' // 可以将 this.addFun 映射为this.$store.commit('addFun')
+  ])
+}
+
+// 上述如果需要重命名则不能用数组的形式，用对像即可，举例：
+...mapActions({
+  addOne: 'addFun' // 可以使用 this.addOne() 映射到 this.$store.dispatch('addFun')
+})
+```
+
 ## 六. 其他
 
 ### 1. 前端优化？
@@ -2520,3 +2629,6 @@ Webpack 具有四个核心的概念，分别是 Entry（入口）、Output（输
 
 ### 2. 原生写一个弹框（含黑色半透明背景），并且点击弹框外区域则消失
 
+### 3. 登录注册的流程
+
+### 4. 自己封装v-model

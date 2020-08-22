@@ -78,6 +78,53 @@ target.getName() // 港版插头 适配器转二脚插头
 
 通过一对一或者一对多的依赖关系，当对象发生改变时，订阅方都会收到通知。比如我们点击一个按钮触发了点击事件就是使用了该模式，VUE的响应式也是使用了发布-订阅模式。
 
+```javascript
+class Event {
+    constructor() {
+        this.obj = {}
+    }
+
+    // 订阅
+    on(eventType, func) {
+        if (!this.obj[eventType]) {
+            this.obj[eventType] = []
+        }
+        this.obj[eventType].push(func)
+    }
+
+    // 触发
+    trigger(eventType) {
+        if (!this.obj[eventType]) return false
+        const args = Array.from(arguments).slice(1)
+        this.obj[eventType].forEach(item => {
+            item(...args)
+        })
+    }
+
+    // 取消订阅
+    remove(eventType, func) {
+        if (!this.obj[eventType]) return false
+        const index = this.obj[eventType].indexOf(func)
+        if (index !== -1) {
+            this.obj[eventType].splice(index, 1)
+        }
+    }
+}
+
+const event = new Event()
+const func1 = name => console.log(name, '房源1--80平--200万')
+const func2 = name => console.log(name, '房源2--80平--300万')
+const func3 = name => console.log(name, '房源3--100平--900万')
+
+event.on('80平', func1)
+event.on('80平', func2)
+event.on('100平', func3)
+event.trigger('80平', 'Shen')
+event.trigger('100平', 'Wei')
+event.remove('80平', func1)
+event.trigger('80平', 'Sherwin')
+```
+
 ## 外观模式
 
 外观模式提供了一个接口，隐藏了内部的逻辑，更加方便外部调用。
