@@ -75,7 +75,7 @@ XSS ( Cross Site Scripting ) 是指恶意攻击者利用网站没有对用户提
 - 在请求地址中添加 token 并验证；
 - 在 HTTP 头中自定义属性并验证；
 - 不让第三方网站访问到用户 Cookie等
-- cookie设置sameSite
+- cookie 设置 sameSite
 
 ✍️ sameSite 用来防止 CSRF 攻击和用户追踪，主要由三个值，其中 Strict 最为严格，完全禁止第三方 Cookie，跨站点时，任何情况下都不会发送 Cookie。换言之，只有当前网页的 URL 与请求目标一致，才会带上 Cookie。Lax 属性值稍稍放宽，大多数情况也是不发送第三方 Cookie，但是导航到目标网址的 Get 请求除外。
 

@@ -220,6 +220,39 @@ function selectSort(array) {
 
 ✍️  按位异或常用于一个数组除了某个元素只出现一次以外，其余每个元素均出现两次的那个唯一元素，所有数据异或即可。
 
+### 1.9 全排列
+
+```javascript
+function permutate(str) {
+    let ans = [];
+    let newStr = str.split('');
+    let length = newStr.length;
+    newStr.sort();
+    const swap = function (arr, i, j) {
+        let temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+    }
+    const perm = function (array, depth) {
+        if (depth === length) {
+            ans.push(array.join())
+        } else {
+            perm(array, depth + 1)
+            for (let i = depth + 1; i < array.length; i++) {
+                if (array[i] !== array[depth]) { // 去重
+                    let newArr = [...array]
+                    swap(newArr, depth, i)
+                    perm(newArr, depth + 1)
+                }
+
+            }
+        }
+    }
+    perm(newStr, 0)
+    return ans
+}
+```
+
 
 
 ## 二. JS相关
@@ -310,3 +343,38 @@ Function.prototype.myBind = function () {
     }
 };
 ```
+
+### 1.6 手写 Promise
+
+```javascript
+function myPromise(fn) {
+    const that = this
+    that.state = 'PENDING'
+    this.value = null
+    that.resolvedCallbacks = []
+    that.rejectedCallbacks = []
+
+    function resolve(value) {
+        if (that.state === 'PENDING') {
+            that.state = 'RESOLVED'
+            that.value = value
+            that.resolvedCallbacks.map(cb => cb(that.value))
+        }
+    }
+
+    function reject(value) {
+        if (that.state === 'PENDING') {
+            that.state = 'REJECTED'
+            that.value = value
+            that.rejectedCallbacks.map(cb => cb(that.value))
+        }
+    }
+
+    try {
+        fn(resolve, reject)
+    } catch (e) {
+        reject(e)
+    }
+}
+```
+

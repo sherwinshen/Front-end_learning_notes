@@ -46,7 +46,7 @@ document.location.replace('http://www.example.com'); // 跳转到新的网址,�
 window.location.reload(true); // 向服务器重新请求当前网址
 ```
 
-## 2、URL 对象
+## 2. URL 对象
 
 url的合法对象分为：
 
