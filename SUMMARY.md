@@ -64,6 +64,7 @@
   * [React框架](frameworks/react/README.md)
     * [React基础知识](frameworks/react/react-basic.md)
     * [React生命周期](frameworks/react/react-lifeCycle.md)
+    * [Redux指南](frameworks/react/redux.md)
 * [服务器/网络相关](network/README.md)
   * [Http协议](network/http.md)
   * [Http2.0](network/http2.0.md)
