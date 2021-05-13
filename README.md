@@ -1,6 +1,5 @@
 ---
-description: "欢迎来到小沈的前端学习博客，参观由此开始\U0001F9D0"
+description: "Welcome to my world! \U0001F973 Are you ready? \U0001F64B‍♂️ Let's start! \U0001F4AB"
 ---
 
-# 首页
-
+# 👋 Welcome
