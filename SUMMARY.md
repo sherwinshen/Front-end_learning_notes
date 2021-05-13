@@ -67,7 +67,7 @@
 * [面试常见编程](interview-coding.md)
 * [面试资源汇总](interview-resources.md)
 
-## 🍭其他 <a id="others"></a>
+## 🍭 其他 <a id="others"></a>
 
 ---
 
