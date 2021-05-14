@@ -103,6 +103,35 @@ area 的 coords 定义可点击区域（对鼠标敏感的区域）的坐标：
 <input id="choose" name="i_like" required minlength="6" maxlength="6">
 ```
 
+## 元标签
+
+meta 标签提供关于 HTML 文档的元数据，元数据将服务于浏览器（如何布局或重载页面），搜索引擎 SEO 和其它网络服务等，主要分为两种：
+
+```markup
+＜meta http-equiv="参数" content="参数变量值"＞
+
+1、用于设定网页字符集，便于浏览器解析与渲染页面
+<meta http-equiv="content-Type" content="text/html;charset=utf-8">
+2、指导浏览器如何缓存某个响应以及缓存多长时间。
+<meta http-equiv="cache-control" content="no-cache">
+3、用于设定网页的到期时间，过期后网页必须到服务器上重新传输。
+<meta http-equiv="expires" content="Sunday 10 October 2020 01:00 GMT">
+4、设定cookie
+<meta http-equiv="Set-Cookie" content="User=Lxxyx; path=/; expires=10-Jan-16 10:00:00 GMT">
+5、网页将在设定的时间内，自动跳转设定的网址。
+<meta http-equiv="refresh" content="30;URL=http://www.fourdays.com">
+```
+
+```markup
+＜meta name="参数" content="具体的参数值"＞
+
+1、告诉搜索引擎网页的信息：keywords-关键字；author-作者；description-描述；copyright-版权信息；关键词可以提高搜索命中率，description设置了什么则百度搜索结果就能够显示这些语句
+<meta name="keywords" content="硕士生，前端">
+
+2、视图窗口的设置信息
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}

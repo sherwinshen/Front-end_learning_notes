@@ -29,13 +29,13 @@
 
 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。
 
-* **head 区域的元素**：[meta](https://sherwinshen.gitbook.io/front-end-blog/html/html-advanced#yuan-biao-qian)，title，style，link，script，base 等；
-* **body 区域的元素**：详见下面 [HTML标签](https://sherwinshen.gitbook.io/front-end-blog/html/html-basic#biao-qian-yu-yi)。
+* **head 区域的元素**：[meta](html-advanced.md#yuan-biao-qian)，title，style，link，script，base 等；
+* **body 区域的元素**：详见下面的 HTML标签
 
 ## HTML 标签
 
 {% hint style="info" %}
-具体详见[参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)。
+具体详见 [W3school参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
 {% endhint %}
 
 第一种分类：
@@ -413,7 +413,7 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
 基础组件
 
 {% hint style="info" %}
-完整表单组件详见[参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)。
+完整表单组件详见 [W3school参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
 {% endhint %}
 
 ```markup

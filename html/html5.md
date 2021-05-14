@@ -116,7 +116,7 @@ H5 可以直接在标签里添加自定义属性，但必须以 `data-` 开头�
 ## 地理定位
 
 {% hint style="info" %}
-详见[说明文档](https://www.w3school.com.cn/html/html5_geolocation.asp)
+详见 [W3school 基础教程](https://www.w3school.com.cn/html/html5_geolocation.asp)
 {% endhint %}
 
 ## Web 存储/缓存
