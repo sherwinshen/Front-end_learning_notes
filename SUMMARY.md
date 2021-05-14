@@ -57,7 +57,7 @@
 * [代码规范](coding-guide.md)
 * [网络安全](web-security.md)
 * [性能优化](optimization.md)
-* [算法编程](algorithm.md)
+* [算法编程](https://github.com/MrEnvision/LeetCode_JS)
 * [数据可视化](data-visualization.md)
 
 ## 🧑‍💻 面试相关 <a id="interview"></a>
