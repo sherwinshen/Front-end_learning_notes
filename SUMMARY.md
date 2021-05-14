@@ -28,8 +28,10 @@
 
 ---
 
-* [Vue.js](vue.md)
-* [React.js](react.md)
+* [Vue.js](vue/README.md)
+  * [基础知识](vue/vue-basic.md)
+* [React.js](react/README.md)
+  * [基础知识](react/react-basic.md)
 
 ## 📦 计算机基础/后端 <a id="network"></a>
 
@@ -49,7 +51,7 @@
 * [构建工具-Webpack](webpack.md)
 * [错误监控工具-Sentry](sentry.md)
 * [单元测试工具-Jest](jest.md)
-* [包管理工具-npm](npm.md)
+* [包管理工具-NPM](npm.md)
 
 ## 🤔 专题内容 <a id="topics"></a>
 
