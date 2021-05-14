@@ -20,7 +20,8 @@
   * [标准对象](javascript/js-objects.md)
   * [JS专题](javascript/js-objects-1.md)
 * [浏览器](browser.md)
-* [综合内容](synthesis.md)
+* [综合内容](synthesis/README.md)
+  * [Web存储/缓存](synthesis/web-cache.md)
 
 ## 🏗 前端框架 <a id="frontend-framework"></a>
 
