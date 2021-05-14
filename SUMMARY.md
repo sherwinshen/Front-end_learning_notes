@@ -19,9 +19,10 @@
   * [进阶知识](javascript/js-advanced.md)
   * [标准对象](javascript/js-objects.md)
   * [JS专题](javascript/js-objects-1.md)
-* [浏览器](browser.md)
-* [综合内容](synthesis/README.md)
-  * [Web存储/缓存](synthesis/web-cache.md)
+* [浏览器](browser/README.md)
+  * [Web缓存](browser/web-cache.md)
+  * [本地存储](browser/storage.md)
+* [综合内容](synthesis.md)
 
 ## 🏗 前端框架 <a id="frontend-framework"></a>
 

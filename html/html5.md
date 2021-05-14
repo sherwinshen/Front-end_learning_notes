@@ -119,9 +119,42 @@ H5 可以直接在标签里添加自定义属性，但必须以 `data-` 开头�
 详见 [W3school 基础教程](https://www.w3school.com.cn/html/html5_geolocation.asp)
 {% endhint %}
 
-## Web 存储/缓存
+## H5 应用缓存
 
-{% page-ref page="../synthesis/web-cache.md" %}
+通过创建 cache manifest 文件，可轻松创建 web 应用的离线版本。
+
+```markup
+<!DOCTYPE HTML>
+<html manifest="demo.appcache">
+...
+</html>
+```
+
+```markup
+CACHE MANIFEST
+
+# 要缓存的文件
+CACHE:
+/theme.css
+/logo.gif
+/main.js
+
+# 指定必须联网才能访问的文件
+NETWORK:
+login.asp
+
+# 当前页面无法访问是回退的页面
+FALLBACK:
+404.html
+```
+
+* CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存
+* NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存
+* FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）
+
+## 本地存储
+
+{% page-ref page="../browser/storage.md" %}
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

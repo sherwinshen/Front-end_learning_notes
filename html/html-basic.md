@@ -165,8 +165,8 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 <a href="mailto:邮件地址?cc=抄送地址1&bcc=暗抄送地址&subject=主题&body=主体">Send mail with cc, bcc, subject and body</a>
 ```
 
-{% hint style="info" %}
-补充知识点：
+{% hint style="success" %}
+知识点：
 
 * href 用于在当前文档和引用资源之间确立联系
   * &lt;a href="url"&gt;&lt;/a&gt;
