@@ -22,7 +22,9 @@
 * [浏览器](browser/README.md)
   * [Web缓存](browser/web-cache.md)
   * [本地存储](browser/storage.md)
-* [综合内容](synthesis.md)
+* [综合内容](synthesis/README.md)
+  * [登录鉴权](synthesis/login.md)
+  * [前端跨域](synthesis/cross-domain.md)
 
 ## 🏗 前端框架 <a id="frontend-framework"></a>
 

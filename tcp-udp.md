@@ -8,7 +8,7 @@
 
 ### 1.1 三次握手
 
-![](.gitbook/assets/thr-handshake.png)
+![](.gitbook/assets/tcp-san-ci-wo-shou-.png)
 
 第一次握手
 
@@ -33,7 +33,7 @@
 
 ### 1.2 四次挥手
 
-![](.gitbook/assets/quarticbye.png)
+![](.gitbook/assets/tcp-si-ci-hui-shou-.png)
 
 第一次挥手
 
@@ -124,8 +124,8 @@
 
 快速重传一般和快恢复一起出现。一旦接收端收到的报文出现失序的情况，接收端只会回复最后一个顺序正确的报文序号（没有 Sack 的情况下）。如果收到三个重复的 ACK，无需等待定时器超时再重发而是启动快速重传。具体算法分为两种：
 
-* **RTT**\(Round Trip Time\) —— 一个连接的往返时间，即数据发送时刻到接收到确认的时刻的差值。
-* **RTO**\(Retransmission Time Out\) —— 重传超时时间，即从数据发送时刻算起，超过这个时间便执行重传。
+* **RTT**\(Round Trip Time\) ：一个连接的往返时间，即数据发送时刻到接收到确认的时刻的差值。
+* **RTO**\(Retransmission Time Out\) ：重传超时时间，即从数据发送时刻算起，超过这个时间便执行重传。
 
 ## 2. UDP
 
