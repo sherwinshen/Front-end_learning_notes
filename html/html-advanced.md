@@ -1,6 +1,6 @@
 # 进阶知识
 
-## 图片自适应
+## 1. 图片自适应
 
 问题1：艺术方向问题，即当网站在狭窄的屏幕上观看时，显示一幅图片的包含了重要细节的裁剪版本
 
@@ -50,7 +50,7 @@
 />
 ```
 
-## URL地址
+## 2. URL地址
 
  scheme://host.domain:port/path/filename
 
@@ -65,7 +65,7 @@
 
 ![](../.gitbook/assets/scheme.png)
 
-## 图像区域映射
+## 3. 图像区域映射
 
 `<map>` 标签定义一个客户端图像映射 - 图像映射（image-map）指带有可点击区域的一幅图像。area 元素永远嵌套在 map 元素内部。area 元素可定义图像映射中的区域。建议：同时向 `<map>` 添加 id 和 name 属性。
 
@@ -85,7 +85,7 @@ area 的 coords 定义可点击区域（对鼠标敏感的区域）的坐标：
 * 多边形：shape="polygon"，coords="x1,y1,x2,y2,x3,y3,..." —— 每一对 "x,y" 坐标都定义了多边形的一个顶点；
 * 矩形：shape="rectangle"，coords="x1,y1,x2,y2" —— 两个对角顶点。
 
-## 表单验证
+## 4. 表单验证
 
 主要分为两种形式：
 
@@ -103,7 +103,7 @@ area 的 coords 定义可点击区域（对鼠标敏感的区域）的坐标：
 <input id="choose" name="i_like" required minlength="6" maxlength="6">
 ```
 
-## 元标签
+## 5. 元标签
 
 meta 标签提供关于 HTML 文档的元数据，元数据将服务于浏览器（如何布局或重载页面），搜索引擎 SEO 和其它网络服务等，主要分为两种：
 

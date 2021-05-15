@@ -2,7 +2,7 @@
 
 > HTML（HyperText Markup Language）：超文本标记语言，从**语义**角度描述页面的**结构**。
 
-## 基础结构
+## 1. 基础结构
 
 ```markup
 <!-- 文档声明头 -->
@@ -32,7 +32,7 @@ html 的常见元素主要分为两类：head 区域的元素、body 区域的�
 * **head 区域的元素**：[meta](html-advanced.md#yuan-biao-qian)，title，style，link，script，base 等；
 * **body 区域的元素**：详见下面的 HTML标签
 
-## HTML 标签
+## 2. HTML 标签
 
 {% hint style="info" %}
 具体详见 [W3school参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
@@ -54,7 +54,7 @@ html 的常见元素主要分为两类：head 区域的元素、body 区域的�
 | 块级元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。 | 行内元素的宽度就是它包含的文字或图片的宽度，不可改变。 |
 | 块级元素的高度、宽度、行高以及顶和底边距都可设置。 | 内联元素的高度、宽度及顶部和底部边距不可设置。 |
 
-### 排版标签
+### 2.1 排版标签
 
 {% hint style="info" %}
 div 是最常见的元素，大多数场景下都可以用div，这也导致 div 的语义并不是很明确，因此除了 div+css 布局之外，H5 中引入了更加明确语义的标签页面布局，例如 header、footer、nav、section 等，具体详见 [HTML5](html5.md)。
@@ -119,7 +119,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
  <cite></cite>
 ```
 
-### 超链接
+### 2.2 超链接
 
 `<a>`标签属性：
 
@@ -176,7 +176,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
   * &lt;script src="url"&gt;&lt;/script&gt;
 {% endhint %}
 
-### 图片标签
+### 2.3 图片标签
 
 ```markup
 <!-- src为图片地址，alt为图片未显示时的替换文本, title为鼠标悬停时出现的文本 -->
@@ -216,7 +216,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 </map>
 ```
 
-### 列表标签
+### 2.4 列表标签
 
 无序列表
 
@@ -268,7 +268,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 
 ![](../.gitbook/assets/ding-yi-lie-biao-2.png)
 
-### 表格标签
+### 2.5 表格标签
 
 基本结构
 
@@ -330,7 +330,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 
 ![](../.gitbook/assets/table.png)
 
-### 框架标签
+### 2.6 框架标签
 
 在网页内显示网页：
 
@@ -347,7 +347,7 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
 
 ![](../.gitbook/assets/iframe.gif)
 
-### 表单标签
+### 2.7 表单标签
 
 表单标签用`<form>`表示，用于与服务器的交互。
 
@@ -530,7 +530,7 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
   </form>
 ```
 
-### 多媒体标签
+### 2.8 多媒体标签
 
 {% hint style="info" %}
 video 和 audio 是 [HTML5](html5.md#shi-yin-pin) 中引入的。
@@ -566,7 +566,7 @@ video 和 audio 是 [HTML5](html5.md#shi-yin-pin) 中引入的。
 </audio>
 ```
 
-### 实体字符
+### 2.9 实体字符
 
 ![](../.gitbook/assets/shi-ti-zi-fu-.png)
 

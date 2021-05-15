@@ -38,7 +38,7 @@
 ---
 
 * [图解计算机网络](fundamentals.md)
-* [HTTP/HTTPs](http-https.md)
+* [HTTP/HTTPS](http-https.md)
 * [TCP/UDP](tcp-udp.md)
 * [Node.js](node.md)
 * [MongoDB](mongodb.md)
@@ -58,7 +58,7 @@
 ---
 
 * [代码规范](coding-guide.md)
-* [网络安全](web-security.md)
+* [网络安全与防御](web-security.md)
 * [性能优化](optimization.md)
 * [算法编程](https://github.com/MrEnvision/LeetCode_JS)
 * [数据可视化](https://github.com/MrEnvision/data-vision)

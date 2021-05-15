@@ -3,10 +3,10 @@
 > HTML5 是新一代开发 Web 富客户端应用程序整体解决方案，包括：HTML5，CSS3，Javascript API在内的一套技术组合。
 
 {% hint style="info" %}
-具体内容详见 [MDN Web Docs - HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+本文指概述部分内容，具体内容详见 [MDN Web Docs - HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 {% endhint %}
 
-## 语义化标签
+## 1. 语义化标签
 
 HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅助设备理解 HTML 页面内容。HTML5会让HTML代码的内容更结构化、标签更语义化。
 
@@ -23,7 +23,7 @@ HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅�
 
 ![](../.gitbook/assets/html5-yu-yi-.png)
 
-## 视/音频
+## 2. 视/音频
 
 视频 `<video>` 标签
 
@@ -55,7 +55,7 @@ HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅�
 </audio>
 ```
 
-## 表单
+## 3. 表单
 
 ![](../.gitbook/assets/html5-biao-dan-yuan-su-.png)
 
@@ -65,7 +65,7 @@ HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅�
 具体详见 [HTML 表单元素](https://www.w3school.com.cn/html/html_form_elements.asp)、[HTML 输入类型](https://www.w3school.com.cn/html/html_form_input_types.asp)、[HTML 输入属性](https://www.w3school.com.cn/html/html_form_attributes.asp)。
 {% endhint %}
 
-## 自定义属性
+## 4. 自定义属性
 
 H5 可以直接在标签里添加自定义属性，但必须以 `data-` 开头，在 JS 中可以通过`dom.dataset` 来获取所有的自定义属性。
 
@@ -89,7 +89,7 @@ H5 可以直接在标签里添加自定义属性，但必须以 `data-` 开头�
 </html>
 ```
 
-## 拖拽
+## 5. 拖拽
 
 在HTML5的规范中，我们可以通过为元素增加 `draggable="true"` 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
 
@@ -113,13 +113,13 @@ H5 可以直接在标签里添加自定义属性，但必须以 `data-` 开头�
   * `ondrop`：当在目标元素上松开鼠标时调用
   * `ondragleave`：当鼠标离开目标元素时调用
 
-## 地理定位
+## 6. 地理定位
 
 {% hint style="info" %}
 详见 [W3school 基础教程](https://www.w3school.com.cn/html/html5_geolocation.asp)
 {% endhint %}
 
-## H5 应用缓存
+## 7. H5 应用缓存
 
 通过创建 cache manifest 文件，可轻松创建 web 应用的离线版本。
 
@@ -152,7 +152,7 @@ FALLBACK:
 * NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存
 * FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）
 
-## 本地存储
+## 8. 本地存储
 
 {% page-ref page="../browser/storage.md" %}
 
