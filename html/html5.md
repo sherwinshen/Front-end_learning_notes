@@ -3,7 +3,7 @@
 > HTML5 是新一代开发 Web 富客户端应用程序整体解决方案，包括：HTML5，CSS3，Javascript API在内的一套技术组合。
 
 {% hint style="info" %}
-本文指概述部分内容，具体内容详见 [MDN Web Docs - HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+本文仅概述部分内容，具体内容详见 [MDN Web Docs - HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 {% endhint %}
 
 ## 1. 语义化标签
@@ -109,14 +109,14 @@ H5 可以直接在标签里添加自定义属性，但必须以 `data-` 开头�
   * `ondrag`：整个拖拽过程都会调用
 * 目标元素
   * `ondragenter`：当拖拽元素进入时调用
-  * `ondragover`：当拖拽元素停留在目标元素上时连续触发（不管拖拽元素此时是移动还是不动的状态）
+  * `ondragover`：当拖拽元素停留在目标元素上时连续触发（不管移动还是停止状态）
   * `ondrop`：当在目标元素上松开鼠标时调用
   * `ondragleave`：当鼠标离开目标元素时调用
 
 ## 6. 地理定位
 
 {% hint style="info" %}
-详见 [W3school 基础教程](https://www.w3school.com.cn/html/html5_geolocation.asp)
+详见 [W3school 基础教程-HTML5 地理定位](https://www.w3school.com.cn/html/html5_geolocation.asp)
 {% endhint %}
 
 ## 7. H5 应用缓存

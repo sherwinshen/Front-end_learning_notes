@@ -1,12 +1,10 @@
-# 进阶知识
+# CSS3
 
-## 1. 浏览器兼容性问题
+## 1. CSS3 选择器
 
-### 2. SASS/SCSS
+{% page-ref page="css-topics/css-selector.md" %}
 
-{% hint style="info" %}
-详见[官方文档](https://sass-lang.com)
-{% endhint %}
+
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

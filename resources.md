@@ -10,7 +10,7 @@
 
 | 项目 | 地址 |
 | :--- | :--- |
-| Sass 文档 | [https://sass.bootcss.com](https://sass.bootcss.com) |
+| Sass 文档 | [https://sass.bootcss.com](https://sass.bootcss.com)  [https://sass-lang.com](https://sass-lang.com) |
 | Less 文档 | [https://less.bootcss.com](https://less.bootcss.com) |
 
 ### JavaScript

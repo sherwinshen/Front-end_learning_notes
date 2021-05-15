@@ -30,24 +30,24 @@
 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。
 
 * **head 区域的元素**：[meta](html-advanced.md#yuan-biao-qian)，title，style，link，script，base 等；
-* **body 区域的元素**：详见下面的 HTML标签
+* **body 区域的元素**：详见 [HTML标签](html-basic.md#2-html-biao-qian)。
 
 ## 2. HTML 标签
 
 {% hint style="info" %}
-具体详见 [W3school参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
+参考链接：[W3school HTML 标签参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
 {% endhint %}
 
 第一种分类：
 
-* **文本级标签**：文本级标签里只能放**文字、图片、表单元素**，主要有 p、span、a、b、i、u、em 等。
+* **文本级标签**：文本级标签里只能放**文字、图片、表单元素**，主要有 p、span、a、b、i、u、em 等；
 * **容器级标签**：容器级标签里可以放置任何东西，主要有 div、h1、li、dt、dd 等。
 
 第二种分类
 
-* **block块元素**：块元素以新行来开始（和结束），主要有 div、h1、p、ul、table 等；
-* **inline行内元素**：行内元素不以新行来开始（和结束），主要有 img、span、b、a、td 等；
-* **inline-block元素**：对外的表现是行内元素（不会独占一行），对内的表现是块级元素（可以设置宽高）。
+* **block 块元素**：块元素以新行来开始和结束，主要有 div、h1、p、ul、table 等；
+* **inline 行内元素**：行内元素不以新行来开始和结束，主要有 img、span、b、a、td 等；
+* **inline-block 元素**：对外的表现是行内元素，对内的表现是块级元素。
 
 | 块元素 | 行内元素 |
 | :--- | :--- |
@@ -153,7 +153,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 <a href="http://www.fourdays.top#tips">定位至fourdays页面的锚tips</a>
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 若浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。
 {% endhint %}
 
@@ -165,15 +165,11 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 <a href="mailto:邮件地址?cc=抄送地址1&bcc=暗抄送地址&subject=主题&body=主体">Send mail with cc, bcc, subject and body</a>
 ```
 
-{% hint style="success" %}
-知识点：
+{% hint style="info" %}
+知识点：区别 href 与 src
 
-* href 用于在当前文档和引用资源之间确立联系
-  * &lt;a href="url"&gt;&lt;/a&gt;
-  * &lt;link href="" rel="stylesheet" /&gt;
-* src 用于替换当前内容
-  * &lt;img src="url" /&gt;
-  * &lt;script src="url"&gt;&lt;/script&gt;
+* href 用于在当前文档和引用资源之间确立联系，例如 a 标签、link 标签等；
+* src 用于替换当前内，例如 img 标签、script 标签等。
 {% endhint %}
 
 ### 2.3 图片标签
@@ -183,16 +179,20 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 <img src="url" alt="替换文本" title='鼠标悬停时出现的文本'/>
 ```
 
-知识点：图片的路径有两种写法：相对路径和绝对路径。
+{% hint style="info" %}
+知识点：相对路径和绝对路径。
 
-* 相对路径：相对当前页面所在的路径，两个标记 `.` 和 `..` 分表代表当前目录和上一层目录。
-* 绝对路径：以盘符开始的绝对路径，例如C:\Users\html\images\1.jpg；网络路径，例如http://img.smyhvae.com/img.png。
+* 相对路径：相对当前页面所在的路径，`.`和`..`代表当前目录和上一层目录；
+* 绝对路径：主要分为盘路径和网络路径
+  * 以盘符开始的绝对路径，例如 C:\Users\html\images\1.jpg
+  * 网络路径，例如 http://img.smyhvae.com/img.png
+{% endhint %}
 
 {% hint style="danger" %}
 绝对不允许使用`file://`开头的文件，这个是完全错误的！
 {% endhint %}
 
-知识点：图片添加说明文字，舍弃使用`<img>`与`<p></p>`组合，采用`<figure>` 和 `<figcaption>`，建立图片与标题之间的语义。
+图片添加说明文字，建议舍弃使用`<img>`与`<p></p>`组合，采用`<figure>` 和 `<figcaption>`，建立图片与标题之间的语义。
 
 ```markup
 <!-- 注意：figure可以是几张图片、一段代码、音视频、方程、表格或别的 -->
@@ -205,7 +205,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 </figure>
 ```
 
-知识点：图片定位链接可在图片不同位置跳转至不同链接
+图片定位链接可在图片不同位置跳转至不同链接，具体详见[进阶知识-图像区域映射](html-advanced.md#3-tu-xiang-qu-yu-ying-she)。
 
 ```markup
 <!-- usemap 属性与 name 一致 -->
@@ -297,8 +297,8 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 
 单元格合并
 
-* `colspan`：横向合并。例如`colspan="2"`表示当前单元格在水平方向上要占据两个单元格的位置。
-* `rowspan`：纵向合并。例如`rowspan="2"`表示当前单元格在垂直方向上要占据两个单元格的位置。
+* `colspan`：横向合并，例如`colspan="2"`表示当前单元格在水平方向上要占据两个单元格的位置。
+* `rowspan`：纵向合并，例如`rowspan="2"`表示当前单元格在垂直方向上要占据两个单元格的位置。
 
 ```markup
 <table>
@@ -360,7 +360,7 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
 * `enctype`属性：内容发送编码
 
 {% hint style="info" %}
-编码格式：
+知识点：编码格式
 
 * application/x-www-form-urlencoded（默认），key=value&key=value 格式
 * multipart/form-data，提交文件时需要设置
@@ -390,7 +390,7 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
 
 表单语义化
 
-* fieldset 元素是用于创建具有相同目的的小部件组的方式，出于样式和语义目的。 
+* fieldset 元素是用于创建具有相同目的的小部件组的方式，出于样式和语义目的； 
 * legend 元素来给 fieldset 标上标签，其文本内容正式地描述 fieldset 的用途。
 
 ```markup
@@ -413,7 +413,7 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
 基础组件
 
 {% hint style="info" %}
-完整表单组件详见 [W3school参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
+完整表单组件详见 [W3school HTML 标签参考手册](https://www.w3school.com.cn/tags/html_ref_byfunc.asp)
 {% endhint %}
 
 ```markup
