@@ -86,7 +86,64 @@
 
 ## 7. 列表样式
 
+```css
+ul {  
+  list-style-type: square;  
+  list-style-position: inside;  
+  list-style-image: url(example.png); 
+}
+```
+
+* list-style-type：设置用于列表的项目符号的类型，例如无序列表的方形或圆形符号，或有序列表的数字、字母和罗马数字（设置为none，以便默认情况下不会显示项目符号）
+* list-style-position：置在每个项目开始之前，项目符号是出现在列表项内，还是出现在其外。 如上所示，默认值为 outside，这使项目符号位于列表项之外（理解不了就试试吧）
+* list-style-image：属性允许对于项目符号使用自定义图片
+
+```css
+/* 采用background来代替列表的原始项目符号 */
+ul li {
+ padding-left: 2rem;
+ background-image: url(star.svg);
+ background-position: 0 0;
+ background-size: 1.6rem 1.6rem;
+ background-repeat: no-repeat;
+}
+```
+
+{% hint style="info" %}
+知识点：管理有序列表的计数
+
+```markup
+<!-- start表示序号从4开始, reversed表示启动列表倒计数 -->
+<ol start="4" reversed>
+ <li></li>
+</ol>
+​
+<!-- value属性允许设置列表项指定数值 - 如下例则列表序号为value值2，4 -->
+<ol>
+ <li value="2"></li>
+ <li value="4"></li>
+</ol>
+```
+{% endhint %}
+
 ## 8. 链接样式
+
+链接状态（采用伪类） - 顺序 link -&gt; visited -&gt; hover -&gt; active
+
+* :link \(没有访问过的\): 这是链接的默认状态，当它没有处在其他状态的时候，使用:link 伪类来应用样式。
+* :visited: 这个链接已经被访问过了\(存在于浏览器的历史纪录\)，使用 :visited 伪类来应用样式。
+* :hover: 当用户的鼠标光标刚好停留在这个链接，使用 :hover 伪类来应用样式。
+* :active: 一个链接当它被激活的时候 \(比如被点击的时候\)，使用 :active 伪类来应用样式。
+* :focus: 一个链接当它被选中的时候 \(比如通过键盘的 Tab 移动到这个链接的时候，或者使用编程的方法来选中这个链接 HTMLElement.focus\(\)\) 使用 :focus 伪类来应用样式。
+
+默认样式：
+
+* 链接具有下划线，可以通过`text-decoration:none`去掉下划线
+* 未访问过的 \(Unvisited\) 的链接是蓝色的
+* 访问过的 \(Visited\) 的链接是紫色的
+* 悬停 \(Hover\) 在一个链接的时候鼠标的光标会变成一个小手的图标
+* 激活 \(Active\) 链接的时候会变成红色 \(当你点击链接时，请尝试按住鼠标按钮\)
+* 选中 \(Focus\) 链接的时候，链接周围会有一个轮廓，你应该可以按 tab 来选中这个页面的链接
 
 ## 9. 背景 background
 
@@ -100,11 +157,31 @@
 
 ## 12. CSS动画
 
-## 13. 浏览器内核
+## 13. 设备媒体
 
-## 14. 设备媒体
+概念：指定样式表规则用于指定的媒体类型和查询条件，主要用于响应式设计
 
+语法：`@media` 媒体类型 `and 条件 { 样式 }`
 
+```css
+@media screen and (max-width:640px) {
+    .class{}
+    ......
+}
+@media screen and (min-width:640px) and (max-width:800px){
+    .class{}
+    ......
+}
+```
+
+媒体类型：
+
+| 值 | 描述 |
+| :--- | :--- |
+| all | 用于所有媒体类型设备。 |
+| print | 用于打印机。 |
+| screen | 用于计算机屏幕、平板电脑、智能手机等等。 |
+| speech | 用于大声“读出”页面的屏幕阅读器。 |
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
