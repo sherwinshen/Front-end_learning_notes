@@ -148,8 +148,6 @@ div {
 }
 ```
 
-
-
 ## 6. 文本/字体样式
 
 ### 6.1 字体样式
@@ -180,8 +178,6 @@ div {
 {% hint style="info" %}
 font-weight 填写数值的话只能填写 100 至 900 这样的整百数字，normal 相当于 400，bold 相当于 700
 {% endhint %}
-
-
 
 ### 6.2 文本布局风格
 
@@ -527,10 +523,35 @@ border-image: url(border-image.png) 40 round;
 ## 14. CSS3 属性
 
 {% hint style="info" %}
-前文中已经混杂了 CSS3 的部分内容，这里概述部分未提到的内容。
+前文中已经混杂了 CSS3 的部分内容，这里概述部分未提到的属性。
 {% endhint %}
 
+**文本阴影**：`text-shadow`
 
+```css
+text-shadow: 水平位移 垂直偏移 模糊程度 阴影颜色
+text-shadow: 20px 27px 22px pink;
+```
+
+**边框阴影：**`box-shadow`
+
+```css
+box-shadow: 水平偏移 垂直偏移 模糊程度 阴影大小 阴影颜色
+box-shadow: 15px 21px 48px -2px #666;
+```
+
+{% hint style="info" %}
+如果在一个阴影声明的开始放置 inset 关键字，可以使其变成一个内部阴影 `box-shadow: inset 2px 2px 1px black;`
+{% endhint %}
+
+**边框圆角**：`border-radius`
+
+```css
+border-radius: 数值
+border-radius: 60px; /* 四角相同 */
+border-radius: 20px 60px;
+border-radius: 20px 60px 100px 140px;  /* 从左上开始，顺时针赋值 */
+```
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

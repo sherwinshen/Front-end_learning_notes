@@ -118,11 +118,53 @@ p:after {
 }
 ```
 
-## 5. Web字体
+## 5. Web 字体
+
+开发人员可以为自已的网页指定特殊的字体（将指定字体提前下载到站点中），无需考虑用户电脑上是否安装了此特殊字体。
+
+{% hint style="info" %}
+* 参考资料：[MDN Web Docs - web 字体 ](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)
+* 字体网站：[Font Awesome](https://fontawesome.dashgame.com)  [IconFont](https://www.iconfont.cn)  [Icooon](https://icomoon.io)
+{% endhint %}
+
+第一步：使用font-face声明字体
+
+```css
+@font-face {
+  font-family: 'webfont';
+  src: url('webfont.eot'); /* IE9*/
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff') format('woff'), /* chrome、firefox */
+       url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+       url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+```
+
+第二步：定义使用 webfont 的样式
+
+```css
+.web-font {
+  font-family:"webfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+第三步：为文字加上对应的样式
+
+```markup
+<div class="web-font">hello</div>
+```
 
 ## 6. BFC 块级格式化上下文
 
+
+
 ## 7. 清除浮动
+
+
 
 ## 8. 重绘与回流
 
