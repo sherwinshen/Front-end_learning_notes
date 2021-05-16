@@ -551,7 +551,12 @@ border-radius: 数值
 border-radius: 60px; /* 四角相同 */
 border-radius: 20px 60px;
 border-radius: 20px 60px 100px 140px;  /* 从左上开始，顺时针赋值 */
+border-radius: 20px / 60px; /* 水平半径/垂直半径 */
 ```
+
+border-radius 完整写法 `border-radius : 50px 50px 50px 50px / 40px 40px 40px 40px;`  的 “/” 前的四个数值表示圆角的水平半径，后面四个值表示圆角的垂直半径。
+
+![](../.gitbook/assets/border-radius.png)
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
