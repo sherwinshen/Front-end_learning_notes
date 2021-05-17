@@ -123,8 +123,8 @@ p:after {
 开发人员可以为自已的网页指定特殊的字体（将指定字体提前下载到站点中），无需考虑用户电脑上是否安装了此特殊字体。
 
 {% hint style="info" %}
-* 参考资料：[MDN Web Docs - web 字体 ](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)
-* 字体网站：[Font Awesome](https://fontawesome.dashgame.com)  [IconFont](https://www.iconfont.cn)  [Icooon](https://icomoon.io)
+* 参考资料：[MDN Web Docs - web 字体 ](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts) [网页开发中关于字体的常识](https://github.com/qianguyihao/Web/blob/master/03-CSS进阶/03-网页设计和开发中，关于字体的常识.md)
+* 字体网站：[Font Awesome](https://fontawesome.dashgame.com)  [IconFont](https://www.iconfont.cn)   [Icooon](https://icomoon.io)
 {% endhint %}
 
 第一步：使用font-face声明字体
@@ -396,6 +396,48 @@ let clone = old.cloneNode(true); // 拷贝到独立的节点
 appendNode(clone, data);
 old.parentNode.replaceChild(clone, old);
 ```
+
+## 9. 滚动条隐藏
+
+{% hint style="info" %}
+参考资料：[html 元素超出部分滚动, 并隐藏滚动条](https://www.cnblogs.com/lovling/p/8000363.html)
+{% endhint %}
+
+利用 css 3 的新特性  -webkit-scrollbar
+
+```markup
+<div class="parent">
+    <div class="child"></div>
+</div>
+
+<style type="text/css">
+    .parent {
+        width: 500px;
+        height: 100px;
+        overflow: scroll;
+    }
+
+    .child {
+        width: 100%;
+        height: 500px;
+        background-color: red;
+    }
+
+    .parent::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+```
+
+## 10. 隐藏盒子的方法
+
+* 使用`display:none;`隐藏元素，渲染树不会包含该渲染对象，该元素不会在页面中占据位置，也不会响应绑定的监听事件。
+* 使用`visibility:hidden;`隐藏元素，元素在页面中仍占据空间，但是不会响应绑定的监听事件。
+* 使用`opacity:0;`将元素的透明度设置为0来实现元素的隐藏，元素在页面中仍然占据空间，并且能够响应元素绑定的监听事件。
+* 通过使用绝对定位将元素移除可视区域内来实现元素的隐藏。
+* 通过`z-index` 负值，来使其他元素遮盖住该元素来实现隐藏。
+* 通过`clip/clip-path` 元素裁剪的方法来实现元素的隐藏，元素仍在页面中占据位置，但是不会响应绑定的监听事件。
+* 通过`transform:scale(0,0)`来将元素缩放为0来实现元素的隐藏，元素仍在页面中占据位置，但是不会响应绑定的监听事件。
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

@@ -214,7 +214,7 @@ animation: 动画名 持续时间 执行次数 是否反向 运动曲线 延迟�
 }
 ```
 
-`animation-timing-function`如果设置为`steps()`，则表示动画不是连续执行，而是间断地分成几步执行，应用于多帧动画等。
+`animation-timing-function`如果设置为`steps()`，则表示动画不是连续执行，而是间断地分成几步执行，应用于逐帧动画等。
 
 举例：通过`animation-timing-function`的`steps()`制作时钟指针
 
