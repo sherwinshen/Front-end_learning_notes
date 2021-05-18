@@ -27,11 +27,14 @@
   * [标准对象](javascript/js-objects.md)
   * [JS 专题](javascript/js-topics.md)
 * [浏览器](browser/README.md)
+  * [浏览器对象](browser/browser-objects.md)
+  * [文件相关对象](browser/file-objects.md)
   * [Web 缓存](browser/web-cache.md)
   * [本地存储](browser/storage.md)
 * [综合内容](synthesis/README.md)
   * [登录鉴权](synthesis/login.md)
   * [前端跨域](synthesis/cross-domain.md)
+  * [文件上传与下载](synthesis/file-upload-download.md)
 
 ## 🏗 前端框架 <a id="frontend-framework"></a>
 
