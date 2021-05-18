@@ -20,7 +20,7 @@ div{
 ```
 
 {% hint style="info" %}
-在实际开发中，我们可以借助[Autoprefixer](https://github.com/postcss/autoprefixer)插件来自动解析CSS文件并且添加浏览器前缀到CSS规则里。
+在实际开发中，我们可以借助 [Autoprefixer插件](https://github.com/postcss/autoprefixer) 来自动解析CSS文件并且添加浏览器前缀到CSS规则里。
 {% endhint %}
 
 ## 2. SASS/SCSS
@@ -250,7 +250,7 @@ p:after {
 
 ## 7. 清除浮动
 
-关键点在于添加清除属性（具体添加在什么上）和触发父元素BFC ，直接设置父元素的高度的方法不考虑。
+关键在于添加清除属性（添加在什么上?）和触发父元素 BFC ，这里设置父元素的高度的方法不考虑。
 
 ### 7.1 div + clear
 
