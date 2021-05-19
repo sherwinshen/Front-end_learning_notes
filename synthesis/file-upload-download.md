@@ -63,7 +63,7 @@ var file = new File(['foo'], 'foo.txt', { type: 'text/plain', });
 
 第一个参数是数组，成员可以是二进制对象或字符串，表示文件的内容；第二个参数表示文件名或文件路径；第三个参数是可选对象，设置实例的属性。
 
-### 1.3 FileReader对象
+### 1.3 FileReader 对象
 
 FileReader 对象用于读取 File 对象或 Blob 对象所包含的文件内容。
 
@@ -226,7 +226,7 @@ function chunkUpload() {
 </script>
 ```
 
-### 3.4 Blob对象下载
+### 3.4 Blob 对象下载
 
 除了利用已知文件地址路径进行下载，还能够发送请求 api 获取文件流进行下载，利用 Blob 对象可以将文件流转化成 Blob 二进制对象。
 
@@ -265,7 +265,7 @@ base64 可以实现任意类型文件的下载，即文件流 -&gt; fileReader�
 ```javascript
 // 文件转 base64
 function base64(文件流) {
-  const file = new FileReader()
+  const fileReader = new FileReader()
   fileReader.onload = function (event) {
     // 然后利用a标签点击下载同2.4
     const a = document.createElement('a');
@@ -288,21 +288,25 @@ function base64(文件流) {
 ### 4.1 文件上传
 
 {% hint style="info" %}
-ile 对象基于 input 标签通过 document.getElementById\('file'\).files\[0\] 获取
+File 对象基于 input 标签通过`document.getElementById('file').files[0]`获取
 {% endhint %}
 
 * formData 上传
 
 ```javascript
 const file = document.getElementById('file2').files[0]
+
 const formData = new FormData()
 formData.append('file', file)
-const data = { file: formData } // 发送 data
+const data = { file: formData } 
+// 发送 data 即可
 ```
 
 * Base64 通过字符串上传
 
 ```javascript
+const file = document.getElementById('file2').files[0]
+
 // 文件转 base64 以字符串上传即可 
 const fileReader = new FileReader()
 fileReader.onload = function(event) {
@@ -341,7 +345,7 @@ a.click();
 objectURL = URL.createObjectURL\(object\); 的 object 表示指定的 File 对象、 Blob 对象或者 MediaSource 对象。
 {% endhint %}
 
-```text
+```javascript
 const blob = new Blob([数据], options: { type: 类型 });
 const url = URL.createObjectURL(blob);
 ```
