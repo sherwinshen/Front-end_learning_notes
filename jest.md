@@ -71,7 +71,7 @@ jest.mock('./sound-player', () => {
 })
 ```
 
-jest.mock\(\)完全接管整个 `./sound-player` JavaScript 模块，比如说这里的 `playSoundFile` 本来应该是从 `./sound-player` 这个文件当中 `export` 出来的，而被 Mock 之后我们的测试就可以使用 Mock 所返回的数据或方法。注意，该模板的所有功能都已经被 Mock 掉，模块中其他功能也被mock了如果需要使用也需要重新实现。
+`jest.mock()` 完全接管整个 `./sound-player` JavaScript 模块，比如说这里的 `playSoundFile` 本来应该是从 `./sound-player` 这个文件当中 `export` 出来的，而被 Mock 之后我们的测试就可以使用 Mock 所返回的数据或方法。注意，该模板的所有功能都已经被 Mock 掉，模块中其他功能也被mock了如果需要使用也需要重新实现。
 
 **Stub -** 用于模拟特定行为
 
@@ -218,9 +218,9 @@ wrapper.vm.$route.path // /some/path
 ## 3. 踩坑指南
 
 * 注意，Vue 会异步的将未生效的 DOM 批量更新，避免因数据反复变化而导致不必要的渲染。因此在更新会引发 DOM 变化的属性后必须使用 `Vue.nextTick（）` （异步函数）来等待 Vue 完成 DOM 更新。
-* 如果项目依赖第三方插件，建议将第三方插件注册到localVue中，mount挂载组件生成wrapper时，将localVue作为参数传递。
-* elementUI组件库与实际html不同，当一些事件无法触发（无法选中对应的dom），可以打印wrapper.html看实际渲染结果。
-* 注意触发事件是在dom上通过trigger\(\)触发，还是子组件触发事件通过wrapper.vm.emit\(\)。
+* 如果项目依赖第三方插件，建议将第三方插件注册到 localVue 中，mount 挂载组件生成 wrapper 时，将 localVue 作为参数传递。
+* elementUI 组件库与实际 html 不同，当一些事件无法触发（无法选中对应的 dom），可以打印 wrapper.html 看实际渲染结果。
+* 注意触发事件是在 dom 上通过 trigger\(\) 触发，还是子组件触发事件通过 wrapper.vm.emit\(\)。
 * 一个测试套件之间的测试用例肯能会互相影响，可使用钩子函数，在每次测试用例测试后都销毁。
 
 {% hint style="info" %}
