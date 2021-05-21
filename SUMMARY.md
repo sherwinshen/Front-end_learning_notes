@@ -42,6 +42,9 @@
 
 * [Vue.js](vue/README.md)
   * [基础知识](vue/vue-basic.md)
+  * [组件通信](vue/vue-component-communication.md)
+  * [Vue 动画](vue/vue-animation.md)
+  * [静态网站框架 VuePress](vue/vuepress.md)
 * [React.js](react/README.md)
   * [基础知识](react/react-basic.md)
 
@@ -69,7 +72,8 @@
 
 ---
 
-* [代码规范](coding-guide.md)
+* [代码规范](coding-guide/README.md)
+  * [Vue 代码规范](https://cn.vuejs.org/v2/style-guide/)
 * [网络安全与防御](web-security.md)
 * [性能优化](optimization.md)
 * [算法编程](https://github.com/MrEnvision/LeetCode_JS)
@@ -89,7 +93,8 @@
 ---
 
 * [项目经验❗️](projects.md)
-* [踩坑指南❗️](questions.md)
+* [踩坑指南❗️](questions/README.md)
+  * [Vue 踩坑指南](questions/vue-questions.md)
 * [学习资源](resources.md)
 * [综合收藏夹](collections.md)
 
