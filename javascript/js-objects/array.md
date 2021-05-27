@@ -1,8 +1,14 @@
 # Array 对象
 
+{% hint style="info" %}
+参考资料：[Array 对象](https://wangdoc.com/javascript/stdlib/array.html)
+{% endhint %}
+
 ```javascript
 const myCars = new Array("Saab","Volvo","BMW");
 ```
+
+## 1. 实例方法
 
 | 方法 | 作用 | 语法 | 返回值 | 改变原数组 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -43,12 +49,7 @@ const myCars = new Array("Saab","Volvo","BMW");
 | reduce\(\) | 根据处理函数将数组中的值缩减为一个值 | array.reduce\(function\(total, curValue, curIndex, arr\), initialValue\) | 最终值 | 否 |
 | reduceRight\(\) | 同上，只是从右开始累加 | array.reduceRight\(function\(total, curValue, curIndex, arr\), initialValue\) | 最终值 | 否 |
 
-| 方法 | 作用 | 语法 | 返回值 |
-| :--- | :--- | :--- | :--- |
-| isArray\(\) | 判断一个对象是否为数组 | Array.isArray\(obj\) | 布尔值 |
-| from\(\) | 通过拥有 length 属性的对象或可迭代的对象来返回一个数组 | Array.from\(object, mapFunction, thisValue\) | 新数组 |
-
-{% hint style="info" %}
+{% hint style="warning" %}
 `Array.prototype.slice.call(类数组)`重要的作用是将类似数组的对象转为真正的数组`。`
 {% endhint %}
 
@@ -64,7 +65,7 @@ const myCars = new Array("Saab","Volvo","BMW");
 ES5 对空位处理各不相同，如忽略跳过等，但 ES6 进行了统一，明确将空位转为 undefined。
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 注意 indexOf 直接传入要查找的元素即可，findIndex 需要传入一个判断函数，不要搞混了。
 
 ```javascript
@@ -106,6 +107,13 @@ for (let [index, elem] of ['a', 'b'].entries()) {
 * 元素查找：indexOf\(\)/ lastIndexOf\(\) / includes\(\) / find\(\) / findIndex\(\) / every\(\) / some\(\)
 * 元素遍历：forEach\(\) / map\(\) / reduce\(\) / filter\(\)
 * 其他常用：fill\(\) / join\(\) / slice\(\) / sort\(\) / flat\(\)
+
+## 2. 静态方法
+
+| 方法 | 作用 | 语法 | 返回值 |
+| :--- | :--- | :--- | :--- |
+| isArray\(\) | 判断一个对象是否为数组 | Array.isArray\(obj\) | 布尔值 |
+| from\(\) | 通过拥有 length 属性的对象或可迭代的对象来返回一个数组 | Array.from\(object, mapFunction, thisValue\) | 新数组 |
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

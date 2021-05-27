@@ -33,7 +33,6 @@
     * [Date 对象](javascript/js-objects/date.md)
     * [RegExp 对象](javascript/js-objects/regexp.md)
     * [Object 对象](javascript/js-objects/object.md)
-    * [JSON 对象](javascript/js-objects/json.md)
   * [JS 专题](javascript/js-topics/README.md)
     * [数据类型](javascript/js-topics/data-type.md)
     * [原型链/继承](javascript/js-topics/prototype.md)
