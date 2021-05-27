@@ -41,7 +41,7 @@
     * [异步操作](javascript/js-topics/async.md)
     * [模块化](javascript/js-topics/module.md)
 * [浏览器](browser/README.md)
-  * [浏览器对象](browser/browser-objects.md)
+  * [浏览器模型](browser/browser-objects.md)
   * [事件](browser/event.md)
   * [位置属性](browser/position.md)
   * [Web 缓存](browser/web-cache.md)
