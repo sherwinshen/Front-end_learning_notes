@@ -7,7 +7,7 @@
 ## 1. 前置知识
 
 {% hint style="info" %}
-具体详见[文件相关对象](../browser/file-objects.md)
+具体详见[文件相关对象]()
 {% endhint %}
 
 ### 1.1 Blob 对象
