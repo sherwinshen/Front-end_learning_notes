@@ -63,11 +63,13 @@ console.log(x.b.m,y.b.m); // 5,6
 
 ```javascript
 function deepClone(obj) {
-    let newObj = obj instanceof Array ? [] : {};
-    for (let item in obj) {
-        newObj[item] = typeof obj[item] == 'object' ? deepClone(obj[item]) : obj[item]
-    }
-    return newObj;
+   const newObj = obj instanceof Array ? [] : {}
+   for (let key in obj) {
+       if (obj.hasOwnProperty(key)) {
+           newObj[key] = typeof obj[key] === 'object' || 'function' ? deepClone(obj[key]) : obj[key]
+      }
+  }
+   return newObj
 }
 ```
 

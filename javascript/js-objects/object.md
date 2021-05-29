@@ -35,6 +35,32 @@ Object.keys(a) // ["0", "1"]
 Object.getOwnPropertyNames(a) // ["0", "1", "length"]
 ```
 
+`Object.is()`比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致，不同之处只有两个：一是`+0`不等于`-0`，二是`NaN`等于自身。
+
+```javascript
++0 === -0 //true
+NaN === NaN // false
+
+Object.is(+0, -0) // false
+Object.is(NaN, NaN) // true
+```
+
+`Object.assign()`用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target），注意为浅拷贝。
+
+```javascript
+// 举例
+const target = { a: 1, b: 1 };
+
+const source1 = { b: 2, c: 2 };
+const source2 = { c: 3 };
+
+Object.assign(target, source1, source2);
+target // {a:1, b:2, c:3}，同名后面的属性会覆盖前面的属性。
+
+// 注意数组的合并情况
+Object.assign([1, 2, 3], [4, 5]) // [4, 5, 3]
+```
+
 ## 2. 实例方法
 
 `Object`实例对象的方法，主要有以下六个。

@@ -193,15 +193,16 @@ function Cat(name) {
 | 组合继承 | 调用父类构造，子类原型是父类实例 | + | + | ？ |
 | 寄生组合继承 | / | + | + | ？ |
 
-### 2.2 ES6 继承
+### 2.2 ES6 Class 继承
 
-子类必须在`constructor`方法中调用`super`方法，否则新建实例时会报错。这是因为子类自己的`this`对象，必须先通过父类的构造函数完成塑造，得到与父类同样的实例属性和方法，然后再对其进行加工，加上子类自己的实例属性和方法。如果不调用`super`方法，子类就得不到`this`对象。
+子类必须在`constructor`方法中调用`super`方法，否则新建实例时会报错。这是因为子类自己的`this`对象，必须先通过父类的构造函数完成塑造，得到与父类同样的实例属性和方法，然后再对其进行加工，加上子类自己的实例属性和方法。如果不调用`super`方法，子类就得不到`this`对象。完整内容详见 [Class 的继承](https://wangdoc.com/es6/class-extends.html)。
 
 ```javascript
 class Point { /* ... */ }
 ​
 class ColorPoint extends Point {
   constructor(x, y, color) {
+    this.y = y // ReferenceError
     super(x, y); // 调用父类的constructor(x, y)
     this.color = color;
   }
@@ -210,6 +211,115 @@ class ColorPoint extends Point {
     return this.color + ' ' + super.toString(); // 调用父类的toString()
   }
 }
+```
+
+父类的静态方法，也会被子类继承，而父类的实例对象不能使用父类的静态方法。
+
+```javascript
+class A {
+    static hello() {
+        console.log('hello world');
+    }
+}
+
+class B extends A {
+}
+
+B.hello();  // hello world
+
+const b = new A();
+b.hello(); // TypeError: newB.hello is not a function
+```
+
+**继承关系说明**
+
+![](../../.gitbook/assets/class-ji-cheng-yuan-xing-.jpg)
+
+```javascript
+class A { }
+class B extends A { }
+console.log(B.__proto__ === A);  // true
+console.log(B.prototype.__proto__ === A.prototype);  // true
+```
+
+**super关键词的用法**
+
+* 当作函数调用时，代表父类的构造函数
+
+```javascript
+class A {}
+
+class B extends A {
+  constructor() {
+    super();
+  }
+}
+```
+
+* 当作对象使用时，在普通方法中，指向父类的原型对象（简单说就是父类中没有static的部分），也就是说在父类实例上的方法或属性是无法通过`super`调用。在子类普通方法中通过`super`调用父类的方法时，方法内部的`this`指向当前的子类实例。
+
+```javascript
+class A {
+  constructor() {
+    this.p = 2;
+  }
+  print() {
+    console.log(this.x);
+  }
+}
+
+A.prototype.x = 2;
+
+class B extends A {
+  constructor() {
+    super();
+    this.x = 4;
+  }
+  get m() {
+    return super.p;
+  }
+  get x(){
+    return super.x;
+  }
+  y() {
+    super.print();
+  }
+}
+
+let b = new B();
+b.m // undefined
+b.x // 2
+b.y() // 4
+```
+
+* 当作对象使用时，在静态方法中，指向父类（简单说就是父类中static的部分）。类相当于实例的原型对象。
+
+```javascript
+// super在静态方法之中指向父类，在普通方法之中指向父类的原型对象。
+class Parent {
+  static myMethod(msg) {
+    console.log('static', msg);
+  }
+
+  myMethod(msg) {
+    console.log('instance', msg);
+  }
+}
+
+class Child extends Parent {
+  static myMethod(msg) {
+    super.myMethod(msg);
+  }
+
+  myMethod(msg) {
+    super.myMethod(msg);
+  }
+}
+
+Child.myMethod(1); // static 1
+
+var child = new Child();
+child.myMethod(2); // instance 2
 ```
 
 {% hint style="info" %}

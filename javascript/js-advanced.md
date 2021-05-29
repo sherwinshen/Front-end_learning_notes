@@ -4,7 +4,7 @@
 
 ### 1.1 定义
 
-闭包为定义在一个函数内部的函数，其本质是将函数内部和函数外部连接起来的一座桥梁，通过闭包使外部能够访问函数内的局部变量。
+闭包为定义在一个函数内部的函数，其本质是将函数内部和函数外部连接起来的一座桥梁，通过闭包使外部能够访问函数内的局部变量，延伸了变量的作用范围。
 
 ```javascript
 // f2能够访问f1内的局部变量，因此返回f2就能在外部访问f1内的局部变量 - f2就是闭包
@@ -161,6 +161,46 @@ console.log('----- end -----')
 {% hint style="info" %}
 参考资料：[十分钟学会防抖和节流](https://www.cnblogs.com/zhuanzhuanfe/p/10633019.html)
 {% endhint %}
+
+## 5. 模版字符串
+
+模版字符串的引入可以使字符串中直接嵌入变量，而不用使用'+'连接。注意模版字符串不是引号`""`，而是反引号````````。
+
+```javascript
+// ES5
+let a = 'hello <b>' + basket.count + '</b>';
+
+// ES6 - 多行字符串所有的空格和缩进都会被保留在输出之中
+let a = `hello <b> ${basket.count} </b>`;
+let a = `
+<ul>
+  <li>first</li>
+  <li>second</li>
+</ul>
+`;
+```
+
+模板字符串紧跟在一个函数名后面，该函数将被调用来处理这个模板字符串。
+
+```javascript
+let message = SaferHTML`<p>${sender} has sent you a message.</p>`;
+
+function SaferHTML(templateData) {
+  let s = templateData[0];
+  for (let i = 1; i < arguments.length; i++) {
+    let arg = String(arguments[i]);
+
+    // Escape special characters in the substitution.
+    s += arg.replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+
+    // Don't escape special characters in the template.
+    s += templateData[i];
+  }
+  return s;
+}
+```
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

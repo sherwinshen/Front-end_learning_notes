@@ -78,7 +78,7 @@ ES5 对空位处理各不相同，如忽略跳过等，但 ES6 进行了统一�
 {% endhint %}
 
 {% hint style="info" %}
-数组实例的 entries\(\)，keys\(\) 和 values\(\)
+数组实例的 entries\(\)，keys\(\) 和 values\(\)，尤其注意 entries\(\) 的写法
 
 ```javascript
 for (let index of ['a', 'b'].keys()) {
@@ -98,6 +98,33 @@ for (let [index, elem] of ['a', 'b'].entries()) {
 }
 // 0 "a"
 // 1 "b"
+```
+{% endhint %}
+
+{% hint style="info" %}
+`sort()`可根据回调函数的返回值来决定元素的排序:
+
+* 如果返回一个大于 0 的值，则元素会交换位置
+* 如果返回一个小于等于 0 的值，则元素位置不变
+{% endhint %}
+
+{% hint style="info" %}
+`reduce()`应用：
+
+```javascript
+// 数组求和
+const total = arr.reduce((prev,cur) => prev + cur)
+
+// 统计某个元素出现的次数
+const count = arr.reduce((prev, cur) => {
+  prev += item == value ? 1 : 0;
+  return prev
+})
+
+// 求元素的最大值
+const count = arr.reduce((prev, cur) => {
+  return prev > item ? prev : item
+})
 ```
 {% endhint %}
 
