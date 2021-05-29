@@ -241,11 +241,17 @@ person.name = 'envision'; // 自动更新视图
 
 当执行 new Vue\(\) 时，Vue 就进入了初始化阶段，一方面 Vue 会遍历 data 选项中的属性，并用 Object.defineProperty 将它们转为 getter/setter，实现数据变化监听功能；另一方面，Vue 的指令编译器 Compile 对元素节点的指令进行解析，初始化视图，并订阅 Watcher 来更新视图， 此时 Wather 会将自己添加到消息订阅器中\(Dep\)，初始化完毕。当数据发生变化时，Observer 中的 setter 方法被触发，setter 会立即调用 Dep.notify\(\)，Dep 开始遍历所有的订阅者，并调用订阅者的 update 方法，订阅者收到通知后对视图进行相应的更新。
 
-## 11. 踩坑指南
+## 11. Vuex
+
+{% hint style="info" %}
+具体详见 [Vuex指南](https://github.com/MrEnvision/Front-end_learning_project/tree/master/vuex_tutorial)。
+{% endhint %}
+
+## 12. 踩坑指南
 
 {% page-ref page="../questions/vue-questions.md" %}
 
-## 12. 代码规范
+## 13. 代码规范
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

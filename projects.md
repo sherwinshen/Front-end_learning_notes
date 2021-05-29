@@ -2,9 +2,9 @@
 
 ## 基础项目
 
-1. 基础HTML/CSS学习项目 - [langlangDental](https://github.com/MrEnvision/langlangDental)
-2. 基础Vue3后台管理系统 - [vue-admin](https://github.com/MrEnvision/vue-admin)
-3. 基础React后台管理系统 - [react-admin](https://github.com/MrEnvision/react-admin)
+1. 基础 HTML/CSS 学习项目 - [langlangDental](https://github.com/MrEnvision/langlangDental)
+2. 基础 Vue3 后台管理系统 - [vue-admin](https://github.com/MrEnvision/vue-admin)
+3. 基础 React 后台管理系统 - [react-admin](https://github.com/MrEnvision/react-admin)
 
 ## **进阶项目**
 
@@ -19,8 +19,8 @@
 3. 数据可视化数据报表 - [data-vision-report](https://github.com/MrEnvision/data-vision-report)
 4. 数据可视化移动报表 - [data-vision-mobile](https://github.com/MrEnvision/data-vision-mobile)
 5. 自定义组件库 - [data-vision-libs](https://github.com/MrEnvision/data-vision-libs)
-6. 数据可视化ECharts项目 - [data-vision-echarts](https://github.com/MrEnvision/data-vision-echarts)
-7. 数据可视化AntV项目 - [data-vision-antv](https://github.com/MrEnvision/data-vision-antv)
+6. 数据可视化 ECharts 项目 - [data-vision-echarts](https://github.com/MrEnvision/data-vision-echarts)
+7. 数据可视化 AntV 项目 - [data-vision-antv](https://github.com/MrEnvision/data-vision-antv)
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

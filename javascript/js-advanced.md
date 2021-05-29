@@ -202,6 +202,33 @@ function SaferHTML(templateData) {
 }
 ```
 
+## 6. 函数柯里化
+
+{% hint style="info" %}
+参考资料： [《JavaScript 专题之函数柯里化》](https://github.com/mqyqingfeng/Blog/issues/42)  [js如何用一句代码实现函数的柯里化](https://www.jianshu.com/p/c87242cd2f6c)
+{% endhint %}
+
+接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数。
+
+```javascript
+// 普通的add函数
+function add(x, y) {
+    return x + y
+}
+​
+// Currying后
+function curryingAdd(x) {
+    return function (y) {
+        return x + y
+    }
+}
+​
+add(1, 2)           // 3
+curryingAdd(1)(2)   // 3
+```
+
+## 
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}

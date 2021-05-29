@@ -40,6 +40,7 @@
     * [this 的指向](javascript/js-topics/this.md)
     * [异步操作](javascript/js-topics/async.md)
     * [模块化](javascript/js-topics/module.md)
+    * [设计模式](javascript/js-topics/pattern.md)
 * [浏览器](browser/README.md)
   * [浏览器模型](browser/browser-objects.md)
   * [事件](browser/event.md)

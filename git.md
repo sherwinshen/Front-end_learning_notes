@@ -3,9 +3,8 @@
 {% hint style="info" %}
 参考资料：
 
-基础教程：[Pro Git 中文版](https://www.progit.cn/)   [猴子都能懂的Git入门](https://backlog.com/git-tutorial/cn/)   [Git教程-廖雪峰教程](https://www.liaoxuefeng.com/wiki/896043488029600)
-
-学习资源：[Git 操作手册](https://backlog.com/git-tutorial/cn/reference/)   [Resources to learn Git](http://try.github.io/)
+* 基础教程：[Pro Git 中文版](https://www.progit.cn/)   [猴子都能懂的Git入门](https://backlog.com/git-tutorial/cn/)   [Git教程-廖雪峰教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+* 学习资源：[Git 操作手册](https://backlog.com/git-tutorial/cn/reference/)   [Resources to learn Git](http://try.github.io/)
 {% endhint %}
 
 ## 1. Git 安装
