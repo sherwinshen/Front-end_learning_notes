@@ -53,6 +53,16 @@ const myCars = new Array("Saab","Volvo","BMW");
 `Array.prototype.slice.call(类数组)`重要的作用是将类似数组的对象转为真正的数组`。`
 {% endhint %}
 
+{% hint style="warning" %}
+数组判空要用 length 进行，不能直接使用 arr===\[\] 进行，相当于声明了一个新的空数组，内存空间不是同一块，所以不相等。
+
+```javascript
+const a = [];
+console.log(a===[]); // false
+console.log(a.length===0); // true
+```
+{% endhint %}
+
 {% hint style="info" %}
 `sort()`默认是根据字典顺序排序，不是根据数值大小，因此比较大小需要自己写函数。sort 的参数函数本身接受两个参数，表示进行比较的两个数组成员。如果该函数的返回值大于 0，表示第一个成员排在第二个成员后面；其他情况下，都是第一个元素排在第二个元素前面。
 {% endhint %}

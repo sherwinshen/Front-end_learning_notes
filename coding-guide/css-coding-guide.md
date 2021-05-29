@@ -1,8 +1,6 @@
-# 综合内容
+# CSS 代码规范
 
-{% page-ref page="cross-domain.md" %}
-
-{% page-ref page="file-upload-download.md" %}
+{% page-ref page="../css/css-topics/css-bem.md" %}
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)

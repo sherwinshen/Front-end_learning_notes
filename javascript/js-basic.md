@@ -767,6 +767,23 @@ fn\(\) 和 fn 的区别
 注意，函数如果通过`function fun(){}`形式声明，则整个函数会在所有的代码执行之前就被创建完成，即声明提升，而函数如果通过`const fun = () => {}`形式声明，则不存在声明提升，需要先声明再使用。
 {% endhint %}
 
+{% hint style="info" %}
+如果函数内部修改的不是参数对象的某个属性，而是替换整个参数，这样不会影响到原始值，赋值会指向另一个地址。
+
+```javascript
+// 举例
+var obj = [1, 2, 3];
+
+function f(o) {
+  o[1] = 8
+  o = [2, 3, 4];
+}
+f(obj);
+
+obj // [1, 8, 3]
+```
+{% endhint %}
+
 ### 5.2 箭头函数
 
 ```javascript
@@ -878,9 +895,28 @@ arguments 是一个类数组对象，在调用函数时，我们所传递的实�
 
 * arguments.length：返回函数实参的个数
 * arguments\[0\] = 99：arguments 可以修改元素
-* arguments 是类数组对象，可以遍历，但不具有数组的 push\(\)、pop\(\) 等方法
+* arguments 是类数组对象，可以遍历，但不具有数组的 push\(\)、pop\(\) 等方法，需要通过 \[...arguments\] 或 Array.from\(arguments\) 进行转化为数组
 
-### 5.6 构造函数
+### 5.6 立即调用的函数表达式 IIFE
+
+```javascript
+// 写法 - 没有函数名
+(function(){ /* code */ }());
+// 或者
+(function(){ /* code */ })();
+```
+
+IIFE的目的有两个：一是不必为函数命名，避免了污染全局变量；二是 IIFE 内部形成了一个单独的作用域，可以封装一些外部无法读取的私有变量。
+
+```javascript
+(function () {
+  var tmp = newData;
+  processData(tmp);
+  storeData(tmp);
+}());
+```
+
+### 5.7 构造函数
 
 构造函数是一种特殊的函数，主要用来创建和初始化对象，也就是为对象的成员变量赋初始值，普通函数是直接调用，而构造函数需要使用 `new` 关键字来调用。
 
@@ -915,6 +951,31 @@ var f = new Fun("Shen","Wei");
 * 静态成员：在构造函数上添加的成员称为静态成员，只能由构造函数本身访问。
 * 实例成员：在构造函数内部创建的对象成员称为实例成员，只能由实例化的对象访问。
 {% endhint %}
+
+### 5.8 函数柯里化
+
+{% hint style="info" %}
+参考资料： [《JavaScript 专题之函数柯里化》](https://github.com/mqyqingfeng/Blog/issues/42)  [js如何用一句代码实现函数的柯里化](https://www.jianshu.com/p/c87242cd2f6c)
+{% endhint %}
+
+接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数。
+
+```javascript
+// 普通的add函数
+function add(x, y) {
+    return x + y
+}
+​
+// Currying后
+function curryingAdd(x) {
+    return function (y) {
+        return x + y
+    }
+}
+​
+add(1, 2)           // 3
+curryingAdd(1)(2)   // 3
+```
 
 ## 6. 对象
 

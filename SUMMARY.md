@@ -47,8 +47,8 @@
   * [Web 缓存](browser/web-cache.md)
   * [本地存储](browser/storage.md)
 * [综合内容](synthesis/README.md)
-  * [登录鉴权](synthesis/login.md)
   * [前端跨域](synthesis/cross-domain.md)
+  * [登录鉴权](https://juejin.im/post/6845166891393089544)
   * [文件上传与下载](synthesis/file-upload-download.md)
 
 ## 🏗 前端框架 <a id="frontend-framework"></a>
@@ -88,6 +88,7 @@
 ---
 
 * [代码规范](coding-guide/README.md)
+  * [CSS 代码规范](coding-guide/css-coding-guide.md)
   * [Vue 代码规范](https://cn.vuejs.org/v2/style-guide/)
 * [网络安全与防御](web-security.md)
 * [性能优化](optimization.md)
