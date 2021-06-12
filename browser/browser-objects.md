@@ -5,7 +5,7 @@
 {% endhint %}
 
 {% hint style="warning" %}
-第 5-9 节内容建议结合[《文件上传与下载》](../synthesis/file-upload-download.md)学习。
+第 5-9 节内容建议结合[《文件上传与下载》](../comprehensive/file-upload-download.md)学习。
 {% endhint %}
 
 ## 1. 浏览器对象 DOM

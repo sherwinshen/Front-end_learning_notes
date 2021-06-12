@@ -47,10 +47,10 @@
   * [位置属性](browser/position.md)
   * [Web 缓存](browser/web-cache.md)
   * [本地存储](browser/storage.md)
-* [综合内容](synthesis/README.md)
-  * [前端跨域](synthesis/cross-domain.md)
+* [综合内容](comprehensive/README.md)
+  * [前端跨域](comprehensive/cross-domain.md)
   * [登录鉴权](https://juejin.im/post/6845166891393089544)
-  * [文件上传与下载](synthesis/file-upload-download.md)
+  * [文件上传与下载](comprehensive/file-upload-download.md)
 
 ## 🏗 前端框架 <a id="frontend-framework"></a>
 
@@ -63,6 +63,7 @@
   * [静态网站框架 VuePress](vue/vuepress.md)
 * [React.js](react/README.md)
   * [基础知识](react/react-basic.md)
+  * [组件通信](react/react-component-communication.md)
 
 ## 📦 计算机基础/后端 <a id="network"></a>
 
@@ -88,9 +89,11 @@
 
 ---
 
+* [前端工程化](frontend-engineering.md)
 * [代码规范](coding-guide/README.md)
   * [CSS 代码规范](coding-guide/css-coding-guide.md)
   * [Vue 代码规范](https://cn.vuejs.org/v2/style-guide/)
+  * [代码规范配置](https://github.com/MrEnvision/Front-end_learning_project/blob/master/coding_guide_setting)
 * [网络安全与防御](web-security.md)
 * [性能优化](optimization.md)
 * [算法编程](https://github.com/MrEnvision/LeetCode_JS)

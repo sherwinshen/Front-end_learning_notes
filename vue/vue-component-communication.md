@@ -119,7 +119,7 @@ export default {
 ## 2. Vuex
 
 {% hint style="info" %}
-这是最常用的方式，具体详见[官方文档](https://vuex.vuejs.org/zh/)。
+这是最常用的方式，具体详见[官方文档](https://vuex.vuejs.org/zh/)和[项目工程](https://github.com/MrEnvision/Front-end_learning_project/tree/master/vuex_tutorial)。
 {% endhint %}
 
 ![](https://vuex.vuejs.org/vuex.png)

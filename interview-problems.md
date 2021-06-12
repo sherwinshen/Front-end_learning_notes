@@ -2234,7 +2234,7 @@ cookie、localstorage 、sessionstorage 和 indexDB（大规模数据存储）�
 参考资料： [《前端常见跨域解决方案（全）》](https://segmentfault.com/a/1190000011145364) [《浏览器同源政策及其规避方法》](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html) [《跨域，你需要知道的全在这里》](https://juejin.im/entry/59feae9df265da43094488f6)
 {% endhint %}
 
-{% page-ref page="synthesis/cross-domain.md" %}
+{% page-ref page="comprehensive/cross-domain.md" %}
 
 * CORS（Access-Control-Allow-Origin）
 * JSONP
