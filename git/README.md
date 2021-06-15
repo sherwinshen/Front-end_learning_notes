@@ -33,7 +33,7 @@ ssh -T git@github.com
 
 ## 2. Git 基础
 
-![](.gitbook/assets/git-chang-yong-ming-ling-.png)
+![](../.gitbook/assets/git-chang-yong-ming-ling-.png)
 
 ```text
 # 确认工作树和索引的状态
@@ -73,7 +73,7 @@ $ git commit -v
 
 ## 3. 分支操作\*
 
-![](.gitbook/assets/git.png)
+![](../.gitbook/assets/git.png)
 
 * **master 分支**只负责管理发布的状态，在提交时使用标签记录发布版本号。
 * **develop 分支**是针对发布的日常开发分支。
@@ -132,13 +132,13 @@ git checkout -b <branchname>
     <tr>
       <td style="text-align:center">&#x5F53;&#x524D;&#x4E24;&#x4E2A;&#x5206;&#x652F;</td>
       <td style="text-align:center">
-        <img src=".gitbook/assets/fen-zhi-.png" alt/>
+        <img src="../.gitbook/assets/fen-zhi-.png" alt/>
       </td>
     </tr>
     <tr>
       <td style="text-align:center">merge &#x5408;&#x5E76;&#x5206;&#x652F;</td>
       <td style="text-align:center">
-        <img src=".gitbook/assets/merge-he-bing-.png" alt/>
+        <img src="../.gitbook/assets/merge-he-bing-.png" alt/>
       </td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ git checkout -b <branchname>
       <td style="text-align:center">
         <p></p>
         <p>
-          <img src=".gitbook/assets/rebase-he-bing-.png" alt/>
+          <img src="../.gitbook/assets/rebase-he-bing-.png" alt/>
         </p>
       </td>
     </tr>
@@ -219,7 +219,7 @@ git revert <目标版本号>
       style="text-align:left">
         <p></p>
         <p>
-          <img src=".gitbook/assets/reset.png" alt/>
+          <img src="../.gitbook/assets/reset.png" alt/>
         </p>
         </td>
     </tr>
@@ -230,7 +230,7 @@ git revert <目标版本号>
       style="text-align:left">
         <p></p>
         <p>
-          <img src=".gitbook/assets/revert.png" alt/>
+          <img src="../.gitbook/assets/revert.png" alt/>
         </p>
         </td>
     </tr>
@@ -255,7 +255,7 @@ revert 图解说明：想要撤销版本二，但又不想影响撤销版本三�
 
 reset 与 checkout 的区别？
 
-![](.gitbook/assets/checkout_reset.png)
+![](../.gitbook/assets/checkout_reset.png)
 
 ### 4.2 提取提交
 
@@ -264,7 +264,7 @@ reset 与 checkout 的区别？
 * 把弄错分支的提交移动到正确的地方
 * 把其他分支的提交添加到现在的分支
 
-![](.gitbook/assets/cherry-pick.png)
+![](../.gitbook/assets/cherry-pick.png)
 
 ```text
 # 将引用内容的导入到当前分支

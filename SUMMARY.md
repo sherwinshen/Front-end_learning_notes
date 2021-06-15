@@ -79,7 +79,8 @@
 
 ---
 
-* [版本控制工具-Git](git.md)
+* [版本控制工具-Git](git/README.md)
+  * [git submodule](git/git-submodule.md)
 * [构建工具-Webpack](webpack.md)
 * [错误监控工具-Sentry](sentry.md)
 * [单元测试工具-Jest](jest.md)
