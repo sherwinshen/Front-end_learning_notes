@@ -78,7 +78,9 @@ setTimeout(function (a,b) {
 {% endhint %}
 
 ```javascript
-// Promise构造函数接受一个函数作为参数
+// Promise 封装异步操作
+
+// 1. 接口封装
 const promise = new Promise((resolve, reject)=>{
   // 异步代码...
   if (/* 异步操作成功 */){
@@ -87,8 +89,20 @@ const promise = new Promise((resolve, reject)=>{
     reject(new Error());
   }
 })
+// 或者还可以这么写
+function promise() {
+  return new Promise((resolve, reject)=>{
+    // 异步代码...
+    if (/* 异步操作成功 */){
+      resolve(value);
+    } else { /* 异步操作失败 */
+      reject(new Error());
+    }
+  })
+}
 
-// Promise 实例有一个then方法，用来指定下一步的回调函数 
+
+// 2. 业务调用接口
 promise.then(successFunc, errorFunc) 
 ```
 
