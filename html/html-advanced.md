@@ -15,11 +15,11 @@
 ```
 
 {% hint style="warning" %}
-`<picture>`标签中必须提供一个`<img>`元素以及它的src和alt属性，否则不会有图片显示
+`<picture>`标签中必须提供一个`<img>`元素以及它的 src 和 alt 属性，否则不会有图片显示
 {% endhint %}
 
 {% hint style="warning" %}
-注意，如果是 CSS 背景图片的形式，则图片自适应可基于background-image 的 css 属性 object-fit！
+注意，img 图片自适应还可以利用 css 属性 object-fit 来基于父容器进行自适应！
 {% endhint %}
 
 **问题2：**分辨率切换问题，即不同分辨率的设备，选择适合分辨率的图片进行显示
@@ -67,7 +67,7 @@
 
 ## 3. 图像区域映射
 
-`<map>` 标签定义一个客户端图像映射 - 图像映射（image-map）指带有可点击区域的一幅图像。area 元素永远嵌套在 map 元素内部。area 元素可定义图像映射中的区域。建议：同时向 `<map>` 添加 id 和 name 属性。
+图像映射（image-map）指带有可点击区域的一幅图像。`<map>` 标签定义一个客户端图像映射。area 元素永远嵌套在 map 元素内部。area 元素可定义图像映射中的区域。建议：同时向 `<map>` 添加 id 和 name 属性。
 
 ```markup
 <img src="planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
@@ -81,12 +81,9 @@
 
 area 的 coords 定义可点击区域（对鼠标敏感的区域）的坐标：
 
-* 圆形：`shape="circle"，coords="x,y,z"` 
-  *  x 和 y 定义了圆心的位置，z 是以像素为单位的圆形半径
-* 多边形：`shape="polygon"，coords="x1,y1,x2,y2,x3,y3,..."` 
-  * 每一对 "x,y" 坐标都定义了多边形的一个顶点
-* 矩形：`shape="rectangle"，coords="x1,y1,x2,y2"` 
-  * x1,y1,x2,y2 表示两个对角顶点
+* 圆形：`shape="circle"，coords="x,y,z"` ，x 和 y 定义了圆心，z 是以像素为单位的半径
+* 多边形：`shape="polygon"，coords="x1,y1,x2,y2,..."`，每对 "x,y" 定义多边形一个点
+* 矩形：`shape="rectangle"，coords="x1,y1,x2,y2"`，x1,y1,x2,y2 表示两个对角顶点
 
 ## 4. 表单验证
 

@@ -1,6 +1,6 @@
 # 基础知识
 
-> HTML（HyperText Markup Language）：超文本标记语言，从**语义**角度描述页面的**结构**。
+> HTML（HyperText Markup Language）：超文本标记语言，从语义角度描述页面的结构。
 
 ## 1. 基础结构
 
@@ -29,8 +29,8 @@
 
 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。
 
-* **head 区域的元素**：[meta](html-advanced.md#yuan-biao-qian)，title，style，link，script，base 等；
-* **body 区域的元素**：详见 [HTML标签](html-basic.md#2-html-biao-qian)。
+* **head 区域的元素**：[meta](html-advanced.md#5-yuan-biao-qian)，title，style，link，script，base 等；
+* **body 区域的元素**：详见[“HTML标签”](html-basic.md#2-html-biao-qian)。
 
 ## 2. HTML 标签
 
@@ -51,13 +51,13 @@ html 的常见元素主要分为两类：head 区域的元素、body 区域的�
 
 | 块元素 | 行内元素 |
 | :--- | :--- |
-| 块级元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。 | 行内元素的宽度就是它包含的文字或图片的宽度，不可改变。 |
-| 块级元素的高度、宽度、行高以及顶和底边距都可设置。 | 内联元素的高度、宽度及顶部和底部边距不可设置。 |
+| 块级元素的宽度在不设置的情况下是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度 | 行内元素的宽度就是它包含的文字或图片的宽度，不可改变 |
+| 块级元素的高度、宽度、行高以及顶和底边距都可设置 | 内联元素的高度、宽度及顶部和底部边距不可设置 |
 
 ### 2.1 排版标签
 
 {% hint style="info" %}
-div 是最常见的元素，大多数场景下都可以用div，这也导致 div 的语义并不是很明确，因此除了 div+css 布局之外，H5 中引入了更加明确语义的标签页面布局，例如 header、footer、nav、section 等，具体详见 [HTML5](html5.md)。
+div 是最常见的元素，大多数场景下都可以用div，这也导致 div 的语义并不是很明确，因此除了 div+css 布局之外，H5 中引入了更加明确语义的标签页面布局，例如 header、footer、nav、section 等，具体详见[“语义化标签”](html5.md#1-yu-yi-hua-biao-qian)。
 {% endhint %}
 
 基础标签
@@ -116,7 +116,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 <!-- 定义地址联系方式(显示为斜体)  -->
 <address></address>
 <!-- 定义著作标题 -->
- <cite></cite>
+<cite></cite>
 ```
 
 ### 2.2 超链接
@@ -125,7 +125,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 
 * `href`：目标URL
 * `title`：悬停文本
-* `name`：主要用于设置一个锚点的名称。
+* `name`：主要用于设置一个锚点的名称
 * `target`：告诉浏览器用什么方式来打开目标页面。`target`属性有以下几个值：
   * `_self`：在同一个网页中显示（默认值）
   * `_blank`：**在新的窗口中打开**。
@@ -205,7 +205,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 </figure>
 ```
 
-图片定位链接可在图片不同位置跳转至不同链接，具体详见[进阶知识-图像区域映射](html-advanced.md#3-tu-xiang-qu-yu-ying-she)。
+图片定位链接可在图片不同位置跳转至不同链接，具体详见[“图像区域映射”](html-advanced.md#3-tu-xiang-qu-yu-ying-she)。
 
 ```markup
 <!-- usemap 属性与 name 一致 -->
@@ -338,7 +338,7 @@ div 是最常见的元素，大多数场景下都可以用div，这也导致 div
 <iframe src="targetURL"></iframe>
 ```
 
-iframe作为链接的目标，点击链接iframe显示链接的内容，通过name属性实现：
+iframe 通过 name 属性作为链接的目标，点击 a 链接则 iframe 显示链接地址的内容：
 
 ```markup
 <a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a>
@@ -395,19 +395,18 @@ iframe作为链接的目标，点击链接iframe显示链接的内容，通过na
 
 ```markup
 <form>
-
-    <fieldset>
-      <legend>账户信息</legend>
-      姓名：<input value="name">
-      密码：<input type="password" value="pwd" size="50">
-    </fieldset>  
-     
-    <fieldset>
-      <legend>其他信息</legend>
-      性别：<input value="gender">
-      爱好：<input value="love">
-    </fieldset>
-  </form>
+  <fieldset>
+    <legend>账户信息</legend>
+    姓名：<input value="name">
+    密码：<input type="password" value="pwd" size="50">
+  </fieldset>  
+   
+  <fieldset>
+    <legend>其他信息</legend>
+    性别：<input value="gender">
+    爱好：<input value="love">
+  </fieldset>
+</form>
 ```
 
 基础组件
@@ -561,8 +560,9 @@ video 和 audio 是 [HTML5](html5.md#shi-yin-pin) 中引入的。
 
 <!-- 多文件供浏览器支持 -->
 <audio controls>
-    <source src="输入文件地址">
-    <source src="输入文件地址">
+    <source src="输入文件地址" type="audio/ogg">
+    <source src="输入文件地址" type="audio/mpeg">
+    Your browser does not support the audio element.
 </audio>
 ```
 

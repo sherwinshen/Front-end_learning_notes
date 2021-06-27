@@ -129,7 +129,7 @@
 我们可以通过 CSS 规则 box-sizing: border-box 来转化为 IE 盒子模型。
 {% endhint %}
 
-通过 max-height，max-width，min-height，min-width 属性进行宽高约束
+通过 max-height，max-width，min-height，min-width 属性进行宽高约束：
 
 ```css
 /* 效果：当父容器在最小和最大宽度限制内时，它将填满整个视口宽度；当父容器超过1280px宽度时，布局将保持在1280px宽，并开始在可用空间内居中。 当宽度低于480px时，视口将小于容器，您必须滚动才能看得到完全的内容。*/
@@ -176,7 +176,7 @@ div {
   * 含四个属性值：阴影与原始文本的水平偏移，阴影与原始文本的垂直偏移，模糊半径，阴影的基础颜色，例如`text-shadow: 4px 4px 5px red;`
 
 {% hint style="info" %}
-font-weight 填写数值的话只能填写 100 至 900 这样的整百数字，normal 相当于 400，bold 相当于 700
+font-weight 填写数值只能填写 100 至 900 的整百数字，normal 即 400，bold 即 700
 {% endhint %}
 
 ### 6.2 文本布局风格
@@ -204,7 +204,7 @@ font-weight 填写数值的话只能填写 100 至 900 这样的整百数字，n
 * 字体大小 font-size 是同一行的顶线和底线之间的距离。
 
 {% hint style="info" %}
-我们的工程师有一个约定： **行高、字号，一般都是偶数**，这样可以保证，它们的差一定偶数，就能够被2整除。
+一个不成文的约定： **行高、字号一般都是偶数**，这样可以保证它们的差一定偶数，就能够被2整除。
 {% endhint %}
 
 {% hint style="info" %}
@@ -287,7 +287,7 @@ background-color: hsla(240,50%,50%,0.4); /* 色度+饱和度+亮度+透明度 */
 ```
 
 {% hint style="info" %}
-透明度除了可以用 `rgba` 表示，还能够用 `opacity` 来设置，此还可以使用 background: transparent; 来设置完全透明。
+透明度除了可以用`rgba`表示，还能够用`opacity`来设置，此还可以使用`background: transparent;`来设置完全透明。
 {% endhint %}
 
 B. 背景图片：`background-image`
@@ -483,7 +483,7 @@ border-image: url(border-image.png) 40 round;
   * space：边图像被重复，直到边界被填满，拷贝之间添加少量间隔，不会出现碎片
 
 {% hint style="info" %}
-边界 border 的应用可详见 [CSS 画图](css-topics/css-drawing.md)
+边界 border 的应用可详见[「CSS 画图」](css-topics/css-drawing.md)
 {% endhint %}
 
 ## 11. 布局
@@ -496,9 +496,7 @@ border-image: url(border-image.png) 40 round;
 
 ## 13. 设备媒体
 
-概念：指定样式表规则用于指定的媒体类型和查询条件，主要用于响应式设计
-
-语法：`@media` 媒体类型 `and 条件 { 样式 }`
+设备媒体能够指定样式表规则用于指定的媒体类型和查询条件，其主要用于响应式设计，语法：`@media 媒体类型 and 条件 { 样式 }`。
 
 ```css
 @media screen and (max-width:640px) {

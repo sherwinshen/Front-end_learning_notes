@@ -10,7 +10,7 @@
 * -webkit- 兼容chrome 和 safari
 
 ```css
-div{ 
+div { 
     -ms-transform: rotate(30deg); 
     -webkit-transform: rotate(30deg); 
     -o-transform: rotate(30deg); 
@@ -20,7 +20,7 @@ div{
 ```
 
 {% hint style="info" %}
-在实际开发中，我们可以借助 [Autoprefixer插件](https://github.com/postcss/autoprefixer) 来自动解析CSS文件并且添加浏览器前缀到CSS规则里。
+在实际开发中，我们可以借助 [Autoprefixer插件](https://github.com/postcss/autoprefixer) 等来自动解析CSS文件并且添加浏览器前缀到 CSS 规则里。
 {% endhint %}
 
 ## 2. SASS/SCSS
@@ -49,7 +49,7 @@ div{
 {% hint style="info" %}
 文本什么时候会发生溢出？
 
-* 设置white-space:nowrap时
+* 设置`white-space:nowrap`时
 * 单个超长字符串
 {% endhint %}
 
@@ -320,7 +320,7 @@ BFC 概念，父元素添加`overflow:hidden`等，使父元素变为 BFC 元素
 每个页面至少需要一次回流，就是在页面第一次加载的时候。当 render tree 中的一些元素需要更新属性，浏览器会重新绘制受影响的部分到屏幕中，该过程成为重绘。回流必将引起重绘，重绘不一定会引起回流。
 
 * 重绘：当render tree中一些元素需要更新属性，这些属性只影响外观风格，不影响布局。
-* 回流\(也称重排\)：当 render tree 中的部分或全部因为元素的规模尺寸、布局、隐藏等改变而需要重新构建。
+* 回流\(重排\)：当 render tree 中的部分或全部因元素的规模尺寸、布局、隐藏等改变而需要重新构建。
 
 ### 8.1 回流的场景
 

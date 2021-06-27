@@ -1,9 +1,7 @@
 # CSS
 
-CSS：层叠样式表\(Cascading Style Sheet\)，用于给 HTML 页面标签添加各种样式，定义网页显示效果。
-
-{% hint style="warning" %}
-该部分的相关内容中 CSS 与 CSS3 不作区分。
+{% hint style="info" %}
+CSS：层叠样式表\(Cascading Style Sheet\)，用于给 HTML 页面标签添加各种样式，定义网页显示效果。⚠️ 该部分的相关内容中 CSS 与 CSS3 不作区分。
 {% endhint %}
 
 {% page-ref page="css-basic.md" %}
