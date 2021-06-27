@@ -161,6 +161,62 @@ promise
 .finally(() => {···});
 ```
 
+* `Promise.all()`并发处理多个异步任务，所有任务都执行成功，才能得到结果。
+* `Promise.race()`并发处理多个异步任务，只要有一个任务执行成功，就能得到结果。
+
+```javascript
+Promise.all([promise1, promise2, promise3]).then((result) => {
+    console.log(result);
+});
+Promise.all([promise1, promise2, promise3]).then((result) => {
+    console.log(result);
+});
+```
+
+链式调用，基于 Promise 处理多层嵌套调用：
+
+```javascript
+const operation1 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Operation1 is ok ')
+    }, 1000)
+  })
+}
+
+const operation2 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Operation2 is ok ')
+    }, 1000)
+  })
+}
+
+
+const operation3 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Operation3 is ok ')
+    }, 1000)
+  })
+}
+
+operation1().then((res) => {
+  console.log(res)
+  return operation2()
+}).then((res) => {
+  console.log(res)
+  return operation3()
+}).then((res) => {
+  console.log(res)
+})
+```
+
+return 后面的返回值，有两种情况：
+
+* 情况 1：返回 Promise 实例对象，则该实例对象会调用下一个 then
+* 情况 2：返回普通值，则直接传递给下一个 then，通过 then 参数中函数的参数接收该值
+
 ## 6. ES6- **Generator**
 
 {% hint style="info" %}
@@ -406,6 +462,46 @@ async function myFunction() {
     console.log(err);
   });
 }
+```
+
+链式调用，基于 async/await 处理多层嵌套调用：
+
+```javascript
+const operation1 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Operation1 is ok ')
+    }, 1000)
+  })
+}
+
+const operation2 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Operation2 is ok ')
+    }, 1000)
+  })
+}
+
+
+const operation3 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>{
+      resolve('Operation3 is ok ')
+    }, 1000)
+  })
+}
+
+async function test() {
+  const res = await operation1()
+  console.log(res)
+  const res2 = await operation2()
+  console.log(res2)
+  const res3 = await operation3()
+  console.log(res3)
+}
+
+test()
 ```
 
 {% hint style="info" %}
