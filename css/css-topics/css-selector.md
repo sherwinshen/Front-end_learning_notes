@@ -1,7 +1,7 @@
 # CSS 选择器
 
 {% hint style="info" %}
-本文内容所涉及的 CSS 选择器包含 CSS3 新增选择器部分，不额外作区分。
+本文内容所涉及的 CSS 选择器包含 CSS3 新增选择器部分，不作额外区分，部分选择器效果详见[「CSS 选择器示例」](http://www.web-jshtml.cn/file/selector/)。
 {% endhint %}
 
 * [简单选择器](css-selector.md#1-jian-dan-xuan-ze-qi)：通过元素类型、class 或 id 匹配一个或多个元素 + 通配符`*`
@@ -83,7 +83,7 @@ li[data-perf*="same"] {
 * `E:nth-last-child(n)` 匹配父元素的倒数第n个子元素E。
 
 {% hint style="warning" %}
-**注意**，`E:nth-child(n)`中元素的编号是从`1`开始算起，不是从`0`开始算起。
+注意，`E:nth-child()`中元素的编号是从`1`开始算起，不是从`0`开始算起，但2n/-n+5这些的n指代了0。
 
 * 如果选择器写成`li:nth-child(2)`，则表示第2个`li`
 * 如果选择器写成`li:nth-child(n)`，则表示**所有的**`li`
@@ -100,6 +100,10 @@ li[data-perf*="same"] {
 * `E:nth-last-of-type(n)` 匹配同类型中的倒数第n个同级兄弟元素E
 * `E:empty` 匹配没有任何子节点（包括空格等text节点）的元素E
 * `E:target` 匹配相关URL指向的E元素。要配合锚点使用
+
+{% hint style="warning" %}
+区别`:nth-child()`与`:nth-of-type()`，其中`:nth-of-type()`的计数是同类型的元素，而`:nth-child()`计数不需要看元素类型。
+{% endhint %}
 
 {% hint style="info" %}
 完整 CSS 伪类详见 [W3school - CSS 选择器参考手册](https://www.w3school.com.cn/cssref/css_selectors.asp)

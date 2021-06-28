@@ -39,22 +39,22 @@
 关键在于百分比（%）相对于谁而言
 {% endhint %}
 
-a）height和width的百分比
+a）height 和 width 的百分比
 
-* 直接相对于父元素而言，width相对于父元素的width，height相对于父元素的height
+* 直接相对于父元素而言，width 相对于父元素的 width，height 相对于父元素的 height
 
 b）top、bottom 、left和right的百分比
 
-* top和bottom相对于直接非static定位\(默认定位\)的父元素的高度
-* left和right相对于直接非static定位\(默认定位\)父元素的宽度
+* top 和 bottom 相对于直接非 static 定位\(默认定位\)的父元素的高度
+* left 和 right 相对于直接非 static 定位\(默认定位\)父元素的宽度
 
-c）padding和margin的百分比
+c）padding 和 margin 的百分比
 
-* 不论是垂直方向或者水平方向，都相对于直接父亲元素的width，而与父元素的height无关
+* 不论是垂直方向或者水平方向都相对于直接父亲元素的 width，而与父元素的 height 无关
 
-d）border-radius的百分比
+d）border-radius 的百分比
 
-* 相对于自身的宽度width
+* 相对于自身的宽度 width
 
 e）......
 

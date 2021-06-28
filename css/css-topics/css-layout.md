@@ -28,7 +28,7 @@ CSS 定位主要分为静态定位 static，固定定位 fixed，绝对定位 ab
 
 ### 1.3 相对定位 relative
 
-{% hint style="info" %}
+{% hint style="warning" %}
 相对指的是相对于原来的位置而言，区别于绝对定位是相对于设有定位的父元素而言
 {% endhint %}
 
@@ -334,7 +334,7 @@ float: right;
 
 #### 5.1.2 内容定宽 + 自适应
 
-![&#x5185;&#x5BB9;&#x5B9A;&#x5BBD;+&#x81EA;&#x9002;&#x5E94;](../../.gitbook/assets/zi-shi-ying-1.png)
+![](../../.gitbook/assets/zi-shi-ying-1.png)
 
 ```markup
 <div class="parent">
@@ -377,7 +377,7 @@ float: right;
 </style>
 ```
 
-#### 5.1.3 内容自适应+自适应
+#### 5.1.3 内容自适应 + 自适应
 
 ![](../../.gitbook/assets/zi-shi-ying-2.png)
 
