@@ -1,7 +1,7 @@
 # JavaScript
 
 {% hint style="warning" %}
-该部分的相关内容中 ES5 与 ES6不作区分。
+该部分的相关内容中 ES5 与 ES6 等不作区分。
 {% endhint %}
 
 {% page-ref page="js-basic.md" %}

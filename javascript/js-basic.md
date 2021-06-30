@@ -1,7 +1,7 @@
 # 基础知识
 
 {% hint style="info" %}
-本文所谓的基础知识只包含重点内容和易错点，简单或常见知识点已省略。具体可详见参考资料：[JavaScript 教程（网道）](https://wangdoc.com/javascript/) [ES6 标准入门教程（网道）](https://wangdoc.com/es6/)
+本文所谓的基础知识只包含重点内容和易错点，简单或常见知识点已省略。完整 JavaScript 内容可详见参考资料：[JavaScript 教程（网道）](https://wangdoc.com/javascript/) [ES6 标准入门教程（网道）](https://wangdoc.com/es6/)
 {% endhint %}
 
 ## 0. 基础
