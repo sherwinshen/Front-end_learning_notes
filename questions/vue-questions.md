@@ -50,8 +50,6 @@ export default {
 </ul>
 ```
 
-## 2. Vue2.0 中监听数组/对象的变化
-
 
 
 {% hint style="info" %}
