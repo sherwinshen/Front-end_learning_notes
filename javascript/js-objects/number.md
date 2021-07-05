@@ -103,6 +103,10 @@ Number.isNaN(1) // false
 (12.34).toPrecision(5) // "12.340"
 ```
 
+{% hint style="warning" %}
+注意`Number.prototype.toFixed()`返回的结果是字符串而不是数字。
+{% endhint %}
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}

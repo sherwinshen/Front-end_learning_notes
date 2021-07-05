@@ -48,6 +48,16 @@ RegExp.prototype.exec\(\) - 返回匹配结果，如果匹配返回数组，否�
 
 * 脱字符`^`表示除了字符类之中的字符，其他字符都可以匹配，`[^xyz]`表示除了`x`、`y`、`z`之外都可以匹配，`[^]`表示匹配一切字符。
 * 连字符`-`表示字符的连续范围，\[a-c\]、\[0-9\]、\[A-Z\]等，注意\[1-31\]表示1-3，不是1-31
+  * `/[ab]/` 等价于 `/a|b/`：检查一个字符串中是否包含 a或b
+  * `/[a-z]/`：检查一个字符串那种是否包含任意小写字母
+  * `/[A-Z]/`：任意大写字母
+  * `/[A-z]/`：任意字母
+  * `/[0-9]/`：任意数字
+  * `/a[bde]c/`：检查一个字符串中是否包含 abc 或 adc 或 aec
+
+{% hint style="info" %}
+简单来说就是`[]`表示或，`[^]`表示除了。
+{% endhint %}
 
 预定义模式
 
@@ -77,6 +87,44 @@ RegExp.prototype.exec\(\) - 返回匹配结果，如果匹配返回数组，否�
 * `g`修饰符，默认情况下，第一次匹配成功后，正则对象就停止向下匹配了。`g`修饰符表示全局匹配（global），加上它以后，正则对象将匹配全部符合条件的结果，主要用于搜索和替换。
 * `i`修饰符，默认情况下，正则对象区分字母的大小写，加上`i`修饰符以后表示忽略大小写。
 * `m`修饰符，默认情况下（即不加`m`修饰符时），`^`和`$`匹配字符串的开始处和结尾处，加上`m`修饰符以后，`^`和`$`还会匹配行首和行尾，即`^`和`$`会忽略末尾换行符（`\n`）
+
+{% hint style="warning" %}
+全局匹配 g 慎用test\(\)方法，当设置全局标志 `/g` 时，一旦字符串中还存在匹配，test\(\) 方法都将返回 true，同时匹配成功后将把 `lastIndex` 属性的值设置为上次匹配成功结果之后的第一个字符所在的位置，下次匹配将从 `lastIndex` 指示的位置开始；匹配不成功时返回 false，同时将 lastIndex 属性的值重置为 0。
+
+```javascript
+const reg = /test/g;
+const str = '_test_test';
+
+console.log(reg.test(str)); // true
+console.log(reg.lastIndex); // 5
+
+console.log(reg.test(str)); // true
+console.log(reg.lastIndex); // 10
+
+console.log(reg.test(str)); // false
+console.log(reg.lastIndex); // 0
+```
+{% endhint %}
+
+**支持正则表达式的 String 对象的方法**
+
+| 方法 | 描述 |
+| :--- | :--- |
+| split\(\) | 将字符串拆分成数组 |
+| search\(\) | 搜索字符串中是否含有指定内容，返回索引 index |
+| match\(\) | 根据正则表达式，从一个字符串中将符合条件的内容提取出来 |
+| replace\(\) | 将字符串中的指定内容，替换为新的内容并返回 |
+
+```javascript
+"1a2b3c4d5e6f7g".split(/[A-z]/) // ["1", "2", "3", "4", "5", "6", "7", ""]
+"hello abc hello aec afc".search(/a[bef]c/) // 6
+"1a2a3a4a5e6f7A8B9C".match(/[a-z]/g); // ["a", "a", "a", "a", "e", "f"]
+"Today is fine day,today is fine day".replace(/today/i,"tomorrow") // tomorrow is fine day,today is fine day
+```
+
+{% hint style="warning" %}
+默认情况下，`match()`方法只会找到**第一个**符合要求的内容，找到以后就停止检索,我们可以设置正则表达式为**全局匹配**模式，这样就会匹配到所有的内容，并以**数组**的形式返回。
+{% endhint %}
 
 ![](../../.gitbook/assets/regexp.png)
 

@@ -1,7 +1,8 @@
 # Date 对象
 
 {% hint style="info" %}
-参考资料：[Date 对象](https://wangdoc.com/javascript/stdlib/date.html)
+* 参考资料：[Date 对象](https://wangdoc.com/javascript/stdlib/date.html)
+* 第三方库：[Moment.js](http://momentjs.cn) - JavaScript 日期处理类库
 {% endhint %}
 
 ## 1. 构造函数
@@ -103,6 +104,72 @@ getDate\(\) 区别于其他，日期是从 1 开始的，其他都是 0 开始�
 * `setMonth(month [, date])`：设置月份（0-11）。
 * `setSeconds(sec [, ms])`：设置秒（0-59）。
 * `setTime(milliseconds)`：设置毫秒时间戳。
+
+## 4. 常用功能
+
+### 4.1 时间显示
+
+```javascript
+function formatter(date){
+  const year  = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  const hours = date.getHours()
+  const minutes = date.getMinutes()
+  const seconds = date.getSeconds()
+
+  console.log(`当前时间：${year}-${month}-${day} ${hours}:${minutes}:${seconds}`)
+}
+
+function nowTime () {
+  formatter(new Date())
+  setInterval(()=>{
+    formatter(new Date())
+  }, 1000)
+}
+
+nowTime()
+```
+
+### 4.2 倒计时显示
+
+```javascript
+function formatter(futureTime, timer){
+  const nowTime = new Date()
+  const timeSum = futureTime.getTime() - nowTime.getTime()
+
+  let day = parseInt(timeSum / 1000 / 60 / 60 / 24) // 天
+  let hour = parseInt((timeSum / 1000 / 60 / 60) % 24) // 时
+  let minute = parseInt((timeSum / 1000 / 60) % 60) // 分
+  let second = parseInt((timeSum / 1000) % 60) // 秒
+
+  // 细节处理：所有的时间小于10的时候，在前面自动补0
+  day = day < 10 ? '0' + day : day
+  hour = hour < 10 ? '0' + hour : hour
+  minute = minute < 10 ? '0' + minute : minute
+  second = second < 10 ? '0' + second : second
+
+  // 兜底处理
+  if (timeSum < 0) {
+    console.log('距离XXX还有00天00小时00分00秒')
+    clearInterval(timer)
+    return false
+  }
+
+  console.log(`距离XXX还有${day}天${hour}小时${minute}分${second}秒`)
+}
+
+function countDown () {
+  const futureTime = new Date('2096/06/23 21:00:00')
+
+  const timer = setInterval(()=>{
+    formatter(futureTime, timer)
+  }, 1000)
+}
+
+countDown()
+```
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
