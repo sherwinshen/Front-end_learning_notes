@@ -115,6 +115,7 @@
 
 * [项目经验❗️](projects.md)
 * [踩坑指南❗️](questions/README.md)
+  * [JavaScript 踩坑指南](questions/javascript-cai-keng-zhi-nan.md)
   * [Vue 踩坑指南](questions/vue-questions.md)
 * [学习资源](resources.md)
 * [综合收藏夹](collections.md)

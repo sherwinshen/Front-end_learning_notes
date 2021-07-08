@@ -8,13 +8,22 @@
 第 5-9 节内容建议结合[《文件上传与下载》](../comprehensive/file-upload-download.md)学习。
 {% endhint %}
 
-## 1. 浏览器对象 DOM
+## 1. 浏览器对象 BOM
 
 BOM\(Browser Object Model\) 是指浏览器对象模型，是用于描述这种对象与对象之间层次关系的模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的 Window 对象是BOM的顶层对象，其他对象都是该对象的子对象（如 Screen、Location、History、Navigator 等）。
+
+![](../.gitbook/assets/bom.png)
 
 ### 1.1 Window 对象
 
 浏览器里面，`window`对象（注意，`w`为小写）指当前的浏览器窗口。它也是当前页面的顶层对象，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。具体详见[《网道 - Window 对象》](https://wangdoc.com/javascript/bom/window.html)。
+
+```javascript
+// 打开窗口
+window.open(url,target,param)
+// 关闭窗口
+window.close()
+```
 
 ### 1.2 Location 对象
 
@@ -98,6 +107,57 @@ Screen 对象表示当前窗口所在的屏幕，提供显示设备的信息。`
 
 ## 2. Document 对象
 
+Document Object Model（DOM），文档对象模型，其由节点组成的。DOM 为文档提供了结构化表示，并定义了如何通过脚本来访问文档结构。
+
+**DOM 节点分类：**
+
+* 文档节点（文档）：整个 HTML 文档
+* 元素节点（标签）：HTML标签
+* 属性节点（属性）：元素的属性
+* 文本节点（文本）：HTML标签中的文本内容（包括空格/换行）
+
+![](../.gitbook/assets/dom-jie-dian-.png)
+
+**DOM 节点获取：**
+
+* 获取直接节点
+  * `document.getElementById()`
+  * `document.getElementsByClassName()`
+  * `document.getElementsByTagName()`
+  * `document.querySelector()`
+  * `document.querySelectorAll()`
+* 获取关系节点
+  * 父节点：`节点.parentNode`
+  * 下一个兄弟节点：`节点.nextElementSibling || 节点.nextSibling`
+  * 前一个兄弟节点：`节点.previousElementSibling || 节点.previousSibling`
+  * 任意兄弟节点：`节点.parentNode.children[index]`
+  * 第一个子节点：`节点.firstElementChild || 节点.firstChild`
+  * 最后一个子节点：`节点.lastElementChild || 节点.lastChild`
+  * 所有子节点：`节点.children`
+
+**DOM 节点操作：**
+
+* 创建节点：`document.createElement("标签名")`
+* 末尾插入节点：`节点.appendChild(新的子节点)`
+* 定位插入节点：`节点.insertBefore(新的子节点, 作为参考的子节点)`
+* 删除节点：`节点.removeChild(子节点)`
+* 克隆节点：`要复制的节点.cloneNode()`
+
+ **DOM 节点属性操作：**
+
+* 获取属性：`节点.属性名`或`节点.getAttribute("属性名称")`
+* 设置属性：`节点.属性名=XXX`或`节点.setAttribute("属性名", "属性值")`
+* 删除属性：`节点.removeAttribute(属性名)`
+
+{% hint style="info" %}
+上述获取和设置属性都有两种方法，其区别在于：
+
+* `元素节点.属性`方式绑定的属性值不会出现在标签上
+* `get/setAttribut`绑定的属性值会出现在标签上
+{% endhint %}
+
+
+
 ## 3. URL 对象
 
 url的合法对象分为：
@@ -108,7 +168,7 @@ url的合法对象分为：
 url编码和解码即合法与不合法之间的转换：
 
 * `encodeURI()`方法用于转码整个 URL，转码**元字符**和**语义字符**之外的字符
-* `encodeURIComponent()`方法用于转码 URL 的组成部分，转码**语义字符**之外的所有字符（一般使用这个）
+* `encodeURIComponent()`方法用于转码 URL 的组成部分，转码**语义字符**之外的所有字符
 * `decodeURI()`方法用于整个 URL 的解码
 * `decodeURIComponent()`方法用于URL 片段的解码
 

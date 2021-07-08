@@ -52,6 +52,25 @@
 offsetLeft 和 offsetTop 值的获取跟父级元素没关系，而是跟其上一级的定位元素（除 position:static 外的所有定位）有关系。
 {% endhint %}
 
+## 6.总结\(offset/scroll/client\)
+
+### 6.1 宽高
+
+* offsetWidth = width + padding + border
+* offsetHeight = height + padding + border
+* scrollWidth = 内容宽度（不包含border）
+* scrollHeight = 内容高度（不包含border）
+* clientWidth = width + padding
+* clientHeight = height + padding
+
+### 6.2 上下
+
+| 内容 | 调用者 | 作用 |
+| :--- | :--- | :--- |
+| offsetTop/Left | 任意元素\(主要是盒子\) | 距离带有定位父系元素的距离 |
+| scrollTop/Left | document.body/window或含有滚动条盒子 | 浏览器无法显示\(或卷去\)的部分 |
+| clientY/clientX | event | 鼠标距离浏览器可视区域的距离 |
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}
