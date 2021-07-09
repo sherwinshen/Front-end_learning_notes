@@ -1,5 +1,7 @@
 # 代码规范
 
+{% page-ref page="js-coding-guide.md" %}
+
 {% page-ref page="css-coding-guide.md" %}
 
 {% hint style="info" %}

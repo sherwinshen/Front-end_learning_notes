@@ -92,8 +92,10 @@
 
 * [前端工程化](frontend-engineering.md)
 * [代码规范](coding-guide/README.md)
+  * [JavaScript 代码规范](coding-guide/js-coding-guide.md)
   * [CSS 代码规范](coding-guide/css-coding-guide.md)
   * [Vue 代码规范](https://cn.vuejs.org/v2/style-guide/)
+  * [Git Commit 规范](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
   * [代码规范配置](https://github.com/MrEnvision/Front-end_learning_project/blob/master/coding_guide_setting)
 * [网络安全与防御](web-security.md)
 * [性能优化](optimization.md)
@@ -115,7 +117,8 @@
 
 * [项目经验❗️](projects.md)
 * [踩坑指南❗️](questions/README.md)
-  * [JavaScript 踩坑指南](questions/javascript-cai-keng-zhi-nan.md)
+  * [JavaScript 踩坑指南](questions/javascript-questions.md)
+  * [CSS 踩坑指南](questions/css-questions.md)
   * [Vue 踩坑指南](questions/vue-questions.md)
 * [学习资源](resources.md)
 * [综合收藏夹](collections.md)

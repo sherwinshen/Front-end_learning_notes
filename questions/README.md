@@ -2,7 +2,9 @@
 
 > 一个萝卜一个坑，这里是我在学习过程中遇到一些坑【当然可能只是我菜🤪】
 
-{% page-ref page="javascript-cai-keng-zhi-nan.md" %}
+{% page-ref page="javascript-questions.md" %}
+
+{% page-ref page="css-questions.md" %}
 
 {% page-ref page="vue-questions.md" %}
 
