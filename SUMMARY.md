@@ -58,7 +58,8 @@
 
 * [Vue.js](vue/README.md)
   * [基础知识](vue/vue-basic.md)
-  * [组件通信](vue/vue-component-communication.md)
+  * [Vue 组件通信](vue/vue-components-communication.md)
+  * [Vuex 使用指南](https://github.com/MrEnvision/Front-end_learning_project/tree/master/vuex_tutorial)
   * [Vue 动画](vue/vue-animation.md)
   * [静态网站框架 VuePress](vue/vuepress.md)
 * [React.js](react/README.md)

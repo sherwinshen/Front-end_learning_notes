@@ -2,8 +2,6 @@
 
 {% page-ref page="vue-basic.md" %}
 
-{% page-ref page="vue-component-communication.md" %}
-
 {% page-ref page="vue-animation.md" %}
 
 {% page-ref page="vuepress.md" %}

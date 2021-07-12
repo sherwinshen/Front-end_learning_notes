@@ -180,8 +180,6 @@ new Vue({
 })
 ```
 
-{% page-ref page="vue-component-communication.md" %}
-
 ## 7. Vue 动画
 
 {% page-ref page="vue-animation.md" %}
