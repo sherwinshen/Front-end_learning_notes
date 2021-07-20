@@ -50,6 +50,54 @@ export default {
 </ul>
 ```
 
+## 2. SCSS 全局变量
+
+以下是存放变量的 scss 文件：
+
+```css
+// @/styles/variables.scss
+// SCSS 公共变量，例如颜色等
+
+$colorBg: #304156;
+```
+
+即使在 main.js 中引入文件，但是在实际组件的应用中也需要进行引入否则无法使用全局变量：
+
+```markup
+<template>
+  <div class="notice">注意！</div>
+</template>
+
+<style lang="scss" scoped>
+@import " @/styles/variables.scss"; // 如果不加这个的话则无法使用变量
+.notice {
+  background: $colorBg;
+}
+</style>
+```
+
+那么全局 SASS/SCSS 变量在 Vue 项目中应用解决方案如下：
+
+* 使用 sass-resources-loader
+* 项目基于 Vue-cli 3.x 的话可以配置`vue.config.js`文件，详见[参考资料](https://vueschool.io/articles/vuejs-tutorials/globally-load-sass-into-your-vue-js-applications/)。
+
+```javascript
+module.exports = {
+  // css相关配置
+  css: {
+    // css预设器配置项
+    loaderOptions: {
+      sass: {
+        prependData: `
+          @import "@/styles/variables.scss";
+          @import "@/styles/mixins.scss";
+        `,
+      },
+    },
+  },
+}
+```
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}
