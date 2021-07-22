@@ -10,9 +10,9 @@ description: 'Github地址：https://github.com/MrEnvision'
 
 项目地址：[langlangDental](https://github.com/MrEnvision/langlangDental)，主要知识点：
 
-* scss 常用语法（继承、for循环、浏览器内核函数......）
+* SCSS 常用语法（继承、for 循环组合类、浏览器内核函数......）
 * 背景图片设置（background-size、background-origin、background-repeat......）
-* 幻灯片原生制作/swiper库应用
+* 幻灯片原生制作/swiper 库应用
 * ......
 
 ### 1.2 Vue3 简易后台管理系统
@@ -20,22 +20,36 @@ description: 'Github地址：https://github.com/MrEnvision'
 项目地址：[vue-admin](https://github.com/MrEnvision/vue-admin)，主要知识点：
 
 * Vue3.0 Composition API 体验版（⚠️与正式版有一定的区别）
-* 环境变量与模式
-* vue router（axios 拦截器、路由守卫、路由传参......）
+* 环境变量与模式的应用
+* xios 拦截器
+* 路由守卫（登录判断与权限判断）、路由传参、动态路由......
 * 组件封装
 * 组件通信（Vuex）
+* 表单验证
+* 自定义 Svg Icon 图标组件
 * ......
 
-### 1.3 React 简易后台管理系统
+### 1.3 后台管理类系统模版（Vue）
+
+项目地址：[vue-element-admin-tips](https://github.com/MrEnvision/vue-element-admin-tips)，主要知识点：
+
+* 模块化思想/配置化思想
+* Axios 全局拦截
+* 路由守卫
+* 动态路由
+* 自定义 Svg Icon 图标组件
+* ......
+
+### 1.4 React 简易后台管理系统
 
 项目地址：[react-admin](https://github.com/MrEnvision/react-admin)，正在开发中。
 
-### 1.4 模块化开发体验项目
+### 1.5 模块化开发体验项目
 
 项目地址：[vue-module](https://github.com/MrEnvision/vue-module)，知识点：
 
 * git submodule 模块化
-* vuex state小技巧 - 同步本地存储
+* vuex state 小技巧 - 同步本地存储
 * ......
 
 ## 2. 进阶项目
@@ -65,4 +79,6 @@ description: 'Github地址：https://github.com/MrEnvision'
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}
+
+
 
