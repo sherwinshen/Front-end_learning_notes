@@ -98,6 +98,25 @@ module.exports = {
 }
 ```
 
+## 3. Vue 使用 computed 时不要使用箭头函数
+
+在获取 vuex state 的过程中，在 computed 下，如果使用箭头函数则无法获取到数据！！！
+
+```javascript
+export default {
+  computed: {
+    // 错误做法
+    isOpened: () => {
+      return this.$store.state.app.sideBar.isOpened // 无法获取到数据，this 指向问题
+    },
+    // 正确做法
+    isOpened() {
+      return this.$store.state.app.sideBar.isOpened
+    },
+  }
+}
+```
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}
