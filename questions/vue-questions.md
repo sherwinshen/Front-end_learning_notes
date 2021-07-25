@@ -117,6 +117,42 @@ export default {
 }
 ```
 
+## 4. router-link 添加 **@click/@mouseover 等无效**
+
+router-link ****会阻止 click/mouseover 等事件，如果只用 @click/@mouseover 等不加 native则事件就不会触发。
+
+```markup
+<router-link :to="pathName" @click.native="handleClick"/>
+```
+
+## 5. Vue 中引入本地图片
+
+```markup
+<img src="/images/test.jpg" alt="">
+
+编译后:<img src="/images/test.jpg" alt="">
+```
+
+用绝对路径引入时，路径读取的是public文件夹中的资源，任何放置在 `public` 文件夹的静态资源都会被简单的复制到编译后的目录中，而不经过 webpack特殊处理。
+
+```markup
+<img :src="require('./assets/images/test.jpg')" alt="">
+<img :src="img3" alt="">
+<script>
+export default:{
+    data(){
+        return {
+          img3:require('./assets/images/test.jpg'),
+        }
+      },
+}
+</script>
+
+编译后: <img src="/img/test.jpg" alt="">
+```
+
+当路径的文件名需要拼接变量的时候，可使用 `require()` 引入，在 template 的`:src` 或者 script 的 `data` 中都可以进行 `require` 引入或拼接
+
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
 {% endhint %}
