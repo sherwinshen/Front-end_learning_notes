@@ -103,7 +103,9 @@ CSS 智能提示。
 
 npm 包导入智能提示。
 
+### Search node\_modules
 
+搜索快速导航和打开文件 node\_modules 的某个包位置。
 
 ### ESLint
 
@@ -114,6 +116,10 @@ npm 包导入智能提示。
 npm 插件支持运行 package.json 文件中定义的 npm 脚本，并支持根据 package.json 中定义的依赖项验证已安装的模块。
 
 ![](.gitbook/assets/npm.png)
+
+### SVG
+
+SVG 插件集编码、最小化、预览等一体。
 
 ### Material icon theme / Material theme
 
@@ -129,46 +135,9 @@ npm 插件支持运行 package.json 文件中定义的 npm 脚本，并支持根
 
 选中内容并按 ctrl + option + L 自动针对选中内容扩展 console.log\(\)，使得调试更便捷。
 
-
-
-#### 
-
-### [**SVG Viewer**](https://link.zhihu.com/?target=https%3A//marketplace.visualstudio.com/items%3FitemName%3Dcssho.vscode-svgviewer)
-
-![](https://pic2.zhimg.com/v2-d3bacd36935ada20b32effbd57220a59_b.webp)
-
-此插件在 Visual Studio 代码中添加了许多实用的 SVG 程序，你无需离开编辑器，便可以打开 SVG 文件并查看它们。同时，它还包含了用于转换为 PNG 格式和生成数据 URI 模式的选项。
-
-
-
-#### 
-
-Path Intellisense
-
-识别引入文件的路径并进行提示。
-
-#### 
-
-#### CSS Peek
-
-能在 html 代码字符串中找到对应的 css\(类和ID\)并跳转到那个 css 文件里。
-
-
-
-### 建议插件
-
-#### import cost
-
-在行尾显示导入包的大小（可能注重性能优化的时候需要吧），Vue 单文件组件需要增加以下配置：
-
-```javascript
-"importCost.javascriptExtensions": [
-    "\\.jsx?$",
-    "\\.vue?$"
-],
-```
-
 ## 快捷键
+
+
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
