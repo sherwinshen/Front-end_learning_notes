@@ -13,6 +13,8 @@
 3. onFocusChange: 当焦点移出编辑框
 4. onWindowChange: 当焦点移出 vscode 窗口
 
+也可以直接在菜单栏选择「文件-自动保存」，勾选后，当写完代码后，文件会立即实时保存。
+
 ### 代码片段配置
 
 ![](.gitbook/assets/dai-ma-pian-duan-.png)
@@ -135,9 +137,9 @@ SVG 插件集编码、最小化、预览等一体。
 
 选中内容并按 ctrl + option + L 自动针对选中内容扩展 console.log\(\)，使得调试更便捷。
 
-## 快捷键
+### Import Cost
 
-
+Import Cost 可以在代码中友好的提示我们，当前引入的包会增加多少体积，这有助于帮我们优化代码的体积。注意，如果需要知道 vue 组件等引入的体积需要进行配置才可以。
 
 {% hint style="info" %}
 如果你对内容有任何疑问，欢迎提交 [❕issues](https://github.com/MrEnvision/Front-end_learning_notes/issues) 或 [ ✉️ email](mailto:EnvisionShen@gmail.com)
