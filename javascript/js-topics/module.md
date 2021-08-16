@@ -49,7 +49,7 @@ myModule.age
 myModule.sayHi
 ```
 
-使用 `import` 命令的时候，用户需要知道所要加载的变量名或函数名，以 {} 的形式加载，也可以采用到 `export default` 命令，为模块指定默认输出。注意，一个模块只能有一个默认输出，因此export default命令只能使用一次 。
+使用 `import` 命令的时候，用户需要知道所要加载的变量名或函数名，以 {} 的形式加载，也可以采用到 `export default` 命令，为模块指定默认输出。注意，一个模块只能有一个默认输出，因此 export default命令只能使用一次 。本质上，`export default`就是输出一个叫做`default`的变量或方法，然后系统允许你为它取任意名字。
 
 ```javascript
 /**
@@ -88,6 +88,7 @@ import DemoModule, { name, age } from 'my_module'
 export { foo, bar } from 'my_module';
 // 默认接口
 export { default } from 'foo';
+export { default as foo } from 'foo'; // import foo from 'my_module'
 // 接口改名
 export { foo as myFoo } from 'my_module';
 // 整体输出
